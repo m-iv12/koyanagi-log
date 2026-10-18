@@ -12713,7 +12713,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "Rematch",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【REMATCH】MECHATU-Aサッカー部【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=cdmG6Wj5hzw"
+   }
+  ]
  },
  {
   "id": "uPUpzE_hR2A",
