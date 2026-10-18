@@ -563,7 +563,7 @@ function renderWeek(){
         // 実際の高さ（px）を見て、サムネイル・タイトルを入れるか決める
         const px=len*HH,thH=COLW*9/16;
         // 入りきる行だけを出す（上の余白10px＋ゲーム行16px＋タイトル1行16px が目安）
-        const thumb=x.thumb&&px>=thH+44?`<span class="evth"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>`:"";
+        const thumb=""; // 週表示ではサムネイルを出さない（詳細と月表示のみ）
         const base=thumb?thH:10;
         const gl=px>=base+14?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
         const tt=px>=base+16+16?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
