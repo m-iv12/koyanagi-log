@@ -124,6 +124,28 @@ def list_uploads(playlist, since, known=None, max_pages=None):
             return ids
 
 
+def list_uploads_matching(playlist, since, words, max_pages=None):
+    """アップロード一覧のタイトルを見て、キーワードを含む動画 ID だけを返す（動画の多い公式チャンネル向け）。"""
+    ids, token, pages = [], None, 0
+    words = [w.lower() for w in words]
+    while True:
+        params = dict(part="snippet,contentDetails", playlistId=playlist, maxResults=50)
+        if token:
+            params["pageToken"] = token
+        res = call("playlistItems", **params)
+        pages += 1
+        for it in res.get("items", []):
+            pub = it["contentDetails"].get("videoPublishedAt")
+            if pub and parse_time(pub) < since:
+                return ids
+            title = it["snippet"].get("title", "").lower()
+            if any(w in title for w in words):
+                ids.append(it["contentDetails"]["videoId"])
+        token = res.get("nextPageToken")
+        if not token or (max_pages and pages >= max_pages):
+            return ids
+
+
 def fetch_videos(ids):
     """動画情報を取得して正規化する。存在しない（削除・非公開）動画は結果に含まれない。"""
     out = {}
@@ -201,17 +223,40 @@ def update_partners(since, scanned):
         print(f"コラボ相手 {name}: {len(ids)} 件を確認" + ("（初回のため全件）" if first_time else ""))
     auto_ids = set(to_fetch)
 
+    # 指定チャンネル：タイトルにキーワードを含むものを、時間の重なりに関係なく取り込む（例：にじさんじ公式の MECHATU-A）
+    watch_ids = set()
+    for w in CONFIG.get("watch_channels", []):
+        ref = w["channel"]
+        name, playlist = resolve_channel(ref)
+        if not playlist:
+            continue
+        key = "watch:" + ref + ":" + "|".join(w.get("keywords", []))
+        first_time = FULL or key not in scanned
+        ids = list_uploads_matching(playlist, since, w.get("keywords", []), max_pages=None if first_time else 2)
+        scanned.add(key)
+        watch_ids |= set(ids)
+        to_fetch += [i for i in ids if i not in cache]
+        print(f"指定チャンネル {name}: 該当 {len(ids)} 件" + ("（初回のため全件）" if first_time else ""))
+    include_watch_videos = CONFIG.get("watch_include_videos", True)
+
     # 手動：collab_videos.json に書いた動画
     manual_ids = {video_id(x) for x in load(DATA / "collab_videos.json", [])} - {None}
     to_fetch += [i for i in manual_ids if i not in cache]
     # 予定・配信中は取り直す
     pending = [k for k, v in cache.items() if v["status"] != "done"]
+    pending_src = {k: cache[k].get("source") for k in pending}  # 予定・配信中の取り直しでも出どころを保つ
     for k in pending:
         cache.pop(k)
     to_fetch += pending
 
     for vid, rec in fetch_videos(to_fetch).items():
-        if vid in manual_ids or vid in pending:
+        if vid in watch_ids:
+            if rec["kind"] == "stream" or include_watch_videos:
+                rec["source"] = "watch"
+                cache[vid] = rec
+        elif vid in manual_ids or vid in pending:
+            if pending_src.get(vid) == "watch":
+                rec["source"] = "watch"
             cache[vid] = rec
         elif vid in auto_ids and rec["kind"] == "stream":
             text = (rec["title"] + "\n" + rec["description"]).lower()
@@ -221,7 +266,8 @@ def update_partners(since, scanned):
         cache.pop(vid, None)
     for vid, rec in cache.items():
         rec["own"] = False
-        rec["source"] = "manual" if vid in manual_ids else "auto"
+        if rec.get("source") != "watch" or vid in manual_ids:
+            rec["source"] = "manual" if vid in manual_ids else "auto"
     save(PARTNER_CACHE, cache)
     print(f"他チャンネル: 合計 {len(cache)} 件")
     return cache
@@ -257,8 +303,8 @@ def merge(own, partners, own_name):
                 best, best_ov = o, ov
         if best and best_ov >= min(min_overlap, (pe - ps) / 2):
             best["collabs"].append({"channel": p["channel"], "title": p["title"], "url": p["url"]})
-        elif p.get("source") == "manual":
-            # 本人の枠がない配信は、手動で登録したものだけ表示する
+        elif p.get("source") in ("manual", "watch"):
+            # 本人の枠がない配信は、手動で登録したものと指定チャンネルのものだけ表示する
             items[p["id"]] = dict(p, collabs=[])
         # 自動で拾ったもので本人の配信と重ならないものは、無関係の可能性があるので表示しない
 
