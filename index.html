@@ -313,6 +313,11 @@ body.mode-list #prev,body.mode-list #next,body.mode-list #today{display:none}
 .li-ch{font-size:.7rem;color:var(--blue-d)}
 .list-empty{margin:20px;color:var(--ink-soft)}
 @media (max-width:480px){.li{grid-template-columns:96px minmax(0,1fr);gap:8px}.li-title{font-size:.8rem}}
+/* 見出し：PCは2行（小柳ロウ／配信スケジュール）、スマホは1行 */
+h1 .br::before{content:"　"}
+@media (min-width:900px){h1 .br{display:block}h1 .br::before{content:none}}
+.ev .g.cont{opacity:.85;font-size:.9em}
+.evin:has(.cont){padding-top:4px}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -355,7 +360,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
   .wrap{display:grid;grid-template-columns:280px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:24px;padding-block:18px}
   .side{overflow-y:auto;gap:14px;padding:4px 4px 8px 0;scrollbar-width:thin}
   .top{flex-direction:column;align-items:flex-start;gap:12px}
-  h1{font-size:1.25rem;line-height:1.4;white-space:normal}
+  h1{font-size:1.4rem;line-height:1.35;white-space:nowrap}
   .seg{width:100%}
   .seg button{flex:1}
   .nav h2{font-size:1.2rem}
@@ -381,7 +386,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 <div class="wrap">
   <aside class="side">
   <header class="top">
-    <div class="brand"><h1>小柳ロウ　配信スケジュール</h1><span class="badge">Sample</span></div>
+    <div class="brand"><h1>小柳ロウ<span class="br"></span>配信スケジュール</h1><span class="badge">Sample</span></div>
     <div class="seg" role="tablist" aria-label="表示切り替え">
       <button id="v-week" role="tab">週</button><button id="v-month" role="tab">月</button>
     </div>
@@ -620,7 +625,11 @@ function renderWeek(){
       const top=(a-d0)/DAYMS*100,ht=(b-a)/DAYMS*100;
       const cut=(a>x.start?" top-cut":"")+(b<x.end?" bot-cut":"");
       const len=(b-a)/H;
-      let inner=`<span class="evin"></span>`;
+      // サムネイルは青を重ねて背景にうっすら敷く（予定のカードは除く）
+      const bg=x.thumb&&!isUp(x)?` style="--th:url(&quot;${esc(x.thumb)}&quot;)"`:"";
+      const fpx=len*HH;
+      // 日付をまたいだ配信のもう片方：背景と、入るならゲーム名を表示
+      let inner=`<span class="evin${bg?" hasth":""}"${bg}>${fpx>=24?`<span class="g cont">${esc(gInfo(x.game).short)}<small>（続き）</small></span>`:""}</span>`;
       if(isMain){
         const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
         const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
@@ -632,8 +641,6 @@ function renderWeek(){
         const gl=px>=base+14?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
         const tt=px>=base+16+16?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
         const pill=`<span class="pill">${isUp(x)?hm(x.start)+"〜":x.status==="live"?"LIVE":hm(x.start)}</span>`;
-        // サムネイルは青を重ねて背景にうっすら敷く（予定のカードは除く）
-        const bg=x.thumb&&!isUp(x)?` style="--th:url(&quot;${esc(x.thumb)}&quot;)"`:"";
         inner=`${pill}<span class="evin${bg?" hasth":""}"${bg}>${thumb}${gl}${tt}</span>`;
       }
       body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
