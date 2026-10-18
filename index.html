@@ -288,6 +288,8 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 #view.v-week .gutter{background:var(--paper)}
 #view.v-week .col{background-image:linear-gradient(to bottom,var(--grid-2) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
   background-size:100% var(--hh),100% var(--hh);background-position:0 0,0 calc(var(--hh) / 2)}
+/* 1時間の間隔が狭いときは30分の線を出さない */
+#view.v-week.dense .col{background-image:linear-gradient(to bottom,var(--grid-2) 1px,transparent 1px);background-size:100% var(--hh);background-position:0 0}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -539,8 +541,9 @@ let MEAS=0;
 function measure(){const v=$("view");MEAS=v?v.clientHeight:0;
   // カレンダー欄の残りの高さを24等分して1時間の高さにする（最小12px）
   const avail=v?v.clientHeight-WKH-2:0;
-  HH=avail>200?Math.max(12,Math.min(44,avail/24)):22;
-  if(v){v.style.setProperty("--hh",HH+"px");v.style.setProperty("--wkh",WKH+"px")}
+  // 線がにじまないよう整数ピクセル（偶数）にそろえる
+  HH=avail>200?Math.max(12,Math.min(44,2*Math.floor(avail/48))):22;
+  if(v){v.style.setProperty("--hh",HH+"px");v.style.setProperty("--wkh",WKH+"px");v.classList.toggle("dense",HH<22)}
   COLW=Math.max(30,((v?v.clientWidth:700)-30)/7-4)}
 function renderWeek(){
   measure();
@@ -625,7 +628,7 @@ function render(){
   renderDeadlines();
   $("v-week").setAttribute("aria-selected",view==="week");
   $("v-month").setAttribute("aria-selected",view==="month");
-  $("view").className="v-"+view;
+  $("view").classList.remove("v-week","v-month");$("view").classList.add("v-"+view);
   view==="week"?renderWeek():renderMonth();
   // 集計などの描画で欄の高さが変わったら、測り直してもう一度描く
   if(view==="week"&&Math.abs($("view").clientHeight-MEAS)>2)renderWeek();
