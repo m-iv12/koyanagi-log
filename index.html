@@ -280,7 +280,7 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 @media (max-width:480px){.evin{padding:10px 1px 2px}.evin .evth{margin:-10px -1px 2px;width:calc(100% + 2px)}.pill{font-size:.56rem;padding:0 3px;left:-3px;top:-7px}}
 
 /* ---- サムネイルの背景（うっすら）---- */
-.evin.hasth{background:linear-gradient(rgb(111 133 178 / .3),rgb(76 95 138 / .50)),var(--th) center / cover no-repeat}
+.evin.hasth{background:linear-gradient(rgb(111 133 178 / .8),rgb(76 95 138 / .88)),var(--th) center / cover no-repeat}
 .evin.hasth .g,.evin.hasth .tt{text-shadow:0 1px 2px rgb(40 50 75 / .45)}
 
 /* ---- 週表示の罫線：1時間ごとの線＋30分ごとの薄い線（方眼紙は月表示のみ）---- */
@@ -290,6 +290,29 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
   background-size:100% var(--hh),100% var(--hh);background-position:0 0,0 calc(var(--hh) / 2)}
 /* 1時間の間隔が狭いときは30分の線を出さない */
 #view.v-week.dense .col{background-image:linear-gradient(to bottom,var(--grid-2) 1px,transparent 1px);background-size:100% var(--hh);background-position:0 0}
+
+/* ---- ゲーム別一覧 ---- */
+button.chip{font:inherit;font-size:.8rem;cursor:pointer}
+button.chip:hover{border-color:var(--blue);color:var(--blue-d)}
+.chip.on,.chip.on:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+#back{display:none}
+body.mode-list #back{display:inline-block}
+body.mode-list #prev,body.mode-list #next,body.mode-list #today{display:none}
+.list{display:flex;flex-direction:column;gap:6px;padding:4px 10px 14px}
+.list-ym{position:sticky;top:0;z-index:2;margin:6px -10px 0;padding:6px 12px;background:rgb(255 255 255 / .94);border-bottom:2px solid var(--blue-l);
+  font-family:var(--font-label);font-size:.82rem;font-weight:600;letter-spacing:.08em;color:var(--blue-d)}
+.li{display:grid;grid-template-columns:128px minmax(0,1fr);gap:12px;align-items:center;text-align:left;width:100%;
+  background:var(--paper);border:1px solid var(--grid-2);border-radius:8px;padding:6px;color:var(--ink)}
+.li:hover{border-color:var(--blue);box-shadow:0 2px 8px rgb(63 77 110 / .12)}
+.li.up{border-style:dashed;border-color:var(--blue)}
+.li-th{display:block;aspect-ratio:16 / 9;border-radius:5px;overflow:hidden;background:var(--blue-xl)}
+.li-th img{display:block;width:100%;height:100%;object-fit:cover}
+.li-body{display:flex;flex-direction:column;gap:2px;min-width:0}
+.li-date{font-size:.74rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.li-title{font-size:.9rem;font-weight:700;line-height:1.45;overflow-wrap:anywhere}
+.li-ch{font-size:.7rem;color:var(--blue-d)}
+.list-empty{margin:20px;color:var(--ink-soft)}
+@media (max-width:480px){.li{grid-template-columns:96px minmax(0,1fr);gap:8px}.li-title{font-size:.8rem}}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -367,6 +390,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
     <button class="round" id="prev" aria-label="前へ">‹</button>
     <h2 id="label"></h2>
     <button class="ghost" id="today">今日</button>
+    <button class="ghost" id="back">← 戻る</button>
     <button class="round" id="next" aria-label="次へ">›</button>
   </div>
   <div class="summary" id="summary"></div>
@@ -529,10 +553,37 @@ function summary(a,b){
   const ranked=Object.entries(per).sort((x,y)=>y[1]-x[1]),top=ranked.slice(0,5),rest=ranked.slice(5).reduce((s,x)=>s+x[1],0);
   const pc=posts.filter(p=>p.time>=a&&p.time<b).length;
   $("summary").innerHTML=`<span class="stat"><small>STREAM</small><b>${ss.length}</b><small>回</small></span><span class="stat"><small>HOURS</small><b>${hrs(tot)}</b><small>時間</small></span><span class="stat"><small>POST</small><b>${pc}</b><small>件</small></span>${up?`<span class="stat"><small>PLAN</small><b>${up}</b><small>予定</small></span>`:""}`+
-    `<span class="chips">`+top.map(([g,v])=>`<span class="chip">${esc(g)} ${hrs(v)}h</span>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
+    `<span class="chips">`+top.map(([g,v])=>`<button class="chip" data-game="${esc(g)}" title="${esc(g)} の配信一覧">${esc(g)} ${hrs(v)}h</button>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
     `</span>`;
 }
 
+// ---- ゲーム別一覧 ----
+let listGame=null;
+const ymd=t=>{const d=new Date(t);return`${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}（${WD[d.getDay()]}）`};
+function renderList(){
+  const g=listGame,items=streams.filter(x=>x.game===g).sort((a,b)=>b.start-a.start);
+  const done=items.filter(x=>!isUp(x)),tot=done.reduce((s,x)=>s+(x.end-x.start),0);
+  $("label").innerHTML=`<small>ゲーム別一覧</small>${esc(g)}`;
+  // 集計：このゲームの通算／ゲーム名は全期間の順位（押すと切り替え）
+  const per={};streams.filter(x=>!isUp(x)).forEach(x=>{per[x.game]=(per[x.game]||0)+(x.end-x.start)});
+  const ranked=Object.entries(per).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  const first=done.length?new Date(done[done.length-1].start):null;
+  $("summary").innerHTML=`<span class="stat"><small>STREAM</small><b>${done.length}</b><small>回</small></span><span class="stat"><small>HOURS</small><b>${hrs(tot)}</b><small>時間</small></span>`+
+    (first?`<span class="stat"><small>SINCE</small><b>${first.getFullYear()}</b><small>${first.getMonth()+1}月〜</small></span>`:"")+
+    `<span class="chips">`+ranked.map(([k,v])=>`<button class="chip${k===g?" on":""}" data-game="${esc(k)}">${esc(k)} ${hrs(v)}h</button>`).join("")+`</span>`;
+  let h='<div class="list">',lastYm="";
+  if(!items.length)h+='<p class="list-empty">このゲームの配信はまだありません。</p>';
+  items.forEach(x=>{
+    const d=new Date(x.start),ym=`${d.getFullYear()}年 ${d.getMonth()+1}月`;
+    if(ym!==lastYm){h+=`<h3 class="list-ym">${ym}</h3>`;lastYm=ym}
+    const time=isUp(x)?`${hm(x.start)}〜 予定`:`${hm(x.start)}–${endLabel(x.start,x.end)}・${hrs(x.end-x.start)}h`;
+    h+=`<button class="li${flags(x)}" data-id="${x.id}">
+      <span class="li-th">${x.thumb?`<img src="${esc(x.thumb)}" alt="" loading="lazy">`:""}</span>
+      <span class="li-body"><span class="li-date">${ymd(x.start)}　${time}</span><span class="li-title">${esc(cleanTitle(x.title))}</span>${x.own?"":`<span class="li-ch">${esc(x.channel)} の枠</span>`}</span>
+    </button>`;
+  });
+  $("view").innerHTML=h+"</div>";$("view").scrollTop=0;
+}
 function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
 
 let HH=22,COLW=100;
@@ -628,12 +679,15 @@ function render(){
   renderDeadlines();
   $("v-week").setAttribute("aria-selected",view==="week");
   $("v-month").setAttribute("aria-selected",view==="month");
-  $("view").classList.remove("v-week","v-month");$("view").classList.add("v-"+view);
+  $("view").classList.remove("v-week","v-month","v-list");$("view").classList.add("v-"+view);
+  document.body.classList.toggle("mode-list",view==="list");
+  if(view==="list"){renderList();return}
   view==="week"?renderWeek():renderMonth();
   // 集計などの描画で欄の高さが変わったら、測り直してもう一度描く
   if(view==="week"&&Math.abs($("view").clientHeight-MEAS)>2)renderWeek();
   try{localStorage.setItem("rou-view",view)}catch(e){}
 }
+let backView="week";
 
 function openSheet(ev){
   const tag=$("sh-tag"),st=$("sh-status"),dl=$("sh-dl"),link=$("sh-link"),ex=$("sh-extra");
@@ -678,6 +732,9 @@ $("view").addEventListener("click",e=>{
   if(d){cursor=+d.dataset.day;view="week";render()}
 });
 $("deadlines").addEventListener("click",e=>{const b=e.target.closest("[data-id]");if(b){const ev=events.find(x=>x.id===b.dataset.id);if(ev)openSheet(ev)}});
+$("summary").addEventListener("click",e=>{const b=e.target.closest("[data-game]");if(!b)return;
+  if(view!=="list")backView=view;listGame=b.dataset.game;view="list";render()});
+$("back").onclick=()=>{view=backView;render()};
 $("v-week").onclick=()=>{view="week";render()};
 $("v-month").onclick=()=>{view="month";render()};
 $("prev").onclick=()=>{if(view==="week")cursor=addDays(cursor,-7);else{const c=new Date(cursor);cursor=new Date(c.getFullYear(),c.getMonth()-1,1).getTime()}render()};
