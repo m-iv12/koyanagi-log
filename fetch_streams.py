@@ -9,7 +9,7 @@
 2・3 は、本人の配信と時間が重なっていれば「コラボ相手の枠」としてその配信に付け、
 重なる本人の配信がなければ「本人の枠なし」の配信として単独で表示する。
 
-環境変数 YOUTUBE_API_KEY が必要。FULL_REFRESH=1 で全件を取り直す。
+環境変数 YOUTUBE_API_KEY が必要。FULL_REFRESH=1 か、config.json の since を変えると全件を取り直す。
 """
 import json
 import os
@@ -291,10 +291,18 @@ def main():
     if not KEY:
         sys.exit("環境変数 YOUTUBE_API_KEY が設定されていません。")
     since = datetime.fromisoformat(CONFIG["since"]).replace(tzinfo=timezone.utc)
+    # config.json の since を変えたら、自動で全件を取り直す（前回の since を cache_meta.json に記録）
+    global FULL
+    meta = load(DATA / "cache_meta.json", {})
+    if meta.get("since") != CONFIG["since"]:
+        if meta:
+            print(f"since が {meta.get('since')} → {CONFIG['since']} に変わったため全件を取り直します")
+        FULL = True
     own, own_name = update_own(since)
     partners = update_partners(since)
     data = merge(own, partners, own_name)
     save(OUT, data)
+    save(DATA / "cache_meta.json", {"since": CONFIG["since"]})
     print(f"表示用データ: {len(data)} 件")
 
 
