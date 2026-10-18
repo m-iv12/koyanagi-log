@@ -23,8 +23,7 @@
   --empty:#eef2f8; --empty-num:#b3c0d8;
   --font-label:"Josefin Sans","Zen Maru Gothic",sans-serif;
   --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
-  --hh:clamp(14px,calc((100vh - 120px) / 24),28px);
-  --hh:clamp(14px,calc((100dvh - 120px) / 24),28px);
+  --hh:22px;
   --grid-bg:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
 }
 
@@ -251,12 +250,73 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .submit:hover{background:var(--blue-d)}
 .done{margin:0;font-size:.82rem;background:var(--paper);border:1px dashed var(--blue);border-radius:8px;padding:8px 10px;line-height:1.6;word-break:break-all;white-space:pre-line}
 [hidden]{display:none!important}
+/* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
+html,body{height:100%}
+.wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
+.side{display:flex;flex-direction:column;gap:8px;flex:none;min-width:0}
+.top{align-items:center;flex-wrap:nowrap}
+h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
+.card,#view,.side{box-sizing:border-box}
+.seg button{padding:6px 14px 4px}
+.seg button[aria-selected="true"]{padding-top:8px}
+.nav h2{font-size:1.05rem;line-height:1.15}
+.nav h2 small{display:block;font-size:.62rem;color:var(--ink-soft);letter-spacing:.1em;font-weight:600}
+.round{width:32px;height:32px}
+.ghost{padding:4px 12px}
+/* 集計：スマホは横一列のコンパクト表示 */
+.summary{flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;padding-bottom:1px}
+.summary::-webkit-scrollbar{display:none}
+.stat{flex:none;flex-direction:row;align-items:baseline;gap:3px;width:auto;height:auto;padding:4px 9px;border-radius:4px}
+.stat small:first-child{display:none}
+.stat b{font-size:1rem;margin:0}
+.chips{flex-wrap:nowrap;min-width:auto;flex:none}
+.chip{white-space:nowrap}
+/* 締切：スマホは一番近い1件だけ */
+.dl-panel{padding:8px 12px 6px;margin-top:4px}
+.dl-panel::before{width:70px;height:12px;top:-6px}
+.dl-h{display:none}
+.dl-item:not(:first-of-type){display:none}
+.dl-item{padding:0}
+.note{display:none}
+/* カレンダー：残りの高さいっぱい */
+.card{flex:1;min-height:0;display:flex;flex-direction:column;margin-top:12px;padding:20px 6px 6px}
+#view{flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden}
+.wk-head{flex:none;height:var(--wkh,50px);overflow:hidden}
+.dh{position:relative;padding:5px 2px 3px}
+.dl-tag{position:absolute;top:2px;right:1px;margin:0}
+.mo-head{flex:none}
+.mo-grid{flex:1;min-height:0;grid-auto-rows:minmax(0,1fr)}
+.mc{aspect-ratio:auto}
+
+@media (min-width:900px){
+  .wrap{display:grid;grid-template-columns:280px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:24px;padding-block:18px}
+  .side{overflow-y:auto;gap:14px;padding:4px 4px 8px 0;scrollbar-width:thin}
+  .top{flex-direction:column;align-items:flex-start;gap:12px}
+  h1{font-size:1.25rem;line-height:1.4;white-space:normal}
+  .seg{width:100%}
+  .seg button{flex:1}
+  .nav h2{font-size:1.2rem}
+  .summary{flex-wrap:wrap;overflow:visible;gap:8px}
+  .stat{flex-direction:column;align-items:center;justify-content:center;width:76px;height:66px;padding:0;gap:0}
+  .stat small:first-child{display:block}
+  .stat b{font-size:1.3rem;margin-top:2px}
+  .chips{flex-wrap:wrap;flex:1 1 100%}
+  .dl-panel{padding:18px 14px 10px;margin-top:8px}
+  .dl-panel::before{width:110px;height:18px;top:-8px}
+  .dl-h{display:block}
+  .dl-item:not(:first-of-type){display:grid}
+  .dl-item{padding:6px 0 3px}
+  .note{display:block;font-size:.74rem}
+  .card{margin-top:14px;padding:26px 8px 8px}
+}
+
 </style>
 </head>
 <body>
 
 
 <div class="wrap">
+  <aside class="side">
   <header class="top">
     <div class="brand"><h1>小柳ロウ　配信スケジュール</h1><span class="badge">Sample</span></div>
     <div class="seg" role="tablist" aria-label="表示切り替え">
@@ -271,8 +331,9 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
   </div>
   <div class="summary" id="summary"></div>
   <div class="dl-panel" id="deadlines" hidden></div>
-  <main class="card"><div class="strap" aria-hidden="true"></div><div id="view"></div></main>
   <p class="note">配信は YouTube から3時間ごとに自動更新しています。ゲーム名はタイトル先頭の【】の中身です。ブロックや丸印をタップすると詳細とリンクが開きます（白丸＝ポスト、青丸＝配信告知）。右上が折れているブロックはコラボ、点線のブロックはこれからの予定、リボンの「締切」はグッズなどの締切です。時刻は閲覧している端末のタイムゾーンで表示されます。</p>
+  </aside>
+  <main class="card"><div class="strap" aria-hidden="true"></div><div id="view"></div></main>
 </div>
 
 <div id="backdrop" class="backdrop" hidden></div>
@@ -419,14 +480,19 @@ function summary(a,b){
 function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
 
 let HH=22,COLW=100;
-function measure(){const v=$("view");HH=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||22;
-  const probe=document.createElement("div");probe.style.cssText="position:absolute;visibility:hidden;height:var(--hh)";document.body.appendChild(probe);HH=probe.getBoundingClientRect().height||HH;probe.remove();
+const WKH=50; // 週表示の見出しの高さ（px）
+let MEAS=0;
+function measure(){const v=$("view");MEAS=v?v.clientHeight:0;
+  // カレンダー欄の残りの高さを24等分して1時間の高さにする（最小12px）
+  const avail=v?v.clientHeight-WKH-2:0;
+  HH=avail>200?Math.max(12,Math.min(44,avail/24)):22;
+  if(v){v.style.setProperty("--hh",HH+"px");v.style.setProperty("--wkh",WKH+"px")}
   COLW=Math.max(30,((v?v.clientWidth:700)-30)/7-4)}
 function renderWeek(){
   measure();
   const ws=sow(cursor),we=addDays(ws,7),today=sod(Date.now());
   const s=new Date(ws),e=new Date(addDays(ws,6));
-  $("label").textContent=`${s.getFullYear()}年 ${s.getMonth()+1}/${s.getDate()} – ${e.getMonth()+1}/${e.getDate()}`;
+  $("label").innerHTML=`<small>${s.getFullYear()}年</small>${s.getMonth()+1}/${s.getDate()} – ${e.getMonth()+1}/${e.getDate()}`;
   let head='<div class="wk-grid wk-head"><div></div>',body='<div class="wk-grid"><div class="gutter">';
   for(let h=1;h<24;h++)body+=`<span style="top:calc(${h} * var(--hh))">${h}</span>`;
   body+="</div>";
@@ -472,7 +538,7 @@ function renderWeek(){
 
 function renderMonth(){
   const c=new Date(cursor),m0=new Date(c.getFullYear(),c.getMonth(),1).getTime(),m1=new Date(c.getFullYear(),c.getMonth()+1,1).getTime();
-  $("label").textContent=`${c.getFullYear()}年 ${c.getMonth()+1}月`;
+  $("label").innerHTML=`<small>${c.getFullYear()}年</small>${c.getMonth()+1}月`;
   const today=sod(Date.now());
   let h='<div class="mo-head">'+["月","火","水","木","金","土","日"].map((w,i)=>`<span class="${i===5?"sat":i===6?"sun":""}">${w}</span>`).join("")+'</div><div class="mo-grid">';
   for(let d0=sow(m0);d0<m1||new Date(d0).getDay()!==1;d0=addDays(d0,1)){
@@ -501,6 +567,8 @@ function render(){
   $("v-week").setAttribute("aria-selected",view==="week");
   $("v-month").setAttribute("aria-selected",view==="month");
   view==="week"?renderWeek():renderMonth();
+  // 集計などの描画で欄の高さが変わったら、測り直してもう一度描く
+  if(view==="week"&&Math.abs($("view").clientHeight-MEAS)>2)renderWeek();
   try{localStorage.setItem("rou-view",view)}catch(e){}
 }
 
@@ -555,7 +623,7 @@ $("today").onclick=()=>{cursor=Date.now();render()};
 $("backdrop").onclick=closeSheet;$("sh-close").onclick=closeSheet;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
 getData().then(d=>{normalize(d);if(d.start)cursor=d.start;render()});
-let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>{if(view==="week")render()},150)});
+let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(render,150)});
 })();
 // ---- 追加フォーム（GitHub の Issue 経由で登録）----
 // 登録先リポジトリは GitHub Pages の URL（ユーザー名.github.io/リポジトリ名/）から自動で決める
