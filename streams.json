@@ -6242,6 +6242,20 @@
   "collabs": []
  },
  {
+  "id": "YpaFxgHwzwA",
+  "title": "【ダンスMV】みんなでおどれ！「MECHA-MECHA」Short ver. / MECHATU-A（佐伯イッテツ、赤城ウェン、宇佐美リト、緋八マナ、星導ショウ、叢雲カゲツ、小柳ロウ、伊波ライ）",
+  "kind": "stream",
+  "status": "done",
+  "start": "2025-02-23T12:00:06Z",
+  "end": "2025-02-23T12:04:13Z",
+  "url": "https://www.youtube.com/watch?v=YpaFxgHwzwA",
+  "thumb": "https://i.ytimg.com/vi/YpaFxgHwzwA/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "ダンスMV",
+  "collabs": []
+ },
+ {
   "id": "LJjgWK540SE",
   "title": "【雑談】 にじフェスでした。【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -7388,6 +7402,20 @@
   ]
  },
  {
+  "id": "4loZUxk0puM",
+  "title": "【MECHATU-A 1st 3DLive】まであと3日！ #めっちゃ_Eライブ",
+  "kind": "video",
+  "status": "done",
+  "start": "2025-07-03T09:30:03Z",
+  "end": "2025-07-03T09:45:03Z",
+  "url": "https://www.youtube.com/watch?v=4loZUxk0puM",
+  "thumb": "https://i.ytimg.com/vi/4loZUxk0puM/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "MECHATU-A 1st 3DLive",
+  "collabs": []
+ },
+ {
   "id": "iad8fIinxQQ",
   "title": "【シージ】デッドスカルのボスと【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -7399,6 +7427,20 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "シージ",
+  "collabs": []
+ },
+ {
+  "id": "YByqW0ueFkE",
+  "title": "【MECHATU-A 1st 3DLive】まであと2日！ #めっちゃ_Eライブ",
+  "kind": "video",
+  "status": "done",
+  "start": "2025-07-04T09:30:19Z",
+  "end": "2025-07-04T09:45:19Z",
+  "url": "https://www.youtube.com/watch?v=YByqW0ueFkE",
+  "thumb": "https://i.ytimg.com/vi/YByqW0ueFkE/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "MECHATU-A 1st 3DLive",
   "collabs": []
  },
  {
@@ -7434,6 +7476,34 @@
     "url": "https://www.youtube.com/watch?v=snDMiJ9B1nc"
    }
   ]
+ },
+ {
+  "id": "hvdosy24TW0",
+  "title": "【MECHATU-A 1st 3DLive】明日7/6(日)配信！ #めっちゃ_Eライブ",
+  "kind": "video",
+  "status": "done",
+  "start": "2025-07-05T03:00:51Z",
+  "end": "2025-07-05T03:15:51Z",
+  "url": "https://www.youtube.com/watch?v=hvdosy24TW0",
+  "thumb": "https://i.ytimg.com/vi/hvdosy24TW0/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "MECHATU-A 1st 3DLive",
+  "collabs": []
+ },
+ {
+  "id": "L9Hl84VAM8I",
+  "title": "【3D Live】MECHATU-A 1st 3DLive #めっちゃ_Eライブ",
+  "kind": "stream",
+  "status": "done",
+  "start": "2025-07-06T11:00:07Z",
+  "end": "2025-07-06T12:04:30Z",
+  "url": "https://www.youtube.com/watch?v=L9Hl84VAM8I",
+  "thumb": "https://i.ytimg.com/vi/L9Hl84VAM8I/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "3D Live",
+  "collabs": []
  },
  {
   "id": "GjV6UVVRCwI",
@@ -7475,7 +7545,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "シージ",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "にじさんじ",
+    "title": "【踊ってみた】MECHA-MECHA / MECHATU-A",
+    "url": "https://www.youtube.com/watch?v=8gnqXSSQFMc"
+   }
+  ]
  },
  {
   "id": "eNrjFKEk19Q",
@@ -10740,7 +10816,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "NTE",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "にじさんじ",
+    "title": "【MV】The Hearties / MECHATU-A",
+    "url": "https://www.youtube.com/watch?v=SYoB6BLSCNA"
+   }
+  ]
  },
  {
   "id": "3TW9rQH5L0M",
@@ -11146,6 +11228,20 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "スト６",
+  "collabs": []
+ },
+ {
+  "id": "rK4dh85C47M",
+  "title": "【全曲試聴】MECHATU-A 1st Mini Album「On-Deck!」XFDムービー【#MECHATUA_1stミニアルバム】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-06-11T10:30:06Z",
+  "end": "2026-06-11T10:35:20Z",
+  "url": "https://www.youtube.com/watch?v=rK4dh85C47M",
+  "thumb": "https://i.ytimg.com/vi/rK4dh85C47M/mqdefault.jpg",
+  "channel": "にじさんじ",
+  "own": false,
+  "game": "全曲試聴",
   "collabs": []
  },
  {
