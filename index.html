@@ -23,10 +23,11 @@
   --empty:#eef2f8; --empty-num:#b3c0d8;
   --font-label:"Josefin Sans","Zen Maru Gothic",sans-serif;
   --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
-  --hh:22px;
+  --hh:clamp(14px,calc((100vh - 120px) / 24),28px);
+  --hh:clamp(14px,calc((100dvh - 120px) / 24),28px);
   --grid-bg:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
 }
-@media (min-width:720px){:root{--hh:28px}}
+
 
 *,*::before,*::after{box-sizing:border-box}
 html,body{min-height:100%}
@@ -106,7 +107,7 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .col{position:relative;height:calc(24 * var(--hh));border-left:1px dashed var(--grid-2);
   background-image:linear-gradient(to bottom,var(--grid-2) 1px,transparent 1px);background-size:100% var(--hh)}
 .col.today{background-color:rgb(228 235 246 / .6)}
-.ev{position:absolute;left:2px;right:2px;border:0;border-radius:6px;padding:5px 3px;overflow:hidden;
+.ev{position:absolute;left:2px;right:2px;border:0;border-radius:6px;padding:4px 3px;overflow:hidden;
   display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:1px;
   font-family:var(--font-label);font-size:.74rem;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums;
   box-shadow:0 1px 2px rgb(63 77 110 / .18);transition:transform .15s,box-shadow .15s}
@@ -114,8 +115,8 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .ev .g{font-family:var(--font-body);font-weight:700;font-size:.78rem}
 .ev.top-cut{border-top-left-radius:0;border-top-right-radius:0}
 .ev.bot-cut{border-bottom-left-radius:0;border-bottom-right-radius:0}
-@media (min-width:720px){.ev{font-size:.84rem;padding:7px 4px}.ev .g{font-size:.9rem}}
-@media (max-width:480px){.ev{font-size:.62rem;padding:4px 1px;letter-spacing:-.02em}.ev .g{font-size:.66rem;text-overflow:clip}}
+@media (min-width:720px){.ev{font-size:.8rem;padding:5px 4px}.ev .g{font-size:.86rem}}
+@media (max-width:480px){.ev{font-size:.58rem;padding:3px 1px;letter-spacing:-.03em}.ev .g{font-size:.62rem;text-overflow:clip}.ev .tm{white-space:normal}}
 @media (prefers-reduced-motion:reduce){.ev{transition:none}.ev:hover{transform:none}}
 /* 予定：点線の枠 */
 .ev.up{background:rgb(255 255 255 / .9);color:var(--ink);box-shadow:inset 0 0 0 2px var(--gd,var(--blue));border:0;
@@ -164,15 +165,20 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
   clip-path:polygon(0 0,100% 0,85% 50%,100% 100%,0 100%);pointer-events:none}
 @media (max-width:480px){.dl-badge{font-size:.5rem}}
 
+/* ---- ブロック内：時刻／ゲーム(時間)／タイトル ---- */
+.ev .tm{white-space:nowrap}
+.ev .g small{font-size:.86em;font-weight:600;margin-left:1px}
+.sh-thumb{display:block;margin:0 -2px;border-radius:6px;overflow:hidden;aspect-ratio:16 / 9;background:var(--blue-xl);box-shadow:0 2px 6px rgb(63 77 110 / .2)}
+.sh-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 /* ---- 週表示のサムネイルとタイトル ---- */
-.evth{display:block;flex:none;width:calc(100% + 6px);margin:-5px -3px 4px;aspect-ratio:16 / 9;overflow:hidden;background:rgb(255 255 255 / .3)}
+.evth{display:block;flex:none;width:calc(100% + 6px);margin:-4px -3px 3px;aspect-ratio:16 / 9;overflow:hidden;background:rgb(255 255 255 / .3)}
 .evth img{display:block;width:100%;height:100%;object-fit:cover}
-.ev .tt{display:block;flex:1 1 auto;min-height:0;width:100%;margin-top:4px;padding-top:4px;border-top:1px dashed currentColor;
+.ev .tt{display:block;flex:1 1 auto;min-height:0;width:100%;margin-top:3px;padding-top:3px;border-top:1px dashed currentColor;
   font-family:var(--font-body);font-weight:500;font-size:.64rem;line-height:1.4;text-align:left;overflow:hidden;overflow-wrap:anywhere;
   -webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
 .ev.up .tt{border-top-color:var(--blue-l)}
-@media (min-width:720px){.evth{width:calc(100% + 8px);margin:-7px -4px 5px}.ev .tt{font-size:.74rem}}
-@media (max-width:480px){.evth{width:calc(100% + 2px);margin:-4px -1px 3px}.ev .tt{font-size:.56rem;line-height:1.35;letter-spacing:0}}
+@media (min-width:720px){.evth{width:calc(100% + 8px);margin:-5px -4px 4px}.ev .tt{font-size:.74rem}}
+@media (max-width:480px){.evth{width:calc(100% + 2px);margin:-3px -1px 2px}.ev .tt{font-size:.56rem;line-height:1.35;letter-spacing:0}}
 /* ---- ゲーム色（名前ごとに --gc/--gi/--gd/--gp）---- */
 .gx{background:var(--gp,linear-gradient(transparent,transparent)),var(--gc);color:var(--gi)}
 .ph.gx{background:var(--gp,linear-gradient(transparent,transparent)),linear-gradient(135deg,var(--gc) 0%,var(--gd) 100%)}
@@ -273,6 +279,7 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 <div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sh-title">
   <div class="sheet-in">
     <div class="sheet-top"><div class="sheet-tags"><span id="sh-tag" class="tag"></span><span id="sh-status" class="tag st" hidden></span></div><button class="round" id="sh-close" aria-label="閉じる">×</button></div>
+    <a id="sh-thumb" class="sh-thumb" target="_blank" rel="noopener" hidden><img alt=""></a>
     <h3 id="sh-title"></h3>
     <dl id="sh-dl"></dl>
     <a id="sh-link" class="open" target="_blank" rel="noopener"></a>
@@ -349,7 +356,8 @@ const PAL=[["#8fa4cc","#ffffff","#5f739c","s"],["#c7d5ec","#33405f","#9db0d6","g
 const gameOf=t=>{const m=String(t||"").match(/【([^】]+)】/);return m?m[1].trim():"その他"};
 const normGame=g=>{if(!g)return"その他";g=LEGACY[g]||String(g).trim();const u=g.toUpperCase();
   if(u.includes("VALORANT")||u==="VALO"||g.includes("ヴァロ"))return"VALORANT";if(u.includes("APEX")||g.includes("エーペックス"))return"APEX";return g};
-const gInfo=g=>{if(KNOWN[g])return{short:KNOWN[g].short,...KNOWN[g]};let h=0;for(const ch of g)h=(h*31+ch.codePointAt(0))>>>0;const p=PAL[h%PAL.length];return{short:g,c:p[0],i:p[1],d:p[2],p:p[3]}};
+const gInfo=g=>({short:KNOWN[g]?KNOWN[g].short:g,c:"var(--valo)",i:"var(--valo-ink)",d:"var(--valo-deep)"});
+const gInfoColored=g=>{if(KNOWN[g])return{short:KNOWN[g].short,...KNOWN[g]};let h=0;for(const ch of g)h=(h*31+ch.codePointAt(0))>>>0;const p=PAL[h%PAL.length];return{short:g,c:p[0],i:p[1],d:p[2],p:p[3]}};
 // 表示用タイトル：先頭のゲーム名【】と、末尾の【小柳ロウ/にじさんじ】などを外す
 const cleanTitle=t=>String(t||"").replace(/^\s*【[^】]*】\s*/,"").replace(/\s*【[^】]*(小柳|にじさんじ|Koyanagi)[^】]*】\s*$/i,"").trim()||String(t||"");
 const gStyle=g=>{const x=gInfo(g);return`--gc:${x.c};--gi:${x.i};--gd:${x.d}`+(x.p?`;--gp:${PAT[x.p]}`:"")};
@@ -404,13 +412,18 @@ function summary(a,b){
   const ranked=Object.entries(per).sort((x,y)=>y[1]-x[1]),top=ranked.slice(0,5),rest=ranked.slice(5).reduce((s,x)=>s+x[1],0);
   const pc=posts.filter(p=>p.time>=a&&p.time<b).length;
   $("summary").innerHTML=`<span class="stat"><small>STREAM</small><b>${ss.length}</b><small>回</small></span><span class="stat"><small>HOURS</small><b>${hrs(tot)}</b><small>時間</small></span><span class="stat"><small>POST</small><b>${pc}</b><small>件</small></span>${up?`<span class="stat"><small>PLAN</small><b>${up}</b><small>予定</small></span>`:""}`+
-    `<span class="chips">`+top.map(([g,v])=>`<span class="chip"><span class="dot gx" style="${gStyle(g)}"></span>${esc(g)} ${hrs(v)}h</span>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
+    `<span class="chips">`+top.map(([g,v])=>`<span class="chip">${esc(g)} ${hrs(v)}h</span>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
     `<span class="chip"><span class="key-co"></span>コラボ</span><span class="chip"><span class="key-up"></span>予定</span></span>`;
 }
 
 function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
 
+let HH=22,COLW=100;
+function measure(){const v=$("view");HH=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hh"))||22;
+  const probe=document.createElement("div");probe.style.cssText="position:absolute;visibility:hidden;height:var(--hh)";document.body.appendChild(probe);HH=probe.getBoundingClientRect().height||HH;probe.remove();
+  COLW=Math.max(30,((v?v.clientWidth:700)-30)/7-4)}
 function renderWeek(){
+  measure();
   const ws=sow(cursor),we=addDays(ws,7),today=sod(Date.now());
   const s=new Date(ws),e=new Date(addDays(ws,6));
   $("label").textContent=`${s.getFullYear()}年 ${s.getMonth()+1}/${s.getDate()} – ${e.getMonth()+1}/${e.getDate()}`;
@@ -437,11 +450,12 @@ function renderWeek(){
       if(isMain){
         const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
         const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
-        // 5時間以上のブロックは上部にサムネイル、2.5時間以上はタイトルも表示
-        const thumb=x.thumb&&len>=5?`<span class="evth"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>`:"";
-        const tt=len>=2.5?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
-        inner=len>=1.9?`${thumb}<span>${time}</span><span class="g">${esc(gInfo(x.game).short)}</span><span>${sub}</span>${!x.own&&len>=3?'<span class="gl">他枠</span>':""}${tt}`
-             :`<span class="g">${esc(gInfo(x.game).short)}</span>`;
+        // 実際の高さ（px）を見て、サムネイル・タイトルを入れるか決める
+        const px=len*HH,thH=COLW*9/16;
+        const thumb=x.thumb&&px>=thH+52?`<span class="evth"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>`:"";
+        const gl=`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`;
+        const tt=px>=(thumb?thH:0)+44?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
+        inner=px>=30?`${thumb}<span class="tm">${time}</span>${gl}${!x.own&&px>=70?'<span class="gl">他枠</span>':""}${tt}`:gl;
       }
       body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
     });
@@ -492,12 +506,13 @@ function render(){
 
 function openSheet(ev){
   const tag=$("sh-tag"),st=$("sh-status"),dl=$("sh-dl"),link=$("sh-link"),ex=$("sh-extra");
-  ex.innerHTML="";st.hidden=true;
+  ex.innerHTML="";st.hidden=true;$("sh-thumb").hidden=true;
   if(ev.kind==="stream"){
     tag.className="tag gx";tag.setAttribute("style",gStyle(ev.game));tag.textContent=ev.game;
     const sts=isUp(ev)?(ev.manual?"予定（枠未作成）":"予定"):ev.status==="live"?"配信中":ev.collabs.length||!ev.own?"コラボ":"";
     if(sts){st.hidden=false;st.textContent=sts}
     $("sh-title").textContent=ev.title;
+    if(ev.thumb){const a=$("sh-thumb");a.hidden=false;a.href=ev.url;a.querySelector("img").src=ev.thumb;a.querySelector("img").alt=ev.title}
     dl.innerHTML=`<dt>日付</dt><dd>${md(ev.start)}</dd>`+
       (isUp(ev)?`<dt>時間</dt><dd>${hm(ev.start)} 開始予定</dd>`
                :`<dt>時間</dt><dd>${hm(ev.start)} – ${ev.status==="live"?"配信中":endLabel(ev.start,ev.end)}</dd><dt>長さ</dt><dd>約${hrs(ev.end-ev.start)}時間</dd>`)+
@@ -540,6 +555,7 @@ $("today").onclick=()=>{cursor=Date.now();render()};
 $("backdrop").onclick=closeSheet;$("sh-close").onclick=closeSheet;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
 getData().then(d=>{normalize(d);if(d.start)cursor=d.start;render()});
+let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>{if(view==="week")render()},150)});
 })();
 // ---- 追加フォーム（GitHub の Issue 経由で登録）----
 // 登録先リポジトリは GitHub Pages の URL（ユーザー名.github.io/リポジトリ名/）から自動で決める
