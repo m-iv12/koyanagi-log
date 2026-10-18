@@ -316,8 +316,8 @@ body.mode-list #prev,body.mode-list #next,body.mode-list #today{display:none}
 /* 見出し：PCは2行（小柳ロウ／配信スケジュール）、スマホは1行 */
 h1 .br::before{content:"　"}
 @media (min-width:900px){h1 .br{display:block}h1 .br::before{content:none}}
-.ev .g.cont{opacity:.85;font-size:.9em}
-.evin:has(.cont){padding-top:4px}
+.evin.next{padding-top:4px}
+.ev .tt.solo{margin-top:0;padding-top:0;border-top:0}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -618,31 +618,27 @@ function renderWeek(){
     body+=`<div class="col${d0===today?" today":""}">`;
     segs.forEach(x=>{
       const a=Math.max(x.start,d0),b=Math.min(x.end,d1);
-      // 日付をまたぐ配信は長い方の断片にラベルを置く
       const first=Math.min(x.end,addDays(sod(x.start),1))-x.start;
       const rest=x.end-x.start-first;
-      const isMain=a===x.start?first>=rest:(b-a)>first;
       const top=(a-d0)/DAYMS*100,ht=(b-a)/DAYMS*100;
       const cut=(a>x.start?" top-cut":"")+(b<x.end?" bot-cut":"");
       const len=(b-a)/H;
       // サムネイルは青を重ねて背景にうっすら敷く（予定のカードは除く）
       const bg=x.thumb&&!isUp(x)?` style="--th:url(&quot;${esc(x.thumb)}&quot;)"`:"";
-      const fpx=len*HH;
-      // 日付をまたいだ配信のもう片方：背景と、入るならゲーム名を表示
-      let inner=`<span class="evin${bg?" hasth":""}"${bg}>${fpx>=24?`<span class="g cont">${esc(gInfo(x.game).short)}<small>（続き）</small></span>`:""}</span>`;
-      if(isMain){
-        const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
-        const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
-        // 実際の高さ（px）を見て、サムネイル・タイトルを入れるか決める
-        const px=len*HH,thH=COLW*9/16;
-        // 入りきる行だけを出す（上の余白10px＋ゲーム行16px＋タイトル1行16px が目安）
-        const thumb=""; // 週表示ではサムネイルを出さない（詳細と月表示のみ）
-        const base=thumb?thH:10;
-        const gl=px>=base+14?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
-        const tt=px>=base+16+16?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
-        const pill=`<span class="pill">${isUp(x)?hm(x.start)+"〜":x.status==="live"?"LIVE":hm(x.start)}</span>`;
-        inner=`${pill}<span class="evin${bg?" hasth":""}"${bg}>${thumb}${gl}${tt}</span>`;
-      }
+      // 日付をまたぐ配信：時刻の札は必ず開始側。ゲーム名・タイトルは開始側に入りきらなければ翌日側へ
+      const isFirst=a===x.start, isSecond=!isFirst&&a===addDays(sod(x.start),1);
+      const firstPx=first/H*HH, restPx=rest/H*HH;
+      const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
+      const gameFirst=firstPx>=24||restPx<24;              // ゲーム行（上の余白10px＋14px）
+      const titleFirst=firstPx>=(gameFirst?24:10)+32||restPx<(gameFirst?16+4:24+16); // タイトル2行ぶん
+      const px=len*HH;
+      let showG=false,showT=false;
+      if(isFirst){showG=gameFirst&&px>=24;showT=titleFirst&&px>=(showG?24:10)+16}
+      else if(isSecond){showG=!gameFirst&&px>=18;showT=!titleFirst&&px>=(showG?18:4)+16}
+      const gl=showG?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
+      const tt=showT?`<span class="tt${showG?"":" solo"}">${esc(cleanTitle(x.title))}</span>`:"";
+      const pill=isFirst?`<span class="pill">${isUp(x)?hm(x.start)+"〜":x.status==="live"?"LIVE":hm(x.start)}</span>`:"";
+      const inner=`${pill}<span class="evin${bg?" hasth":""}${isFirst?"":" next"}"${bg}>${gl}${tt}</span>`;
       body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
     });
     posts.filter(p=>p.time>=d0&&p.time<d1).forEach(p=>{
