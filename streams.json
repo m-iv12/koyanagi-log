@@ -1236,7 +1236,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【キングダムハーツ1】真夏のハロウィン！ナイトメアーの世界へ！#６【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=cOsIKSzQiUA"
+   }
+  ]
  },
  {
   "id": "pso2vS5mCRk",
@@ -1842,6 +1848,21 @@
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【VCR ARK】完全初見！スト鯖ARKに上陸！with 小柳ロウ【赤城ウェン/にじさんじ】",
     "url": "https://www.youtube.com/watch?v=gLilfza9rxw"
+   },
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 弾き語り 】しっと～～りと弾き語りをします。【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=RO4dD9KmIK0"
+   },
+   {
+    "channel": "宇佐美リト / Usami Rito【にじさんじ】",
+    "title": "【Detroit: Become Human】わいの完全初見デトロイトを始めるぞ！ その２【宇佐美リト/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=NO-5wT2qYnI"
+   },
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Poppy Playtime】ホッピーって美味しいのかな、毎回気になるけど「ビール×焼酎？別のにするか…」ってなる【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=mldeKJSbP7k"
    }
   ]
  },
@@ -1871,7 +1892,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VCR ARK",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "宇佐美リト / Usami Rito【にじさんじ】",
+    "title": "【Detroit: Become Human】わいの完全初見デトロイトを始めるぞ！ その３【宇佐美リト/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=5sEH9h4N8H4"
+   }
+  ]
  },
  {
   "id": "dhMA5FgRD8A",
@@ -1885,7 +1912,28 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VCR ARK",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 OVERCOOKED!2】あのメンツが再び！？今度はワイワイお料理コラボ！！！！【 緑仙 / でびでび・でびる / 佐伯イッテツ / 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=InuHwkoFjqg"
+   },
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【VCR ARK】戦闘どうする？ 超絶初心者のスト鯖ARK【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=A2LSxhVmyu0"
+   },
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 スト6 】ちょっとだけランクしてもいいですか。【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=GuPUgc3Lrgs"
+   },
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【 あつまれどうぶつの森 】ローン返済のためにひたすら釣る【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=br_gJB6l9rY"
+   }
+  ]
  },
  {
   "id": "F9MYc945-cY",
@@ -1899,7 +1947,28 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VCR ARK",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【VCR ARK】最終日！２匹目で参る！ 超絶初心者のスト鯖ARK【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=N0V3fAcCjmw"
+   },
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 Dark Deception#1 】猿 vs メカニック【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=Ve2_GvM28eQ"
+   },
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Dinosaur Fossil Hunter】プロ化石鑑定士、掘ります。【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=rbb2mLWIceY"
+   },
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【Phasmophobia】ソロで心霊調査ｗ【にじさんじ/叢雲カゲツ】",
+    "url": "https://www.youtube.com/watch?v=KtVQxYZT4VU"
+   }
+  ]
  },
  {
   "id": "vKXcgsBJLLA",
@@ -1913,7 +1982,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "雑談",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Garten of Banban 】ヒーローが幼稚園に訪問する回（7話くらい）【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=nzkBRLo8mXo"
+   }
+  ]
  },
  {
   "id": "Es3cGfzNk4Q",
@@ -1927,7 +2002,18 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "HITMAN",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Garten of Banban 3】ヒーローが幼稚園でお弁当を分けてもらう回（9話くらい）【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=RKij7WW3G2g"
+   },
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【ごく普通の鹿のゲーム DEEEER Simulator】シ・カゲツ【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=GirxMgHp6lo"
+   }
+  ]
  },
  {
   "id": "4GeHsdvFrAw",
@@ -1941,7 +2027,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【#にじスプラDREAMMATCH】顔合わせです。【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=H8XezRSsNDs"
+   }
+  ]
  },
  {
   "id": "qewAmV6AQ2s",
@@ -1969,7 +2061,18 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VALORANT",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "宇佐美リト / Usami Rito【にじさんじ】",
+    "title": "【スーパーマリオブラザーズ ワンダー】待望の最新作！わい実はマリオ結構うまいねん【宇佐美リト / にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=nl-Be5Fwf48"
+   },
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【#にじスプラDREAMMATCH】vs ノックアウトGG【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=-H8p8QO_858"
+   }
+  ]
  },
  {
   "id": "K7FAHYKJf-4",
@@ -1984,6 +2087,11 @@
   "own": true,
   "game": "APEX",
   "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【スーパーマリオブラザーズ ワンダー】クリアまで走り抜けます。【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=sjuK_HE-aS0"
+   },
    {
     "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
     "title": "【APEX LEGENDS】お菓子くれなきゃ一発ギャグ。【にじさんじ/緋八マナ w/ 小柳ロウ / 赤城ウェン】",
@@ -2008,7 +2116,23 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "宇佐美リト / Usami Rito【にじさんじ】",
+    "title": "【Papers, Please】世界一厳しい入国審査官の俺の目をくぐれるかな？【宇佐美リト/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=3VMaz7t4_Lw"
+   },
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【HANS】スイカと本気で向き合う！転がす方向で！【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=R5d23b3lgGs"
+   },
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【スーパーマリオブラザーズ ワンダー】クリアまで走り抜けます。2【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=_QxrwkMR7gk"
+   }
+  ]
  },
  {
   "id": "wv7Npn18FfM",
@@ -2022,7 +2146,33 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "スプラトゥーン３",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【ARK:SA】新ARKリメイク！初心者が島に降り立つ！初の拠点作る！＃１【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=jSux9GiN_0c"
+   },
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【Cats Organized Neatly】猫パズル、チル配信【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=yn6liWrFhYU"
+   },
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 22:30~雑談→23:00~スプラフェス 】10月の振り返りをした後スプラフェス！！！！！！！【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=qjMq7JMHYc4"
+   },
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【スプラトゥーン3】大会を経て成長した男のブキルーレットフェス【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=hDyAWTibdjA"
+   },
+   {
+    "channel": "宇佐美リト / Usami Rito【にじさんじ】",
+    "title": "【League of Legends】よう！宇佐美セトだ！ゴールドをこっそり目指すゼ！母ちゃん！！【宇佐美リト / にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=5JJUMywqcwg"
+   }
+  ]
  },
  {
   "id": "2ifBrJOhRcw",
@@ -2036,7 +2186,18 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "ウツロマユ",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 DON'T SCREAM 】叫んだら最初からやり直し！？喉にやさしいホラーゲームだなぁ！！！！【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=Q4lOsWtocTA"
+   },
+   {
+    "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
+    "title": "【スイカゲーム】ハロ前日パーティー！4000点いくぞ！！ 15話【赤城ウェン/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=00fDRs2pcq8"
+   }
+  ]
  },
  {
   "id": "cUUTEfp6lj4",
@@ -2050,7 +2211,18 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "Labyrinthine",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Labyrinthine】ハロウィン幽霊調査【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=GoP8GSDzVc0"
+   },
+   {
+    "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
+    "title": "【告知あり】ハロウィンに叫ぶ漢達【LABYRINTHINE】【にじさんじ/緋八マナ】",
+    "url": "https://www.youtube.com/watch?v=n0d8M_p4CSU"
+   }
+  ]
  },
  {
   "id": "caeQsPkros8",
@@ -2125,6 +2297,11 @@
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【フォートナイト】シーズン１の初期世界へ！with 小柳ロウ【赤城ウェン/にじさんじ】",
     "url": "https://www.youtube.com/watch?v=kq6jZAkeGKM"
+   },
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【 原神 】璃月編 終 ＆ フォンテーヌ観光【にじさんじ/叢雲カゲツ】",
+    "url": "https://www.youtube.com/watch?v=7ZhMR7WU4iA"
    }
   ]
  },
@@ -2264,7 +2441,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "にじ鯖RUST",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 RUST 】は じ め て の ら す と with 小柳さんちのロウくん【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=brbBbewDgjg"
+   }
+  ]
  },
  {
   "id": "A1MQrq5bDhQ",
@@ -2491,7 +2674,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VCR GTA",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
+    "title": "【視聴者参加人狼】ジンロウゲエム【にじさんじ所属の佐伯イッテツ】",
+    "url": "https://www.youtube.com/watch?v=76kwzkzEQGI"
+   }
+  ]
  },
  {
   "id": "-6qXouA5w2Y",
@@ -4248,7 +4437,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
+    "title": "【APEX】だらだランク【にじさんじ/緋八マナ w / 小柳 @1】",
+    "url": "https://www.youtube.com/watch?v=fRcz1Mk0lj8"
+   }
+  ]
  },
  {
   "id": "_o_I9GPd52s",
@@ -5262,6 +5457,11 @@
   "game": "APEX",
   "collabs": [
    {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【雑談】1.5周年、1.5個お知らせあり。【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=bl9G6Nd06bM"
+   },
+   {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【APEX ➡ スプラトゥーン3】ハロウィンイベントっしょ！ with 小柳ロウ、星導ショウ【赤城ウェン/にじさんじ】",
     "url": "https://www.youtube.com/watch?v=AMX2X_5Ggn4"
@@ -5280,7 +5480,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VALORANT",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【あつまれどうぶつの森】叢雲式クリエイト #32【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=h81IlM7HFwg"
+   }
+  ]
  },
  {
   "id": "Jhmdjk3QXvc",
@@ -5308,7 +5514,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "#にじさんじハードコア対決2",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【マリオカート8DX】超久々高速運転【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=sYDYcvI74jQ"
+   }
+  ]
  },
  {
   "id": "E51UgFTa4a4",
@@ -5322,7 +5534,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "carry the glass",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
+    "title": "【スプラトゥーン3】ぬっていいんですか？　w/伊波 緋八 赤城【叢雲カゲツ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=t5J-QSD3tcw"
+   }
+  ]
  },
  {
   "id": "n_khHRYh4lE",
@@ -5499,7 +5717,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "VCRGTA3",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
+    "title": "【Persona5: The Phantom X】クローズドβテスト プレイします！！【にじさんじ／佐伯イッテツ】",
+    "url": "https://www.youtube.com/watch?v=9PMaF-heWEA"
+   }
+  ]
  },
  {
   "id": "vopYArBLoxg",
@@ -6773,7 +6997,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "R.E.P.O.",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 R.E.P.O. 】ヒーロー調査隊、再び w / 緋八, 小柳, 星導【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=YOMQNbs7_2Y"
+   }
+  ]
  },
  {
   "id": "R65Fw52C0zo",
@@ -6891,7 +7121,18 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
+    "title": "【APEX LEGENDS】新シーズン到来！ロウとライと探検するで～！【にじさんじ/緋八マナ】",
+    "url": "https://www.youtube.com/watch?v=5pgP5oYE3Sc"
+   },
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 Apex Legends 】新シーズン探索でも w / 小柳, 緋八【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=gVWubcKOJYU"
+   }
+  ]
  },
  {
   "id": "ZnZSZ0JSQPc",
@@ -8490,7 +8731,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "MADTOWN",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
+    "title": "【ハロウィーン企画】黄色の狂騒パーチー【にじさんじ/佐伯イッテツ】",
+    "url": "https://www.youtube.com/watch?v=Mb7mdSQraaQ"
+   }
+  ]
  },
  {
   "id": "XycrciJFsGg",
@@ -9998,7 +10245,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
+    "title": "【ダンジョンクロウラー】クレーンゲームで装備ゲット系ゲーム【にじさんじ／佐伯イッテツ】",
+    "url": "https://www.youtube.com/watch?v=ls5vtPtAyNE"
+   }
+  ]
  },
  {
   "id": "jBex2l8oQEA",
@@ -10404,7 +10657,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 OW 】帰宅後即ランク w / ぷてさん, 小柳【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=Vv7faqabUxY"
+   }
+  ]
  },
  {
   "id": "Bp3JOsEne4w",
@@ -10586,7 +10845,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 OW 】タンクフルパGO w / 小柳, ぷてぃ3, 未来人3, 日裏3【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=OQfB_AIBhOI"
+   }
+  ]
  },
  {
   "id": "GhF3-myTH2c",
@@ -11032,7 +11297,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "サブノーティカ２",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 サブノーティカ2 】深夜遊泳 w / 小柳【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=78_wcFmbcnI"
+   }
+  ]
  },
  {
   "id": "xoiFE51BLZI",
@@ -11102,7 +11373,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "スト６",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
+    "title": "【#にじバイオヒールボ】こ、この煌めきは…！？【にじさんじ/佐伯イッテツ/長尾景】",
+    "url": "https://www.youtube.com/watch?v=2Oiyz4jrbw0"
+   }
+  ]
  },
  {
   "id": "YTZDISSl2xU",
@@ -11481,6 +11758,11 @@
   "own": true,
   "game": "League of Legends",
   "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 League of legends 】奇跡のフルパ w / 星導宇佐美小柳叢雲【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=0GNerfHVZLI"
+   },
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
     "title": "【LOL】ひーろーる w/宇佐美リト 小柳ロウ 伊波ライ  星導ショウ【叢雲カゲツ/にじさんじ】",
