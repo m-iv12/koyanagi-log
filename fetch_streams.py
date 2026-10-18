@@ -89,6 +89,28 @@ def classify(title):
     return normalize_game(m.group(1) if m else None)
 
 
+KATA = "ァ-ヺー"
+KANJI = "一-龥々"
+
+
+def keyword_pattern(words):
+    """キーワードの前後が同じ種類の文字（カタカナ・漢字）で続く場合は一致としない。
+    例：「ロウ」は「ハロウィン」「フロウ」には当たらない。"""
+    parts = []
+    for w in words:
+        p = re.escape(w)
+        if re.match(f"[{KATA}]", w):
+            p = f"(?<![{KATA}])" + p
+        elif re.match(f"[{KANJI}]", w):
+            p = f"(?<![{KANJI}])" + p
+        if re.search(f"[{KATA}]$", w):
+            p += f"(?![{KATA}])"
+        elif re.search(f"[{KANJI}]$", w):
+            p += f"(?![{KANJI}])"
+        parts.append(p)
+    return re.compile("|".join(parts), re.I) if parts else None
+
+
 def resolve_channel(ref):
     """@ハンドル または UC で始まるチャンネル ID から (チャンネル名, アップロード再生リスト ID) を返す。"""
     if ref.startswith("UC"):
@@ -207,7 +229,11 @@ def update_own(since):
 def update_partners(since, scanned):
     cache = {} if FULL else load(PARTNER_CACHE, {})
     exclude = {video_id(x) for x in load(DATA / "collab_exclude.json", [])}
-    keywords = [k.lower() for k in CONFIG.get("collab_keywords", [])]
+    kw = keyword_pattern(CONFIG.get("collab_keywords", []))
+    matches = lambda r: bool(kw and kw.search(r["title"] + "\n" + r.get("description", "")))
+    # キーワードの条件を変えたときのため、自動で拾った分は毎回条件を当て直す
+    for vid in [k for k, r in cache.items() if r.get("source") == "auto" and not matches(r)]:
+        cache.pop(vid)
     to_fetch = []
 
     # 自動：コラボ相手チャンネルの新しい動画
@@ -259,8 +285,7 @@ def update_partners(since, scanned):
                 rec["source"] = "watch"
             cache[vid] = rec
         elif vid in auto_ids and rec["kind"] == "stream":
-            text = (rec["title"] + "\n" + rec["description"]).lower()
-            if any(k in text for k in keywords):
+            if matches(rec):
                 cache[vid] = rec
     for vid in exclude:
         cache.pop(vid, None)
