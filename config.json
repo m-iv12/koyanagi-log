@@ -18,5 +18,7 @@
     "小柳ロウ",
     "Koyanagi Rou"
   ],
-  "collab_min_overlap_minutes": 30
-}
+  "collab_min_overlap_minutes": 30,
+  "watch_channels": [
+    {"channel": "UCX7YkU9nEeaoZbkVLVajcMg", "keywords": ["MECHATU-A"]}
+  ]
