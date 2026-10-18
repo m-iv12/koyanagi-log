@@ -1,0 +1,13 @@
+{
+  "channel": "@KoyanagiRou",
+  "since": "2024-01-01T00:00:00",
+  "include_own_videos": false,
+  "games": {
+    "valo": ["VALORANT", "ヴァロ", "VALO"],
+    "apex": ["APEX", "エーペックス"],
+    "chat": ["雑談", "おしゃべり"]
+  },
+  "collab_channels": [],
+  "collab_keywords": ["小柳ロウ", "Koyanagi Rou"],
+  "collab_min_overlap_minutes": 30
+}

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>ロウ配信ログ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Saira+Extra+Condensed:wght@500;700&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 灰色の紙（デザイン画の台紙）の上に、黒いスーツ地のカード。ベルト帯で区切り、金の三角金具と青い裏地をアクセントに */
+:root{
+  --paper:#646468; --paper-ink:#f4f3ee; --paper-muted:#dcdbd5;
+  --cloth:#141416; --cloth-2:#1b1b1f; --seam:#26262b; --seam-strong:#3a3a42; --strap:#0a0a0b;
+  --ink:#eeede8; --muted:#9a99a3; --lining:#3a46d1; --lining-hi:#6f7bff; --gold:#c9a24c; --gold-hi:#e6c879;
+  --sat:#8a94ff; --sun:#e39a9a;
+  --valo:#3a46d1; --valo-ink:#ffffff; --valo-deep:#151a5c;
+  --apex:#d8d7d1; --apex-ink:#121214; --apex-deep:#7e7d78;
+  --chat:#c9a24c; --chat-ink:#1a1405; --chat-deep:#5e4614;
+  --other:#3b3b42; --other-ink:#eeede8; --other-deep:#151517;
+  --empty:#1a1a1d; --empty-num:#3e3e46;
+  --font-display:"Dela Gothic One","Zen Kaku Gothic New","Hiragino Sans",sans-serif;
+  --font-body:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+  --font-num:"Saira Extra Condensed","Arial Narrow",sans-serif;
+  --font-hand:"Yomogi","Zen Kaku Gothic New",sans-serif;
+  --hh:22px;
+  color-scheme:dark;
+}
+@media (min-width:720px){:root{--hh:28px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0}
+body{color:var(--paper-ink);font-family:var(--font-body);font-size:15px;line-height:1.6;
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(ellipse 160px 110px at 8% 22%,rgb(255 255 255 / .16),transparent 70%),
+    radial-gradient(ellipse 90px 140px at 92% 12%,rgb(255 255 255 / .12),transparent 70%),
+    radial-gradient(ellipse 220px 90px at 80% 78%,rgb(0 0 0 / .22),transparent 70%),
+    radial-gradient(circle at 18% 88%,rgb(0 0 0 / .18) 0 3px,transparent 4px),
+    radial-gradient(circle at 21% 84%,rgb(0 0 0 / .18) 0 2px,transparent 3px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-attachment:fixed}
+.wrap{max-width:1040px;margin:0 auto;padding-block:22px 40px;position:relative;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:14px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
+
+/* 白い×マーク */
+.xmark{position:absolute;pointer-events:none;stroke:#fff;stroke-linecap:round;opacity:.75}
+.xmark.a{right:max(16px,env(safe-area-inset-right,0px));top:2px;width:64px;height:64px}
+.xmark.b{left:-6px;bottom:6px;width:46px;height:46px;opacity:.5}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-right:56px}
+.brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font-family:var(--font-display);font-weight:400;font-size:1.55rem;margin:0;letter-spacing:.04em;text-wrap:balance;
+  color:#fff;text-shadow:0 2px 0 rgb(0 0 0 / .35)}
+h1::before{content:"";display:inline-block;width:.62em;height:.56em;margin-right:.35em;vertical-align:.08em;background:var(--gold);
+  clip-path:polygon(50% 0,100% 100%,0 100%)}
+.badge{font-family:var(--font-num);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#fff;background:var(--strap);border:1px solid var(--gold);padding:1px 10px;border-radius:2px}
+.seg{display:flex;background:var(--strap);border:1px solid #000;border-radius:3px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;padding:3px 18px;border-radius:2px;font-weight:700;color:var(--muted)}
+.seg button[aria-selected="true"]{background:var(--lining);color:#fff}
+
+.nav{display:flex;align-items:center;gap:8px}
+.nav h2{font-family:var(--font-num);font-weight:700;font-size:1.45rem;letter-spacing:.04em;margin:0 4px;font-variant-numeric:tabular-nums;flex:1;min-width:0;
+  color:#fff;text-shadow:0 2px 0 rgb(0 0 0 / .3)}
+.round{width:36px;height:36px;border-radius:50%;border:1px solid #000;background:var(--cloth);color:var(--ink);font-size:1.1rem;line-height:1;display:grid;place-items:center;
+  box-shadow:inset 0 0 0 3px var(--cloth),inset 0 0 0 4px var(--seam-strong)}
+.ghost{border:1px solid #000;background:var(--cloth);color:var(--ink);border-radius:3px;padding:5px 14px;font-size:.85rem;font-weight:700}
+
+.summary{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:.85rem;color:var(--paper-muted)}
+.summary b{color:#fff;font-family:var(--font-num);font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-family:var(--font-num);font-weight:500;letter-spacing:.04em;font-size:.95rem;color:#fff}
+.dot{width:12px;height:12px;border-radius:2px;display:inline-block;box-shadow:0 0 0 1px rgb(0 0 0 / .5)}
+.sep{flex-basis:100%;height:0}
+
+.card{background:var(--cloth);color:var(--ink);border:1px solid #000;border-radius:4px;overflow:hidden;
+  box-shadow:0 10px 30px rgb(0 0 0 / .35);
+  background-image:repeating-linear-gradient(45deg,rgb(255 255 255 / .012) 0 2px,transparent 2px 4px)}
+/* ベルト帯：アイレットと金のバックル */
+.strap{position:relative;height:20px;background:var(--strap);border-bottom:1px solid #000;
+  background-image:radial-gradient(circle,#8e8e96 0 2.6px,#2a2a30 2.7px 3.6px,transparent 3.8px);background-size:30px 20px;background-position:44px 0}
+.strap::before{content:"";position:absolute;left:0;right:0;top:3px;bottom:3px;border-top:1px dashed #3a3a40;border-bottom:1px dashed #3a3a40}
+.strap::after{content:"";position:absolute;left:12px;top:-1px;width:18px;height:20px;border:3px solid var(--gold);border-radius:2px;box-sizing:border-box}
+
+/* ---- week ---- */
+.wk-grid{display:grid;grid-template-columns:30px repeat(7,minmax(0,1fr))}
+.wk-head{border-bottom:1px solid var(--seam-strong);background:var(--cloth-2)}
+.dh{padding:6px 2px 5px;text-align:center;display:flex;flex-direction:column;align-items:center;line-height:1.2;border-left:1px solid var(--seam)}
+.dh .dd{font-family:var(--font-num);font-weight:700;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.dh .dw{font-size:.7rem;color:var(--muted)}
+.dh .dt{font-family:var(--font-num);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;min-height:1.2em}
+.dh.sat .dw{color:var(--sat)} .dh.sun .dw{color:var(--sun)}
+.dh.today .dd{background:var(--gold);color:#16120a;border-radius:2px;padding:0 6px}
+.gutter{position:relative;height:calc(24 * var(--hh))}
+.gutter span{position:absolute;right:5px;font-family:var(--font-num);font-size:.75rem;color:var(--muted);transform:translateY(-50%);font-variant-numeric:tabular-nums}
+.col{position:relative;height:calc(24 * var(--hh));border-left:1px solid var(--seam);
+  background-image:linear-gradient(to bottom,var(--seam) 1px,transparent 1px);background-size:100% var(--hh)}
+.col.today{background-color:rgb(58 70 209 / .12)}
+.ev{position:absolute;left:2px;right:2px;border:0;border-radius:3px;padding:5px 3px;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:1px;
+  font-family:var(--font-num);font-size:.78rem;font-weight:500;line-height:1.15;font-variant-numeric:tabular-nums;
+  box-shadow:inset 0 0 0 1px rgb(0 0 0 / .45);transition:filter .15s}
+.ev::before{content:"";position:absolute;inset:3px;border:1px dashed currentColor;opacity:.38;border-radius:2px;pointer-events:none}
+.ev:hover{filter:brightness(1.12)}
+.ev .g{font-weight:700;font-size:.9rem;letter-spacing:.06em}
+.ev.top-cut{border-top-left-radius:0;border-top-right-radius:0}
+.ev.bot-cut{border-bottom-left-radius:0;border-bottom-right-radius:0}
+@media (min-width:720px){.ev{font-size:.88rem;padding:7px 4px}.ev .g{font-size:1rem}}
+.g-valo{background:var(--valo);color:var(--valo-ink)}
+.g-apex{background:var(--apex);color:var(--apex-ink)}
+.g-chat{background:var(--chat);color:var(--chat-ink)}
+.g-other{background:var(--other);color:var(--other-ink)}
+/* ポスト＝銀の三角、告知＝金の三角 */
+.post{position:absolute;right:-1px;width:20px;height:20px;margin-top:-10px;border:0;background:transparent;padding:0;display:grid;place-items:center;z-index:2}
+.post::after{content:"";width:10px;height:9px;background:#c7c6cc;clip-path:polygon(50% 0,100% 100%,0 100%);filter:drop-shadow(0 0 1px #000)}
+.post.ann::after{background:var(--gold-hi)}
+.nowline{position:absolute;left:0;right:0;height:2px;background:var(--gold-hi);z-index:3;pointer-events:none;box-shadow:0 0 6px rgb(230 200 121 / .6)}
+.nowline::before{content:"";position:absolute;left:-4px;top:-4px;width:9px;height:9px;background:var(--gold-hi);clip-path:polygon(0 0,100% 50%,0 100%)}
+
+/* ---- month ---- */
+.mo-head{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-bottom:1px solid #000;background:var(--cloth-2)}
+.mo-head span{text-align:center;font-family:var(--font-num);font-weight:700;letter-spacing:.12em;font-size:.85rem;color:var(--muted);padding:6px 0}
+.mo-head .sat{color:var(--sat)} .mo-head .sun{color:var(--sun)}
+.mo-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;background:#000;padding:2px}
+.mc{position:relative;border:0;padding:0;aspect-ratio:1;max-width:100%;min-width:0;overflow:hidden;
+  background:var(--empty);display:flex;flex-direction:column;gap:1px}
+.mc.out{visibility:hidden}
+.mc:hover .th{filter:brightness(1.12)}
+.th{position:relative;flex:1;min-height:0;overflow:hidden;transition:filter .15s}
+.th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* 仮サムネイル（実データでは配信サムネイル画像に置き換わる） */
+.ph{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden}
+.ph.g-valo{background:linear-gradient(135deg,var(--valo) 0%,var(--valo-deep) 100%)}
+.ph.g-apex{background:linear-gradient(135deg,var(--apex) 0%,var(--apex-deep) 100%)}
+.ph.g-chat{background:linear-gradient(135deg,var(--chat) 0%,var(--chat-deep) 100%)}
+.ph.g-other{background:linear-gradient(135deg,var(--other) 0%,var(--other-deep) 100%)}
+.ph::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(32deg,transparent 47%,rgb(255 255 255 / .35) 47.5% 48.5%,transparent 49%),
+             linear-gradient(-58deg,transparent 52%,rgb(255 255 255 / .25) 52.5% 53.3%,transparent 54%)}
+.ph b{position:relative;font-family:var(--font-num);font-weight:700;font-size:clamp(.6rem,2.6vw,1.1rem);opacity:.7;letter-spacing:.12em}
+.mn{position:absolute;right:5px;bottom:0;z-index:2;font-family:var(--font-num);font-weight:700;font-size:clamp(1.15rem,5vw,2.3rem);line-height:1.05;
+  font-variant-numeric:tabular-nums;color:var(--empty-num);pointer-events:none}
+.mc.has .mn{color:#fff;text-shadow:0 0 2px #000,0 0 2px #000,0 2px 4px rgb(0 0 0 / .6)}
+.mc.today{outline:3px solid var(--gold-hi);outline-offset:-3px}
+.mh{position:absolute;left:4px;top:3px;z-index:2;font-family:var(--font-num);font-size:.8rem;font-weight:700;color:#fff;background:rgb(0 0 0 / .65);
+  border-radius:2px;padding:0 5px;font-variant-numeric:tabular-nums;pointer-events:none;letter-spacing:.04em}
+@media (max-width:480px){.mh{display:none}}
+
+.note{font-family:var(--font-hand);font-size:.85rem;color:var(--paper-muted);margin:0;max-width:65ch;line-height:1.7}
+
+/* ---- sheet ---- */
+.backdrop{position:fixed;inset:0;background:rgb(0 0 0 / .5);z-index:20}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;display:flex;justify-content:center;
+  padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));
+  padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.sheet-in{width:100%;max-width:440px;background:var(--cloth);color:var(--ink);border:1px solid #000;border-left:7px solid var(--lining);border-radius:4px;
+  padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 14px 40px rgb(0 0 0 / .5);animation:up .2s ease-out;
+  background-image:repeating-linear-gradient(45deg,rgb(255 255 255 / .012) 0 2px,transparent 2px 4px)}
+@keyframes up{from{transform:translateY(16px);opacity:.6}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.sheet-in{animation:none}}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tag{font-family:var(--font-num);font-size:.85rem;font-weight:700;letter-spacing:.1em;padding:1px 10px;border-radius:2px}
+.tag.post-tag{background:var(--strap);color:var(--gold-hi);border:1px solid var(--gold)}
+.sheet h3{margin:0;font-size:1.08rem;line-height:1.45;text-wrap:balance;color:#fff}
+.sheet dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.9rem;border-top:1px dashed var(--seam-strong);padding-top:10px}
+.sheet dt{color:var(--muted)} .sheet dd{margin:0;font-variant-numeric:tabular-nums}
+.open{display:flex;justify-content:center;align-items:center;gap:8px;background:var(--lining);color:#fff;
+  text-decoration:none;font-weight:700;border-radius:3px;padding:11px;margin-top:4px;box-shadow:inset 0 0 0 1px rgb(0 0 0 / .4)}
+.open::before{content:"";width:9px;height:8px;background:var(--gold-hi);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.open:hover{background:#4552e0}
+.sheet .hint{font-size:.72rem;color:var(--muted);margin:0;text-align:center}
+[hidden]{display:none!important}
+/* ---- 予定・コラボ・他枠 ---- */
+.g-valo{--gc:var(--valo)} .g-apex{--gc:var(--apex)} .g-chat{--gc:var(--chat)} .g-other{--gc:#7a7a84}
+.ev.up{background:repeating-linear-gradient(-45deg,color-mix(in srgb,var(--gc) 55%,transparent) 0 3px,var(--cloth-2) 3px 9px);color:#fff;box-shadow:inset 0 0 0 1px var(--gc)}
+.ev.up::before{opacity:.9;border-color:var(--gc);border-width:1px}
+.ev.up span{text-shadow:0 0 3px #000,0 0 2px #000}
+.ev.live{box-shadow:inset 0 0 0 2px var(--gold-hi),0 0 10px rgb(230 200 121 / .5)}
+/* コラボ＝右上の金の折り返し */
+.ev.co::after,.th.co::after{content:"";position:absolute;right:0;top:0;width:11px;height:11px;background:var(--gold-hi);clip-path:polygon(0 0,100% 0,100% 100%);z-index:1}
+.th.co::after{width:14px;height:14px}
+.ev .gl{font-size:.68rem;letter-spacing:.06em;border:1px solid currentColor;border-radius:2px;padding:0 3px;margin-top:2px;opacity:.85}
+.ev.guest{outline:1px dashed var(--muted);outline-offset:-1px}
+.th.up::before{content:"";position:absolute;inset:0;z-index:1;background:repeating-linear-gradient(-45deg,rgb(0 0 0 / .45) 0 4px,transparent 4px 10px)}
+.th.up img,.th.up .ph{filter:grayscale(.5) brightness(.8)}
+.upl{position:absolute;left:3px;top:3px;z-index:2;font-size:.6rem;font-weight:700;background:var(--strap);color:#fff;border:1px solid var(--gold);border-radius:2px;padding:0 4px;line-height:1.4}
+@media (max-width:480px){.upl{font-size:.52rem;padding:0 2px}}
+.key-co{width:12px;height:12px;background:var(--gold-hi);clip-path:polygon(0 0,100% 0,100% 100%);display:inline-block}
+.key-up{width:12px;height:12px;border-radius:2px;display:inline-block;background:repeating-linear-gradient(-45deg,#9a99a3 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px #9a99a3}
+/* 詳細パネル */
+.sheet-tags{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.tag.st{background:var(--strap);color:var(--gold-hi);border:1px solid var(--gold)}
+.warn{margin-left:8px;font-size:.75rem;color:var(--gold-hi);border:1px solid var(--gold);border-radius:2px;padding:0 5px}
+.ex-h{margin:4px 0 0;font-size:.78rem;color:var(--muted);letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.ex-h::after{content:"";flex:1;border-top:1px dashed var(--seam-strong)}
+.cl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.cl a{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-decoration:none;color:var(--ink);
+  background:var(--cloth-2);border:1px solid var(--seam-strong);border-left:3px solid var(--gold);border-radius:3px;padding:7px 10px}
+.cl a:hover{border-color:var(--gold)}
+.cl b{font-size:.88rem;min-width:0}
+.cl span{grid-row:2;font-size:.75rem;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cl i{grid-row:1 / 3;grid-column:2;font-style:normal;color:var(--gold-hi)}
+.sheet-in{max-height:calc(100vh - 40px);overflow-y:auto}
+/* ---- 締切 ---- */
+.dl-panel{display:flex;flex-direction:column;gap:6px;background:var(--strap);border:1px solid #000;border-left:4px solid var(--gold);border-radius:4px;padding:10px 12px;color:var(--ink)}
+.dl-h{font-size:.75rem;color:var(--gold-hi);letter-spacing:.08em;font-weight:700}
+.dl-item{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-align:left;
+  border:0;border-top:1px dashed var(--seam-strong);background:transparent;padding:6px 0 2px;min-width:0}
+.dl-item:first-of-type{border-top:0}
+.dl-left{grid-row:1 / 3;font-family:var(--font-num);font-weight:700;font-size:1.05rem;color:#16120a;background:var(--gold-hi);border-radius:2px;padding:0 7px;white-space:nowrap}
+.dl-title{font-size:.86rem;font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dl-date{font-family:var(--font-num);font-size:.85rem;color:var(--muted)}
+.dl-item:hover .dl-title{color:var(--gold-hi)}
+.dl-tag{margin-top:2px;border:1px solid var(--gold);background:var(--strap);color:var(--gold-hi);font-size:.62rem;font-weight:700;border-radius:2px;padding:0 4px;line-height:1.5}
+.dl-badge{position:absolute;left:3px;bottom:3px;z-index:2;font-size:.58rem;font-weight:700;color:#16120a;background:var(--gold-hi);border-radius:2px;padding:0 4px;line-height:1.5;pointer-events:none}
+@media (max-width:480px){.dl-badge{font-size:.5rem;padding:0 2px}}
+.tag.dl{background:var(--gold-hi);color:#16120a}
+/* ---- 追加ボタンとフォーム ---- */
+.fab{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  display:flex;align-items:center;gap:8px;border:1px solid #000;background:var(--strap);color:#fff;font-weight:700;
+  border-radius:99px;padding:10px 18px 10px 14px;box-shadow:0 6px 18px rgb(0 0 0 / .45),inset 0 0 0 2px var(--strap),inset 0 0 0 3px var(--gold)}
+.fab::before{content:"";width:12px;height:11px;background:var(--gold-hi);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.fab:hover{background:#18181c}
+.wrap{padding-bottom:84px}
+.form{display:flex;flex-direction:column;gap:12px}
+.types{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--strap);border:1px solid #000;border-radius:3px;padding:3px}
+.types label{position:relative;text-align:center;font-size:.82rem;font-weight:700;color:var(--muted);padding:6px 2px;border-radius:2px;cursor:pointer}
+.types input{position:absolute;opacity:0;pointer-events:none}
+.types label:has(input:checked){background:var(--lining);color:#fff}
+.types label:has(input:focus-visible){outline:2px solid var(--gold-hi)}
+.fld{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fld>span{font-size:.78rem;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form input[type=url],.form input[type=text],.form input[type=date],.form input[type=time],.form select{
+  width:100%;min-width:0;font:inherit;font-size:16px;color:var(--ink);background:var(--cloth-2);border:1px solid var(--seam-strong);border-radius:3px;padding:8px 10px}
+.form input:focus,.form select:focus{outline:2px solid var(--lining-hi);outline-offset:0;border-color:transparent}
+.chk{display:flex;align-items:center;gap:8px;font-size:.88rem}
+.chk input{width:18px;height:18px;accent-color:var(--gold)}
+.help{margin:0;font-size:.76rem;color:var(--muted);line-height:1.6}
+.preview{margin:0;font-size:.82rem;color:var(--gold-hi);min-height:1.3em}
+.err{margin:0;font-size:.82rem;color:#ff9a9a;min-height:0}
+.submit{border:0;background:var(--lining);color:#fff;font-weight:700;border-radius:3px;padding:11px;display:flex;justify-content:center;align-items:center;gap:8px;
+  box-shadow:inset 0 0 0 1px rgb(0 0 0 / .4)}
+.submit::before{content:"";width:9px;height:8px;background:var(--gold-hi);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.submit:hover{background:#4552e0}
+.done{margin:0;font-size:.82rem;background:var(--cloth-2);border:1px dashed var(--gold);border-radius:3px;padding:8px 10px;line-height:1.6;word-break:break-all;white-space:pre-line}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <svg class="xmark a" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 10 L58 56" stroke-width="1.6"/><path d="M50 4 L14 60" stroke-width="2.4"/><path d="M30 22 L36 30" stroke-width="1"/></svg>
+  <header class="top">
+    <div class="brand"><h1>ロウ配信ログ</h1><span class="badge">Stream Log</span></div>
+    <div class="seg" role="tablist" aria-label="表示切り替え">
+      <button id="v-week" role="tab">週</button><button id="v-month" role="tab">月</button>
+    </div>
+  </header>
+  <div class="nav">
+    <button class="round" id="prev" aria-label="前へ">‹</button>
+    <h2 id="label"></h2>
+    <button class="ghost" id="today">今日</button>
+    <button class="round" id="next" aria-label="次へ">›</button>
+  </div>
+  <div class="summary" id="summary"></div>
+  <div class="dl-panel" id="deadlines" hidden></div>
+  <main class="card"><div class="strap" aria-hidden="true"></div><div id="view"></div></main>
+  <p class="note">配信は YouTube から3時間ごとに自動更新しています。ブロックや三角をタップすると詳細とリンクが開きます（銀の三角＝ポスト、金の三角＝配信告知）。右上が金色に折れているブロックはコラボ、斜線のブロックはこれからの予定、金の「締切」はグッズなどの締切です。時刻は閲覧している端末のタイムゾーンで表示されます。</p>
+</div>
+
+<div id="backdrop" class="backdrop" hidden></div>
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sh-title">
+  <div class="sheet-in">
+    <div class="sheet-top"><div class="sheet-tags"><span id="sh-tag" class="tag"></span><span id="sh-status" class="tag st" hidden></span></div><button class="round" id="sh-close" aria-label="閉じる">×</button></div>
+    <h3 id="sh-title"></h3>
+    <dl id="sh-dl"></dl>
+    <a id="sh-link" class="open" target="_blank" rel="noopener"></a>
+    <div id="sh-extra"></div>
+      </div>
+</div>
+
+<button class="fab" id="add-open" type="button" hidden>追加</button>
+<div id="add-sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="add-title">
+  <div class="sheet-in">
+    <div class="sheet-top"><h3 id="add-title" style="margin:0">予定・配信を追加</h3><button class="round" id="add-close" type="button" aria-label="閉じる">×</button></div>
+    <form class="form" id="add-form" novalidate>
+      <div class="types" role="radiogroup" aria-label="追加する種類">
+        <label><input type="radio" name="ftype" id="t-collab" value="collab" checked>他枠の配信</label>
+        <label><input type="radio" name="ftype" id="t-schedule" value="schedule">配信予定</label>
+        <label><input type="radio" name="ftype" id="t-post" value="post">ポスト</label>
+        <label><input type="radio" name="ftype" id="t-deadline" value="deadline">締切</label>
+      </div>
+      <div class="fgroup" data-type="collab">
+        <label class="fld"><span>YouTube の URL（配信・動画）</span><input type="url" id="f-yt" placeholder="https://www.youtube.com/watch?v=…" autocomplete="off"></label>
+        <p class="help">時刻・サムネイル・チャンネル名は自動で取得します。同じ時間に小柳ロウの配信があれば「コラボ相手の枠」として付き、なければ「本人の枠なし」として表示されます。</p>
+      </div>
+      <div class="fgroup" data-type="schedule" hidden>
+        <div class="row2">
+          <label class="fld"><span>日付</span><input type="date" id="f-date"></label>
+          <label class="fld"><span>開始時刻</span><input type="time" id="f-time"></label>
+        </div>
+        <label class="fld"><span>タイトル</span><input type="text" id="f-title" placeholder="大会本番 など"></label>
+        <div class="row2">
+          <label class="fld"><span>ゲーム</span><select id="f-game"><option value="valo">VALORANT</option><option value="apex">Apex Legends</option><option value="chat">雑談</option><option value="other">その他</option></select></label>
+          <label class="fld"><span>配信元</span><select id="f-own"><option value="own">本人の枠</option><option value="guest">他の人の枠</option></select></label>
+        </div>
+        <label class="fld"><span>告知ポストの URL（任意）</span><input type="url" id="f-surl" placeholder="https://x.com/…/status/…" autocomplete="off"></label>
+        <p class="help">YouTube に枠が立つと、自動でそちらに置き換わります。</p>
+      </div>
+      <div class="fgroup" data-type="post" hidden>
+        <label class="fld"><span>X のポストの URL</span><input type="url" id="f-x" placeholder="https://x.com/…/status/…" autocomplete="off"></label>
+        <p class="preview" id="f-xtime" aria-live="polite"></p>
+        <label class="chk"><input type="checkbox" id="f-ann">配信告知のポスト</label>
+        <p class="help">投稿時刻は URL から自動で読み取ります。</p>
+      </div>
+      <div class="fgroup" data-type="deadline" hidden>
+        <label class="fld"><span>内容</span><input type="text" id="f-dtitle" placeholder="〇〇グッズ 受注締切 など"></label>
+        <div class="row2">
+          <label class="fld"><span>締切日</span><input type="date" id="f-ddate"></label>
+          <label class="fld"><span>締切時刻</span><input type="time" id="f-dtime" value="23:59"></label>
+        </div>
+        <label class="fld"><span>告知ポストか販売ページの URL</span><input type="url" id="f-durl" placeholder="https://x.com/…/status/…" autocomplete="off"></label>
+        <p class="help">カレンダーの上の「締切が近いもの」と、該当日に「締切」の印で表示されます。</p>
+      </div>
+      <p class="err" id="f-err" role="alert"></p>
+      <button class="submit" type="submit">GitHub で登録する</button>
+      <p class="help" id="f-note">GitHub の画面が開くので、「Create」（Submit new issue）を押すと登録されます。カレンダーへの反映まで数分かかります。</p>
+      <p class="done" id="f-done" hidden></p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+const H=3600e3, DAYMS=864e5, OWN="小柳ロウ";
+const GAMES={valo:{name:"VALORANT",short:"VALO"},apex:{name:"Apex Legends",short:"APEX"},chat:{name:"雑談",short:"雑談"},other:{name:"その他",short:"他"}};
+const WD=["日","月","火","水","木","金","土"];
+const sod=t=>{const d=new Date(t);d.setHours(0,0,0,0);return d.getTime()};
+const addDays=(t,n)=>{const d=new Date(t);d.setDate(d.getDate()+n);return d.getTime()};
+const sow=t=>{const s=sod(t);return addDays(s,-((new Date(s).getDay()+6)%7))};
+
+// ---- *.json を読み込む ----
+async function getData(){
+  const get=async p=>{try{const r=await fetch(p,{cache:"no-cache"});return r.ok?await r.json():[]}catch(e){return[]}};
+  const [streams,posts,deadlines]=await Promise.all([get("streams.json"),get("posts.json"),get("deadlines.json")]);
+  return {streams,posts,deadlines};
+}
+
+let events=[],streams=[],posts=[],deadlines=[];
+const T=v=>typeof v==="number"?v:Date.parse(v);
+function normalize(d){
+  const now=Date.now();
+  streams=d.streams.filter(x=>x.start).map((x,i)=>{
+    const s=T(x.start),status=x.status||"done";
+    let e=x.end?T(x.end):null,est=false;
+    if(!e){if(status==="live")e=Math.max(now,s+30*6e4);else{e=s+2*H;est=true}}
+    return{id:"s"+i,kind:"stream",vkind:x.kind||"stream",status,est,own:x.own!==false,channel:x.channel||OWN,manual:!!x.manual,
+      game:GAMES[x.game]?x.game:"other",title:x.title||"",start:s,end:e,url:x.url||"https://www.youtube.com/",thumb:x.thumb||null,collabs:x.collabs||[]};
+  });
+  posts=(d.posts||[]).filter(x=>x.time).map((x,i)=>({id:"p"+i,kind:"post",ann:x.kind==="announce",time:T(x.time),
+    text:x.text||(x.kind==="announce"?"配信告知":"ポスト"),url:x.url||"https://x.com/"}));
+  deadlines=(d.deadlines||[]).filter(x=>x.deadline).map((x,i)=>({id:"d"+i,kind:"deadline",title:x.title||"締切",time:T(x.deadline),url:x.url||"https://x.com/"}));
+  events=streams.concat(posts,deadlines);
+}
+
+// ---- helpers ----
+const hm=t=>{const d=new Date(t);return d.getHours()+":"+String(d.getMinutes()).padStart(2,"0")};
+const endLabel=(s,e)=>{const d=new Date(e);if(sod(e)!==sod(s)){if(d.getHours()===0&&d.getMinutes()===0&&sod(e)===addDays(sod(s),1))return"24:00";return"翌"+hm(e)}return hm(e)};
+const hrs=ms=>{const h=Math.round(ms/H*2)/2;return(h%1?h.toFixed(1):h)};
+const md=t=>{const d=new Date(t);return`${d.getMonth()+1}/${d.getDate()}（${WD[d.getDay()]}）`};
+const overlap=(s,e,a,b)=>Math.max(0,Math.min(e,b)-Math.max(s,a));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const isUp=x=>x.status==="upcoming";
+
+// ---- state ----
+let view="week",cursor=Date.now();
+try{const v=localStorage.getItem("rou-view");if(v==="week"||v==="month")view=v}catch(e){}
+if(location.hash==="#month")view="month";if(location.hash==="#week")view="week";
+const $=id=>document.getElementById(id);
+
+function summary(a,b){
+  const all=streams.filter(e=>e.end>a&&e.start<b),ss=all.filter(x=>!isUp(x)),up=all.length-ss.length;
+  const per={valo:0,apex:0,chat:0,other:0};let tot=0;
+  ss.forEach(e=>{const o=overlap(e.start,e.end,a,b);per[e.game]+=o;tot+=o});
+  const pc=posts.filter(p=>p.time>=a&&p.time<b).length;
+  $("summary").innerHTML=`<span>配信 <b>${ss.length}</b> 回</span><span>合計 <b>${hrs(tot)}</b> 時間</span><span>ポスト <b>${pc}</b> 件</span>${up?`<span>予定 <b>${up}</b> 件</span>`:""}<span class="sep"></span>`+
+    Object.keys(GAMES).map(g=>`<span class="chip"><span class="dot g-${g}"></span>${GAMES[g].short} ${hrs(per[g])}h</span>`).join("")+
+    `<span class="chip"><span class="key-co"></span>コラボ</span><span class="chip"><span class="key-up"></span>予定</span>`;
+}
+
+function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
+
+function renderWeek(){
+  const ws=sow(cursor),we=addDays(ws,7),today=sod(Date.now());
+  const s=new Date(ws),e=new Date(addDays(ws,6));
+  $("label").textContent=`${s.getFullYear()}年 ${s.getMonth()+1}/${s.getDate()} – ${e.getMonth()+1}/${e.getDate()}`;
+  let head='<div class="wk-grid wk-head"><div></div>',body='<div class="wk-grid"><div class="gutter">';
+  for(let h=1;h<24;h++)body+=`<span style="top:calc(${h} * var(--hh))">${h}</span>`;
+  body+="</div>";
+  for(let i=0;i<7;i++){
+    const d0=addDays(ws,i),d1=addDays(ws,i+1),dw=new Date(d0).getDay();
+    const segs=streams.filter(x=>x.end>d0&&x.start<d1);
+    const tot=segs.filter(x=>!isUp(x)).reduce((acc,x)=>acc+overlap(x.start,x.end,d0,d1),0);
+    const cls=(dw===6?" sat":dw===0?" sun":"")+(d0===today?" today":"");
+    head+=`<div class="dh${cls}"><span class="dd">${new Date(d0).getDate()}</span><span class="dw">${WD[dw]}</span><span class="dt">${tot?hrs(tot)+"h":""}</span>${deadlines.filter(x=>x.time>=d0&&x.time<d1).map(x=>`<button class="dl-tag" data-id="${x.id}" aria-label="締切 ${esc(x.title)}">締切</button>`).join("")}</div>`;
+    body+=`<div class="col${d0===today?" today":""}">`;
+    segs.forEach(x=>{
+      const a=Math.max(x.start,d0),b=Math.min(x.end,d1);
+      // 日付をまたぐ配信は長い方の断片にラベルを置く
+      const first=Math.min(x.end,addDays(sod(x.start),1))-x.start;
+      const rest=x.end-x.start-first;
+      const isMain=a===x.start?first>=rest:(b-a)>first;
+      const top=(a-d0)/DAYMS*100,ht=(b-a)/DAYMS*100;
+      const cut=(a>x.start?" top-cut":"")+(b<x.end?" bot-cut":"");
+      const len=(b-a)/H;
+      let inner="";
+      if(isMain){
+        const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
+        const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
+        inner=len>=1.9?`<span>${time}</span><span class="g">${GAMES[x.game].short}</span><span>${sub}</span>${!x.own&&len>=3?'<span class="gl">他枠</span>':""}`
+             :`<span class="g">${GAMES[x.game].short}</span>`;
+      }
+      body+=`<button class="ev g-${x.game}${cut}${flags(x)}" style="top:${top}%;height:${ht}%" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
+    });
+    posts.filter(p=>p.time>=d0&&p.time<d1).forEach(p=>{
+      body+=`<button class="post${p.ann?" ann":""}" style="top:${(p.time-d0)/DAYMS*100}%" data-id="${p.id}" aria-label="ポスト ${hm(p.time)}"></button>`;
+    });
+    if(d0===today){body+=`<div class="nowline" style="top:${(Date.now()-d0)/DAYMS*100}%"></div>`}
+    body+="</div>";
+  }
+  $("view").innerHTML=head+"</div>"+body+"</div>";
+  $("view").querySelector(".wk-head").addEventListener("click",ev=>{const b=ev.target.closest("[data-id]");if(b){ev.stopPropagation();const x=events.find(y=>y.id===b.dataset.id);if(x)openSheet(x)}});
+  summary(ws,we);
+}
+
+function renderMonth(){
+  const c=new Date(cursor),m0=new Date(c.getFullYear(),c.getMonth(),1).getTime(),m1=new Date(c.getFullYear(),c.getMonth()+1,1).getTime();
+  $("label").textContent=`${c.getFullYear()}年 ${c.getMonth()+1}月`;
+  const today=sod(Date.now());
+  let h='<div class="mo-head">'+["月","火","水","木","金","土","日"].map((w,i)=>`<span class="${i===5?"sat":i===6?"sun":""}">${w}</span>`).join("")+'</div><div class="mo-grid">';
+  for(let d0=sow(m0);d0<m1||new Date(d0).getDay()!==1;d0=addDays(d0,1)){
+    const d1=addDays(d0,1);
+    // 配信開始日のマスにサムネイルを置く（複数あれば縦に分割、最大3枠）
+    const started=streams.filter(x=>x.start>=d0&&x.start<d1).sort((a,b)=>a.start-b.start);
+    const tot=started.filter(x=>!isUp(x)).reduce((acc,x)=>acc+(x.end-x.start),0);
+    const tiles=started.slice(0,3).map(x=>`<span class="th${flags(x)}">${x.thumb?`<img src="${esc(x.thumb)}" alt="" loading="lazy">`:`<span class="ph g-${x.game}"><b>${GAMES[x.game].short}</b></span>`}${isUp(x)?'<span class="upl">予定</span>':""}</span>`).join("");
+    const out=d0<m0||d0>=m1;
+    const dn=String(new Date(d0).getDate()).padStart(2,"0");
+    h+=`<button class="mc${out?" out":""}${started.length?" has":""}${d0===today?" today":""}" data-day="${d0}" aria-label="${md(d0)}、配信${started.length}件。週表示を開く"${out?' tabindex="-1"':""}>
+      ${tiles}<span class="mn">${dn}</span>${tot?`<span class="mh">${hrs(tot)}h</span>`:""}${deadlines.some(x=>x.time>=d0&&x.time<d1)?'<span class="dl-badge">締切</span>':""}</button>`;
+  }
+  $("view").innerHTML=h+"</div>";
+  summary(m0,m1);
+}
+
+function renderDeadlines(){
+  const now=Date.now(),list=deadlines.filter(x=>x.time>=now).sort((a,b)=>a.time-b.time).slice(0,3),el=$("deadlines");
+  el.hidden=!list.length;
+  el.innerHTML=`<span class="dl-h">締切が近いもの</span>`+list.map(x=>{const days=Math.ceil((sod(x.time)-sod(now))/DAYMS);
+    return`<button class="dl-item" data-id="${x.id}"><span class="dl-left">${days<=0?"今日":"あと"+days+"日"}</span><span class="dl-title">${esc(x.title)}</span><span class="dl-date">${md(x.time)} ${hm(x.time)}</span></button>`}).join("");
+}
+function render(){
+  renderDeadlines();
+  $("v-week").setAttribute("aria-selected",view==="week");
+  $("v-month").setAttribute("aria-selected",view==="month");
+  view==="week"?renderWeek():renderMonth();
+  try{localStorage.setItem("rou-view",view)}catch(e){}
+}
+
+function openSheet(ev){
+  const tag=$("sh-tag"),st=$("sh-status"),dl=$("sh-dl"),link=$("sh-link"),ex=$("sh-extra");
+  ex.innerHTML="";st.hidden=true;
+  if(ev.kind==="stream"){
+    tag.className="tag g-"+ev.game;tag.textContent=GAMES[ev.game].name;
+    const sts=isUp(ev)?(ev.manual?"予定（枠未作成）":"予定"):ev.status==="live"?"配信中":ev.collabs.length||!ev.own?"コラボ":"";
+    if(sts){st.hidden=false;st.textContent=sts}
+    $("sh-title").textContent=ev.title;
+    dl.innerHTML=`<dt>日付</dt><dd>${md(ev.start)}</dd>`+
+      (isUp(ev)?`<dt>時間</dt><dd>${hm(ev.start)} 開始予定</dd>`
+               :`<dt>時間</dt><dd>${hm(ev.start)} – ${ev.status==="live"?"配信中":endLabel(ev.start,ev.end)}</dd><dt>長さ</dt><dd>約${hrs(ev.end-ev.start)}時間</dd>`)+
+      `<dt>配信元</dt><dd>${esc(ev.channel)}${ev.own?"":"<span class=\"warn\">本人の枠なし</span>"}</dd>`;
+    link.href=ev.url;
+    link.textContent=ev.manual?"X で告知を開く ↗":ev.own?"小柳ロウの枠を開く ↗":`${ev.channel} の枠を開く ↗`;
+    if(ev.collabs.length){
+      ex.innerHTML=`<p class="ex-h">コラボ相手の枠</p><ul class="cl">`+ev.collabs.map(c=>
+        `<li><a href="${esc(c.url)}" target="_blank" rel="noopener"><b>${esc(c.channel)}</b><span>${esc(c.title||"")}</span><i aria-hidden="true">↗</i></a></li>`).join("")+"</ul>";
+    }
+  }else if(ev.kind==="deadline"){
+    tag.className="tag dl";tag.textContent="締切";
+    const days=Math.ceil((sod(ev.time)-sod(Date.now()))/DAYMS);
+    st.hidden=false;st.textContent=ev.time<Date.now()?"終了":days<=0?"今日まで":`あと${days}日`;
+    $("sh-title").textContent=ev.title;
+    dl.innerHTML=`<dt>締切</dt><dd>${md(ev.time)} ${hm(ev.time)}</dd>`;
+    link.href=ev.url;link.textContent="告知・販売ページを開く ↗";
+  }else{
+    tag.className="tag post-tag";tag.textContent=ev.ann?"配信告知":"ポスト";
+    $("sh-title").textContent=ev.text;
+    dl.innerHTML=`<dt>日付</dt><dd>${md(ev.time)}</dd><dt>時刻</dt><dd>${hm(ev.time)}</dd>`;
+    link.href=ev.url;link.textContent="X でポストを開く ↗";
+  }
+  $("backdrop").hidden=false;$("sheet").hidden=false;$("sh-close").focus();
+}
+function closeSheet(){$("sheet").hidden=true;if($("add-sheet").hidden)$("backdrop").hidden=true}
+
+$("view").addEventListener("click",e=>{
+  const b=e.target.closest("[data-id]");
+  if(b){const ev=events.find(x=>x.id===b.dataset.id);if(ev)openSheet(ev);return}
+  const d=e.target.closest("[data-day]");
+  if(d){cursor=+d.dataset.day;view="week";render()}
+});
+$("deadlines").addEventListener("click",e=>{const b=e.target.closest("[data-id]");if(b){const ev=events.find(x=>x.id===b.dataset.id);if(ev)openSheet(ev)}});
+$("v-week").onclick=()=>{view="week";render()};
+$("v-month").onclick=()=>{view="month";render()};
+$("prev").onclick=()=>{if(view==="week")cursor=addDays(cursor,-7);else{const c=new Date(cursor);cursor=new Date(c.getFullYear(),c.getMonth()-1,1).getTime()}render()};
+$("next").onclick=()=>{if(view==="week")cursor=addDays(cursor,7);else{const c=new Date(cursor);cursor=new Date(c.getFullYear(),c.getMonth()+1,1).getTime()}render()};
+$("today").onclick=()=>{cursor=Date.now();render()};
+$("backdrop").onclick=closeSheet;$("sh-close").onclick=closeSheet;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet()});
+getData().then(d=>{normalize(d);if(d.start)cursor=d.start;render()});
+})();
+// ---- 追加フォーム（GitHub の Issue 経由で登録）----
+// 登録先リポジトリは GitHub Pages の URL（ユーザー名.github.io/リポジトリ名/）から自動で決める
+const REPO=(()=>{const h=location.hostname;if(!h.endsWith(".github.io"))return"";const u=h.split(".")[0];const seg=location.pathname.split("/").filter(Boolean)[0];return seg?`${u}/${seg}`:`${u}/${h}`})();
+const SHOW_ADD_ALWAYS=false; // 「追加」ボタンは URL の末尾に #edit を付けて開いた端末にだけ表示
+(function(){
+  const $=id=>document.getElementById(id);
+  let edit=SHOW_ADD_ALWAYS;
+  try{if(location.hash==="#edit")localStorage.setItem("rou-edit","1");if(localStorage.getItem("rou-edit")==="1")edit=true}catch(e){if(location.hash==="#edit")edit=true}
+  $("add-open").hidden=!edit;
+  const sheet=$("add-sheet"),bd=$("backdrop");
+  const open=()=>{bd.hidden=false;sheet.hidden=false;$("f-done").hidden=true;$("f-err").textContent="";$("add-close").focus()};
+  const close=()=>{sheet.hidden=true;if($("sheet").hidden)bd.hidden=true};
+  $("add-open").onclick=open;$("add-close").onclick=close;
+  bd.addEventListener("click",close);
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+  const type=()=>document.querySelector('input[name="ftype"]:checked').value;
+  document.querySelectorAll('input[name="ftype"]').forEach(r=>r.addEventListener("change",()=>{
+    document.querySelectorAll(".fgroup").forEach(g=>g.hidden=g.dataset.type!==type());$("f-err").textContent=""}));
+  const ytId=u=>{const m=String(u).match(/(?:v=|youtu\.be\/|\/live\/|\/shorts\/)([A-Za-z0-9_-]{11})/);return m?m[1]:null};
+  const xId=u=>{const m=String(u).match(/(?:x|twitter)\.com\/[^/]+\/status\/(\d+)/);return m?m[1]:null};
+  const xTime=id=>Number((BigInt(id)>>22n)+1288834974657n);
+  const pad=n=>String(n).padStart(2,"0");
+  const jst=t=>{const d=new Date(t+9*3600e3);return`${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())}T${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:00+09:00`};
+  $("f-x").addEventListener("input",()=>{const id=xId($("f-x").value);
+    if(!id){$("f-xtime").textContent="";return}
+    const t=new Date(xTime(id));$("f-xtime").textContent=`投稿時刻：${t.getFullYear()}/${t.getMonth()+1}/${t.getDate()} ${t.getHours()}:${pad(t.getMinutes())}`});
+  $("add-form").addEventListener("submit",e=>{
+    e.preventDefault();const err=$("f-err");err.textContent="";
+    const t=type();let title,lines;
+    if(t==="collab"){
+      const u=$("f-yt").value.trim();if(!ytId(u)){err.textContent="YouTube の動画・配信の URL を入れてください（watch?v= や /live/ を含むもの）。";return}
+      title=`[追加] 他枠の配信 ${ytId(u)}`;lines=[`type: collab`,`url: ${u}`];
+    }else if(t==="schedule"){
+      const d=$("f-date").value,tm=$("f-time").value,ti=$("f-title").value.trim();
+      if(!d||!tm){err.textContent="日付と開始時刻を入れてください。";return}
+      const su=$("f-surl").value.trim();
+      title=`[追加] 配信予定 ${d} ${tm}`;
+      lines=[`type: schedule`,`start: ${d}T${tm}:00+09:00`,`title: ${ti||"配信予定"}`,`game: ${$("f-game").value}`,`own: ${$("f-own").value==="own"?"yes":"no"}`];
+      if(su)lines.push(`url: ${su}`);
+    }else if(t==="deadline"){
+      const ti=$("f-dtitle").value.trim(),d=$("f-ddate").value,tm=$("f-dtime").value||"23:59",u=$("f-durl").value.trim();
+      if(!ti||!d){err.textContent="内容と締切日を入れてください。";return}
+      title=`[追加] 締切 ${d}`;lines=[`type: deadline`,`deadline: ${d}T${tm}:00+09:00`,`title: ${ti}`];
+      if(u)lines.push(`url: ${u}`);
+    }else{
+      const u=$("f-x").value.trim(),id=xId(u);if(!id){err.textContent="X のポストの URL を入れてください（/status/ を含むもの）。";return}
+      title=`[追加] ポスト ${id}`;lines=[`type: post`,`url: ${u}`,`time: ${jst(xTime(id))}`,`announce: ${$("f-ann").checked?"yes":"no"}`];
+    }
+    const body=lines.join("\n")+"\n\n（このまま Create を押してください。内容を書き換えないでください）";
+    if(!REPO){const done=$("f-done");done.hidden=false;
+      done.textContent=`サンプルのため送信先が未設定です。GitHub 版では、ここで GitHub の登録画面が開きます。送信される内容：\n${lines.join(" / ")}`;return}
+    const url=`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+    const w=window.open(url,"_blank","noopener");
+    const done=$("f-done");done.hidden=false;
+    done.innerHTML=w===null?`GitHub の画面を開けませんでした。<a href="${url}" target="_blank" rel="noopener">こちら</a>から開いてください。`:"GitHub の画面で Create を押すと登録されます。";
+    e.target.reset();document.querySelectorAll(".fgroup").forEach(g=>g.hidden=g.dataset.type!=="collab");$("f-xtime").textContent="";
+  });
+})();
+</script>
+
+</body>
+</html>
