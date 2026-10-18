@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>ロウ配信ログ</title>
+<title>koyanagi-log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <style>
 /* Layout: 淡いブルーの机に置いたクリップボード。方眼紙のボードにカレンダー、メモ用紙の詳細、マスキングテープの見出し */
 :root{
@@ -21,7 +21,6 @@
   --chat:#f8efd2; --chat-ink:#4a4636; --chat-deep:#e3d3a2;
   --other:#e7ecf5; --other-ink:#3f4d6e; --other-deep:#c3cee2;
   --empty:#eef2f8; --empty-num:#b3c0d8;
-  --font-script:"Courgette","Zen Maru Gothic",cursive;
   --font-label:"Josefin Sans","Zen Maru Gothic",sans-serif;
   --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
   --hh:22px;
@@ -42,8 +41,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
 /* ---- ヘッダー ---- */
 .top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand{display:flex;flex-direction:column;gap:0;line-height:1.1}
-h1{margin:0;font-family:var(--font-script);font-weight:400;font-size:2.1rem;color:var(--blue);letter-spacing:.01em;text-wrap:balance}
-h1 small{display:block;font-family:var(--font-body);font-size:.78rem;color:var(--ink-soft);letter-spacing:.2em;margin-top:2px}
+h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,4.6vw,1.75rem);color:var(--ink);letter-spacing:.06em;line-height:1.35;text-wrap:balance}
 .badge{display:none}
 /* 表示切替＝フォルダのインデックスタブ */
 .seg{display:flex;gap:4px;align-items:flex-end}
@@ -57,12 +55,9 @@ h1 small{display:block;font-family:var(--font-body);font-size:.78rem;color:var(-
 .round:hover{background:var(--blue-xl)}
 .ghost{border:1.5px solid var(--blue-l);background:var(--paper);color:var(--blue-d);border-radius:99px;padding:5px 16px;font-size:.85rem;font-weight:700}
 
-/* ---- 集計：花形のポイントバッジ ---- */
+/* ---- 集計：四角のカード ---- */
 .summary{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
-.stat{position:relative;width:76px;height:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;color:#fff;
-  background:var(--blue);
-  -webkit-mask:radial-gradient(circle at 50% 22%,#000 15px,transparent 15.5px),radial-gradient(circle at 76% 40%,#000 15px,transparent 15.5px),radial-gradient(circle at 66% 72%,#000 15px,transparent 15.5px),radial-gradient(circle at 34% 72%,#000 15px,transparent 15.5px),radial-gradient(circle at 24% 40%,#000 15px,transparent 15.5px),radial-gradient(circle at 50% 50%,#000 24px,transparent 24.5px);
-          mask:radial-gradient(circle at 50% 22%,#000 15px,transparent 15.5px),radial-gradient(circle at 76% 40%,#000 15px,transparent 15.5px),radial-gradient(circle at 66% 72%,#000 15px,transparent 15.5px),radial-gradient(circle at 34% 72%,#000 15px,transparent 15.5px),radial-gradient(circle at 24% 40%,#000 15px,transparent 15.5px),radial-gradient(circle at 50% 50%,#000 24px,transparent 24.5px)}
+.stat{position:relative;width:72px;height:68px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;color:#fff;background:var(--blue);border-radius:4px}
 .stat:nth-child(2){background:#8fa4cc} .stat:nth-child(3){background:var(--blue-l);color:var(--ink)} .stat:nth-child(4){background:var(--cream-d);color:var(--ink)}
 .stat small{font-family:var(--font-label);font-size:.6rem;letter-spacing:.14em}
 .stat b{font-family:var(--font-label);font-weight:600;font-size:1.3rem;font-variant-numeric:tabular-nums;margin-top:2px}
@@ -248,7 +243,7 @@ h1 small{display:block;font-family:var(--font-body);font-size:.78rem;color:var(-
 
 <div class="wrap">
   <header class="top">
-    <div class="brand"><h1>Rou's Log<small>ロウ配信ログ</small></h1><span class="badge">Sample</span></div>
+    <div class="brand"><h1>小柳ロウ　配信スケジュール</h1><span class="badge">Sample</span></div>
     <div class="seg" role="tablist" aria-label="表示切り替え">
       <button id="v-week" role="tab">週</button><button id="v-month" role="tab">月</button>
     </div>
