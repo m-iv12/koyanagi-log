@@ -262,6 +262,22 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .k-post{border-radius:50%;background:var(--paper);border:2px solid var(--blue);width:10px;height:10px}
 .k-ann{border-radius:50%;background:var(--blue-d);width:10px;height:10px}
 .k-dl{width:16px;background:var(--cream-d);clip-path:polygon(0 0,100% 0,80% 50%,100% 100%,0 100%)}
+
+/* ---- 時刻の札（カード左上にはみ出す）---- */
+.ev{overflow:visible;padding:0}
+.evin{position:absolute;inset:0;overflow:hidden;border-radius:inherit;display:flex;flex-direction:column;align-items:center;padding:10px 3px 3px;gap:1px}
+.evin>*{flex:none}
+.evin .tt{flex:1 1 auto}
+.evin .evth{margin:-10px -3px 3px;width:calc(100% + 6px)}
+.pill{position:absolute;top:-8px;left:-5px;z-index:4;background:var(--paper);color:var(--blue-d);border:1.5px solid var(--blue);border-radius:99px;
+  font-family:var(--font-label);font-weight:600;font-size:.66rem;line-height:1.35;padding:1px 6px 0;white-space:nowrap;
+  box-shadow:0 1px 3px rgb(63 77 110 / .25);pointer-events:none;font-variant-numeric:tabular-nums}
+.ev.up .pill{border-style:dashed}
+.ev.live .pill{background:var(--blue-d);color:#fff;border-color:var(--blue-d)}
+.ev .g{line-height:1.3}
+.dh{line-height:1.15}
+@media (min-width:720px){.evin{padding:10px 4px 4px}.evin .evth{margin:-10px -4px 4px;width:calc(100% + 8px)}.pill{font-size:.72rem}}
+@media (max-width:480px){.evin{padding:10px 1px 2px}.evin .evth{margin:-10px -1px 2px;width:calc(100% + 2px)}.pill{font-size:.56rem;padding:0 3px;left:-3px;top:-7px}}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -508,7 +524,7 @@ function summary(a,b){
 function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
 
 let HH=22,COLW=100;
-const WKH=50; // 週表示の見出しの高さ（px）
+const WKH=56; // 週表示の見出しの高さ（px）
 let MEAS=0;
 function measure(){const v=$("view");MEAS=v?v.clientHeight:0;
   // カレンダー欄の残りの高さを24等分して1時間の高さにする（最小12px）
@@ -540,16 +556,19 @@ function renderWeek(){
       const top=(a-d0)/DAYMS*100,ht=(b-a)/DAYMS*100;
       const cut=(a>x.start?" top-cut":"")+(b<x.end?" bot-cut":"");
       const len=(b-a)/H;
-      let inner="";
+      let inner=`<span class="evin"></span>`;
       if(isMain){
         const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
         const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
         // 実際の高さ（px）を見て、サムネイル・タイトルを入れるか決める
         const px=len*HH,thH=COLW*9/16;
-        const thumb=x.thumb&&px>=thH+52?`<span class="evth"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>`:"";
-        const gl=`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`;
-        const tt=px>=(thumb?thH:0)+44?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
-        inner=px>=30?`${thumb}<span class="tm">${time}</span>${gl}${!x.own&&px>=70?'<span class="gl">他枠</span>':""}${tt}`:gl;
+        // 入りきる行だけを出す（上の余白10px＋ゲーム行16px＋タイトル1行16px が目安）
+        const thumb=x.thumb&&px>=thH+44?`<span class="evth"><img src="${esc(x.thumb)}" alt="" loading="lazy"></span>`:"";
+        const base=thumb?thH:10;
+        const gl=px>=base+14?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
+        const tt=px>=base+16+16?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
+        const pill=`<span class="pill">${isUp(x)?hm(x.start)+"〜":x.status==="live"?"LIVE":hm(x.start)}</span>`;
+        inner=`${pill}<span class="evin">${thumb}${gl}${tt}</span>`;
       }
       body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
     });
