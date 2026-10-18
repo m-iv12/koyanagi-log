@@ -318,6 +318,8 @@ h1 .br::before{content:"　"}
 @media (min-width:900px){h1 .br{display:block}h1 .br::before{content:none}}
 .evin.next{padding-top:4px}
 .ev .tt.solo{margin-top:0;padding-top:0;border-top:0}
+.round{padding:0}
+.round .ico{width:16px;height:16px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -392,11 +394,11 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
     </div>
   </header>
   <div class="nav">
-    <button class="round" id="prev" aria-label="前へ">‹</button>
+    <button class="round" id="prev" aria-label="前へ"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
     <h2 id="label"></h2>
     <button class="ghost" id="today">今日</button>
     <button class="ghost" id="back">← 戻る</button>
-    <button class="round" id="next" aria-label="次へ">›</button>
+    <button class="round" id="next" aria-label="次へ"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
   </div>
   <div class="summary" id="summary"></div>
   <div class="dl-panel" id="deadlines" hidden></div>
@@ -424,7 +426,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 <div id="backdrop" class="backdrop" hidden></div>
 <div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sh-title">
   <div class="sheet-in">
-    <div class="sheet-top"><div class="sheet-tags"><span id="sh-tag" class="tag"></span><span id="sh-status" class="tag st" hidden></span></div><button class="round" id="sh-close" aria-label="閉じる">×</button></div>
+    <div class="sheet-top"><div class="sheet-tags"><span id="sh-tag" class="tag"></span><span id="sh-status" class="tag st" hidden></span></div><button class="round" id="sh-close" aria-label="閉じる"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
     <a id="sh-thumb" class="sh-thumb" target="_blank" rel="noopener" hidden><img alt=""></a>
     <h3 id="sh-title"></h3>
     <dl id="sh-dl"></dl>
@@ -436,7 +438,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 <button class="fab" id="add-open" type="button" hidden>追加</button>
 <div id="add-sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="add-title">
   <div class="sheet-in">
-    <div class="sheet-top"><h3 id="add-title" style="margin:0">予定・配信を追加</h3><button class="round" id="add-close" type="button" aria-label="閉じる">×</button></div>
+    <div class="sheet-top"><h3 id="add-title" style="margin:0">予定・配信を追加</h3><button class="round" id="add-close" type="button" aria-label="閉じる"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></div>
     <form class="form" id="add-form" novalidate>
       <div class="types" role="radiogroup" aria-label="追加する種類">
         <label><input type="radio" name="ftype" id="t-collab" value="collab" checked>他枠の配信</label>
