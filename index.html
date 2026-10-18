@@ -280,9 +280,14 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 @media (max-width:480px){.evin{padding:10px 1px 2px}.evin .evth{margin:-10px -1px 2px;width:calc(100% + 2px)}.pill{font-size:.56rem;padding:0 3px;left:-3px;top:-7px}}
 
 /* ---- サムネイルの背景（うっすら）---- */
-.evin.hasth{background:linear-gradient(rgb(111 133 178 / .6),rgb(76 95 138 / .66)),var(--th) center / cover no-repeat}
+.evin.hasth{background:linear-gradient(rgb(111 133 178 / .8),rgb(76 95 138 / .88)),var(--th) center / cover no-repeat}
 .evin.hasth .g,.evin.hasth .tt{text-shadow:0 1px 2px rgb(40 50 75 / .45)}
-font-size:.76rem;line-height:1.45;color:var(--ink);padding:0 2px 2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---- 週表示の罫線：1時間ごとの線＋30分ごとの薄い線（方眼紙は月表示のみ）---- */
+#view.v-week{background-image:none;background-color:var(--paper)}
+#view.v-week .gutter{background:var(--paper)}
+#view.v-week .col{background-image:linear-gradient(to bottom,var(--grid-2) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:100% var(--hh),100% var(--hh);background-position:0 0,0 calc(var(--hh) / 2)}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -620,6 +625,7 @@ function render(){
   renderDeadlines();
   $("v-week").setAttribute("aria-selected",view==="week");
   $("v-month").setAttribute("aria-selected",view==="month");
+  $("view").className="v-"+view;
   view==="week"?renderWeek():renderMonth();
   // 集計などの描画で欄の高さが変わったら、測り直してもう一度描く
   if(view==="week"&&Math.abs($("view").clientHeight-MEAS)>2)renderWeek();
