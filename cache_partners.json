@@ -4198,5 +4198,20 @@
   "end": "2026-09-30T14:02:42Z",
   "own": false,
   "source": "manual"
+ },
+ "utoTG-AOBgg": {
+  "id": "utoTG-AOBgg",
+  "title": "にじさんじ×TECH.C.【コラボイベント#8】",
+  "description": "「開発中ゲーム試遊紹介」\n8月24日（日）13：45～配信開始予定\n\n▼ゲスト\n赤城ウェン( @akagi_wen)\n小柳ロウ( @Rou_2434)\n\n▼司会進行\n・大城（TECH.C.広報）\n\n\nTECH.C.ではゲーム、esports、IT、CG、イラストなど様々な分野のお仕事体験や、学校相談会・保護者相談会を開催しています。\n本校の情報をより楽しく知っていただくための取り組みとして、にじさんじ所属のライバーを定期的にゲストで招き様々なイベントやオープンキャンパスを企画しています。\n\n\n※本配信は、遠方にお住いの方や一般の方向けとなります。\n※コラボオープンキャンパスの来校参加は進学を検討する高校生限定です。\n\n\n\n▼主催\n東京デザインテクノロジーセンター専門学校\n通称TECH.C.（テックシー）\n\nゲーム・e-sports・AI・IT・ロボット・CG・アニメ・イラスト様々な分野の勉強ができ、\n300種類以上のお仕事を目指せる東京デザインテクノロジーセンター専門学校。\n\nhttps://www.tech.ac.jp/\n\nhttps://twitter.com/tokyotechc\n\n#TECHCとにじさんじ",
+  "channel": "東京デザインテクノロジーセンター専門学校",
+  "channel_id": "UC-Z5-yYeAcnZheegpkm6IDA",
+  "url": "https://www.youtube.com/watch?v=utoTG-AOBgg",
+  "thumb": "https://i.ytimg.com/vi/utoTG-AOBgg/mqdefault.jpg",
+  "kind": "stream",
+  "status": "done",
+  "start": "2025-08-24T04:46:15Z",
+  "end": "2025-08-24T05:45:23Z",
+  "own": false,
+  "source": "manual"
  }
 }
