@@ -250,6 +250,18 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .submit:hover{background:var(--blue-d)}
 .done{margin:0;font-size:.82rem;background:var(--paper);border:1px dashed var(--blue);border-radius:8px;padding:8px 10px;line-height:1.6;word-break:break-all;white-space:pre-line}
 [hidden]{display:none!important}
+
+/* ---- 凡例 ---- */
+.note{font-size:.76rem;color:var(--ink-soft);margin:0;line-height:1.5;max-width:none}
+.note-h{margin:0 0 4px;font-family:var(--font-label);font-size:.68rem;font-weight:600;letter-spacing:.16em;color:var(--blue-d);border-bottom:1px dashed var(--grid-2);padding-bottom:2px}
+.note ul{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:4px 12px}
+.note li{display:flex;align-items:center;gap:5px}
+.note .note-data{flex-direction:column;gap:2px}
+.note .note-data li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--blue-l);flex:none}
+.k{width:12px;height:12px;flex:none;display:inline-block}
+.k-post{border-radius:50%;background:var(--paper);border:2px solid var(--blue);width:10px;height:10px}
+.k-ann{border-radius:50%;background:var(--blue-d);width:10px;height:10px}
+.k-dl{width:16px;background:var(--cream-d);clip-path:polygon(0 0,100% 0,80% 50%,100% 100%,0 100%)}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -306,7 +318,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
   .dl-h{display:block}
   .dl-item:not(:first-of-type){display:grid}
   .dl-item{padding:6px 0 3px}
-  .note{display:block;font-size:.74rem}
+  .note{display:block}
   .card{margin-top:14px;padding:26px 8px 8px}
 }
 
@@ -331,7 +343,23 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
   </div>
   <div class="summary" id="summary"></div>
   <div class="dl-panel" id="deadlines" hidden></div>
-  <p class="note">配信は YouTube から3時間ごとに自動更新しています。ゲーム名はタイトル先頭の【】の中身です。ブロックや丸印をタップすると詳細とリンクが開きます（白丸＝ポスト、青丸＝配信告知）。右上が折れているブロックはコラボ、点線のブロックはこれからの予定、リボンの「締切」はグッズなどの締切です。時刻は閲覧している端末のタイムゾーンで表示されます。</p>
+  <div class="note">
+      <p class="note-h">表示の見方</p>
+      <ul>
+        <li><span class="k k-post"></span>ポスト</li>
+        <li><span class="k k-ann"></span>配信告知</li>
+        <li><span class="k key-co"></span>コラボ</li>
+        <li><span class="k key-up"></span>配信予定</li>
+        <li><span class="k k-dl"></span>締切</li>
+      </ul>
+      <p class="note-h">データ</p>
+      <ul class="note-data">
+        <li>配信：YouTube から3時間ごとに自動更新</li>
+        <li>ゲーム名：タイトル先頭の【】</li>
+        <li>時刻：閲覧端末のタイムゾーン</li>
+        <li>ブロック・丸印をタップで詳細とリンク</li>
+      </ul>
+    </div>
   </aside>
   <main class="card"><div class="strap" aria-hidden="true"></div><div id="view"></div></main>
 </div>
@@ -474,7 +502,7 @@ function summary(a,b){
   const pc=posts.filter(p=>p.time>=a&&p.time<b).length;
   $("summary").innerHTML=`<span class="stat"><small>STREAM</small><b>${ss.length}</b><small>回</small></span><span class="stat"><small>HOURS</small><b>${hrs(tot)}</b><small>時間</small></span><span class="stat"><small>POST</small><b>${pc}</b><small>件</small></span>${up?`<span class="stat"><small>PLAN</small><b>${up}</b><small>予定</small></span>`:""}`+
     `<span class="chips">`+top.map(([g,v])=>`<span class="chip">${esc(g)} ${hrs(v)}h</span>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
-    `<span class="chip"><span class="key-co"></span>コラボ</span><span class="chip"><span class="key-up"></span>予定</span></span>`;
+    `</span>`;
 }
 
 function flags(x){return(isUp(x)?" up":"")+(x.status==="live"?" live":"")+(x.collabs.length?" co":"")+(x.own?"":" guest")}
