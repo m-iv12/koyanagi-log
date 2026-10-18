@@ -182,7 +182,7 @@ def update_own(since):
 
 
 # ---------- 2・3. 他チャンネル ----------
-def update_partners(since):
+def update_partners(since, scanned):
     cache = {} if FULL else load(PARTNER_CACHE, {})
     exclude = {video_id(x) for x in load(DATA / "collab_exclude.json", [])}
     keywords = [k.lower() for k in CONFIG.get("collab_keywords", [])]
@@ -193,9 +193,12 @@ def update_partners(since):
         name, playlist = resolve_channel(ref)
         if not playlist:
             continue
-        ids = list_uploads(playlist, since, max_pages=None if FULL or not cache else 1)
+        # 初めて見るチャンネルは since まで全件、2回目以降は最新50件だけ確認
+        first_time = FULL or ref not in scanned
+        ids = list_uploads(playlist, since, max_pages=None if first_time else 1)
+        scanned.add(ref)
         to_fetch += [i for i in ids if i not in cache]
-        print(f"コラボ相手 {name}: {len(ids)} 件を確認")
+        print(f"コラボ相手 {name}: {len(ids)} 件を確認" + ("（初回のため全件）" if first_time else ""))
     auto_ids = set(to_fetch)
 
     # 手動：collab_videos.json に書いた動画
@@ -299,10 +302,11 @@ def main():
             print(f"since が {meta.get('since')} → {CONFIG['since']} に変わったため全件を取り直します")
         FULL = True
     own, own_name = update_own(since)
-    partners = update_partners(since)
+    scanned = set() if FULL else set(meta.get("scanned_channels", []))
+    partners = update_partners(since, scanned)
     data = merge(own, partners, own_name)
     save(OUT, data)
-    save(DATA / "cache_meta.json", {"since": CONFIG["since"]})
+    save(DATA / "cache_meta.json", {"since": CONFIG["since"], "scanned_channels": sorted(scanned)})
     print(f"表示用データ: {len(data)} 件")
 
 
