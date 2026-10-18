@@ -206,6 +206,11 @@ h1::before{content:"";display:inline-block;width:.62em;height:.56em;margin-right
 .cl span{grid-row:2;font-size:.75rem;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cl i{grid-row:1 / 3;grid-column:2;font-style:normal;color:var(--gold-hi)}
 .sheet-in{max-height:calc(100vh - 40px);overflow-y:auto}
+/* ---- ゲーム色（名前ごとに --gc/--gi/--gd を指定）---- */
+.gx{background:var(--gc);color:var(--gi)}
+.ph.gx{background:linear-gradient(135deg,var(--gc) 0%,var(--gd) 100%)}
+.ev .g{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph b{max-width:92%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* ---- 締切 ---- */
 .dl-panel{display:flex;flex-direction:column;gap:6px;background:var(--strap);border:1px solid #000;border-left:4px solid var(--gold);border-radius:4px;padding:10px 12px;color:var(--ink)}
 .dl-h{font-size:.75rem;color:var(--gold-hi);letter-spacing:.08em;font-weight:700}
@@ -273,7 +278,7 @@ h1::before{content:"";display:inline-block;width:.62em;height:.56em;margin-right
   <div class="summary" id="summary"></div>
   <div class="dl-panel" id="deadlines" hidden></div>
   <main class="card"><div class="strap" aria-hidden="true"></div><div id="view"></div></main>
-  <p class="note">配信は YouTube から3時間ごとに自動更新しています。ブロックや三角をタップすると詳細とリンクが開きます（銀の三角＝ポスト、金の三角＝配信告知）。右上が金色に折れているブロックはコラボ、斜線のブロックはこれからの予定、金の「締切」はグッズなどの締切です。時刻は閲覧している端末のタイムゾーンで表示されます。</p>
+  <p class="note">配信は YouTube から3時間ごとに自動更新しています。ゲーム名はタイトル先頭の【】の中身です。ブロックや三角をタップすると詳細とリンクが開きます（銀の三角＝ポスト、金の三角＝配信告知）。右上が金色に折れているブロックはコラボ、斜線のブロックはこれからの予定、金の「締切」はグッズなどの締切です。時刻は閲覧している端末のタイムゾーンで表示されます。</p>
 </div>
 
 <div id="backdrop" class="backdrop" hidden></div>
@@ -309,7 +314,7 @@ h1::before{content:"";display:inline-block;width:.62em;height:.56em;margin-right
         </div>
         <label class="fld"><span>タイトル</span><input type="text" id="f-title" placeholder="大会本番 など"></label>
         <div class="row2">
-          <label class="fld"><span>ゲーム</span><select id="f-game"><option value="valo">VALORANT</option><option value="apex">Apex Legends</option><option value="chat">雑談</option><option value="other">その他</option></select></label>
+          <label class="fld"><span>ゲーム（【】の中身）</span><input type="text" id="f-game" list="f-games" placeholder="VALORANT など"><datalist id="f-games"><option value="VALORANT"><option value="APEX"><option value="雑談"></datalist></label>
           <label class="fld"><span>配信元</span><select id="f-own"><option value="own">本人の枠</option><option value="guest">他の人の枠</option></select></label>
         </div>
         <label class="fld"><span>告知ポストの URL（任意）</span><input type="url" id="f-surl" placeholder="https://x.com/…/status/…" autocomplete="off"></label>
@@ -341,7 +346,20 @@ h1::before{content:"";display:inline-block;width:.62em;height:.56em;margin-right
 <script>
 (function(){
 const H=3600e3, DAYMS=864e5, OWN="小柳ロウ";
-const GAMES={valo:{name:"VALORANT",short:"VALO"},apex:{name:"Apex Legends",short:"APEX"},chat:{name:"雑談",short:"雑談"},other:{name:"その他",short:"他"}};
+const GAMES={valo:{name:"VALORANT",short:"VALO"},apex:{name:"APEX",short:"APEX"},chat:{name:"雑談",short:"雑談"},other:{name:"その他",short:"他"}};
+// ゲーム名＝タイトル先頭の【】の中身。VALORANT・APEX・雑談は衣装の配色、それ以外は名前から色を自動で決める
+const KNOWN={"VALORANT":{short:"VALO",c:"var(--valo)",i:"var(--valo-ink)",d:"var(--valo-deep)"},
+  "APEX":{short:"APEX",c:"var(--apex)",i:"var(--apex-ink)",d:"var(--apex-deep)"},
+  "雑談":{short:"雑談",c:"var(--chat)",i:"var(--chat-ink)",d:"var(--chat-deep)"},
+  "その他":{short:"他",c:"var(--other)",i:"var(--other-ink)",d:"var(--other-deep)"}};
+const LEGACY={valo:"VALORANT",apex:"APEX",chat:"雑談",other:"その他"};
+const PAL=[["#6d7fa8","#fff","#2e3650"],["#9aa3b5","#121214","#4d5260"],["#2c2f8f","#fff","#121339"],["#7b5ea7","#fff","#33264a"],
+  ["#4f8a8b","#fff","#1f3a3b"],["#a35d6a","#fff","#4a252c"],["#b9b28a","#121214","#5c573d"],["#555a66","#fff","#22252b"]];
+const gameOf=t=>{const m=String(t||"").match(/【([^】]+)】/);return m?m[1].trim():"その他"};
+const normGame=g=>{if(!g)return"その他";g=LEGACY[g]||String(g).trim();const u=g.toUpperCase();
+  if(u.includes("VALORANT")||u==="VALO"||g.includes("ヴァロ"))return"VALORANT";if(u.includes("APEX")||g.includes("エーペックス"))return"APEX";return g};
+const gInfo=g=>{if(KNOWN[g])return{short:KNOWN[g].short,...KNOWN[g]};let h=0;for(const ch of g)h=(h*31+ch.codePointAt(0))>>>0;const p=PAL[h%PAL.length];return{short:g,c:p[0],i:p[1],d:p[2]}};
+const gStyle=g=>{const x=gInfo(g);return`--gc:${x.c};--gi:${x.i};--gd:${x.d}`};
 const WD=["日","月","火","水","木","金","土"];
 const sod=t=>{const d=new Date(t);d.setHours(0,0,0,0);return d.getTime()};
 const addDays=(t,n)=>{const d=new Date(t);d.setDate(d.getDate()+n);return d.getTime()};
@@ -363,7 +381,7 @@ function normalize(d){
     let e=x.end?T(x.end):null,est=false;
     if(!e){if(status==="live")e=Math.max(now,s+30*6e4);else{e=s+2*H;est=true}}
     return{id:"s"+i,kind:"stream",vkind:x.kind||"stream",status,est,own:x.own!==false,channel:x.channel||OWN,manual:!!x.manual,
-      game:GAMES[x.game]?x.game:"other",title:x.title||"",start:s,end:e,url:x.url||"https://www.youtube.com/",thumb:x.thumb||null,collabs:x.collabs||[]};
+      game:normGame(x.game||gameOf(x.title)),title:x.title||"",start:s,end:e,url:x.url||"https://www.youtube.com/",thumb:x.thumb||null,collabs:x.collabs||[]};
   });
   posts=(d.posts||[]).filter(x=>x.time).map((x,i)=>({id:"p"+i,kind:"post",ann:x.kind==="announce",time:T(x.time),
     text:x.text||(x.kind==="announce"?"配信告知":"ポスト"),url:x.url||"https://x.com/"}));
@@ -388,11 +406,12 @@ const $=id=>document.getElementById(id);
 
 function summary(a,b){
   const all=streams.filter(e=>e.end>a&&e.start<b),ss=all.filter(x=>!isUp(x)),up=all.length-ss.length;
-  const per={valo:0,apex:0,chat:0,other:0};let tot=0;
-  ss.forEach(e=>{const o=overlap(e.start,e.end,a,b);per[e.game]+=o;tot+=o});
+  const per={};let tot=0;
+  ss.forEach(e=>{const o=overlap(e.start,e.end,a,b);per[e.game]=(per[e.game]||0)+o;tot+=o});
+  const ranked=Object.entries(per).sort((x,y)=>y[1]-x[1]),top=ranked.slice(0,5),rest=ranked.slice(5).reduce((s,x)=>s+x[1],0);
   const pc=posts.filter(p=>p.time>=a&&p.time<b).length;
   $("summary").innerHTML=`<span>配信 <b>${ss.length}</b> 回</span><span>合計 <b>${hrs(tot)}</b> 時間</span><span>ポスト <b>${pc}</b> 件</span>${up?`<span>予定 <b>${up}</b> 件</span>`:""}<span class="sep"></span>`+
-    Object.keys(GAMES).map(g=>`<span class="chip"><span class="dot g-${g}"></span>${GAMES[g].short} ${hrs(per[g])}h</span>`).join("")+
+    top.map(([g,v])=>`<span class="chip"><span class="dot gx" style="${gStyle(g)}"></span>${esc(g)} ${hrs(v)}h</span>`).join("")+(rest?`<span class="chip">ほか ${hrs(rest)}h</span>`:"")+
     `<span class="chip"><span class="key-co"></span>コラボ</span><span class="chip"><span class="key-up"></span>予定</span>`;
 }
 
@@ -425,10 +444,10 @@ function renderWeek(){
       if(isMain){
         const time=isUp(x)?`${hm(x.start)}〜`:`${hm(x.start)}–${endLabel(x.start,x.end)}`;
         const sub=isUp(x)?"予定":x.status==="live"?"LIVE":`${hrs(x.end-x.start)}h`;
-        inner=len>=1.9?`<span>${time}</span><span class="g">${GAMES[x.game].short}</span><span>${sub}</span>${!x.own&&len>=3?'<span class="gl">他枠</span>':""}`
-             :`<span class="g">${GAMES[x.game].short}</span>`;
+        inner=len>=1.9?`<span>${time}</span><span class="g">${esc(gInfo(x.game).short)}</span><span>${sub}</span>${!x.own&&len>=3?'<span class="gl">他枠</span>':""}`
+             :`<span class="g">${esc(gInfo(x.game).short)}</span>`;
       }
-      body+=`<button class="ev g-${x.game}${cut}${flags(x)}" style="top:${top}%;height:${ht}%" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
+      body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
     });
     posts.filter(p=>p.time>=d0&&p.time<d1).forEach(p=>{
       body+=`<button class="post${p.ann?" ann":""}" style="top:${(p.time-d0)/DAYMS*100}%" data-id="${p.id}" aria-label="ポスト ${hm(p.time)}"></button>`;
@@ -451,7 +470,7 @@ function renderMonth(){
     // 配信開始日のマスにサムネイルを置く（複数あれば縦に分割、最大3枠）
     const started=streams.filter(x=>x.start>=d0&&x.start<d1).sort((a,b)=>a.start-b.start);
     const tot=started.filter(x=>!isUp(x)).reduce((acc,x)=>acc+(x.end-x.start),0);
-    const tiles=started.slice(0,3).map(x=>`<span class="th${flags(x)}">${x.thumb?`<img src="${esc(x.thumb)}" alt="" loading="lazy">`:`<span class="ph g-${x.game}"><b>${GAMES[x.game].short}</b></span>`}${isUp(x)?'<span class="upl">予定</span>':""}</span>`).join("");
+    const tiles=started.slice(0,3).map(x=>`<span class="th${flags(x)}">${x.thumb?`<img src="${esc(x.thumb)}" alt="" loading="lazy">`:`<span class="ph gx" style="${gStyle(x.game)}"><b>${esc(gInfo(x.game).short)}</b></span>`}${isUp(x)?'<span class="upl">予定</span>':""}</span>`).join("");
     const out=d0<m0||d0>=m1;
     const dn=String(new Date(d0).getDate()).padStart(2,"0");
     h+=`<button class="mc${out?" out":""}${started.length?" has":""}${d0===today?" today":""}" data-day="${d0}" aria-label="${md(d0)}、配信${started.length}件。週表示を開く"${out?' tabindex="-1"':""}>
@@ -479,7 +498,7 @@ function openSheet(ev){
   const tag=$("sh-tag"),st=$("sh-status"),dl=$("sh-dl"),link=$("sh-link"),ex=$("sh-extra");
   ex.innerHTML="";st.hidden=true;
   if(ev.kind==="stream"){
-    tag.className="tag g-"+ev.game;tag.textContent=GAMES[ev.game].name;
+    tag.className="tag gx";tag.setAttribute("style",gStyle(ev.game));tag.textContent=ev.game;
     const sts=isUp(ev)?(ev.manual?"予定（枠未作成）":"予定"):ev.status==="live"?"配信中":ev.collabs.length||!ev.own?"コラボ":"";
     if(sts){st.hidden=false;st.textContent=sts}
     $("sh-title").textContent=ev.title;
@@ -494,14 +513,14 @@ function openSheet(ev){
         `<li><a href="${esc(c.url)}" target="_blank" rel="noopener"><b>${esc(c.channel)}</b><span>${esc(c.title||"")}</span><i aria-hidden="true">↗</i></a></li>`).join("")+"</ul>";
     }
   }else if(ev.kind==="deadline"){
-    tag.className="tag dl";tag.textContent="締切";
+    tag.className="tag dl";tag.removeAttribute("style");tag.textContent="締切";
     const days=Math.ceil((sod(ev.time)-sod(Date.now()))/DAYMS);
     st.hidden=false;st.textContent=ev.time<Date.now()?"終了":days<=0?"今日まで":`あと${days}日`;
     $("sh-title").textContent=ev.title;
     dl.innerHTML=`<dt>締切</dt><dd>${md(ev.time)} ${hm(ev.time)}</dd>`;
     link.href=ev.url;link.textContent="告知・販売ページを開く ↗";
   }else{
-    tag.className="tag post-tag";tag.textContent=ev.ann?"配信告知":"ポスト";
+    tag.className="tag post-tag";tag.removeAttribute("style");tag.textContent=ev.ann?"配信告知":"ポスト";
     $("sh-title").textContent=ev.text;
     dl.innerHTML=`<dt>日付</dt><dd>${md(ev.time)}</dd><dt>時刻</dt><dd>${hm(ev.time)}</dd>`;
     link.href=ev.url;link.textContent="X でポストを開く ↗";
@@ -563,7 +582,7 @@ const SHOW_ADD_ALWAYS=false; // 「追加」ボタンは URL の末尾に #edit 
       if(!d||!tm){err.textContent="日付と開始時刻を入れてください。";return}
       const su=$("f-surl").value.trim();
       title=`[追加] 配信予定 ${d} ${tm}`;
-      lines=[`type: schedule`,`start: ${d}T${tm}:00+09:00`,`title: ${ti||"配信予定"}`,`game: ${$("f-game").value}`,`own: ${$("f-own").value==="own"?"yes":"no"}`];
+      lines=[`type: schedule`,`start: ${d}T${tm}:00+09:00`,`title: ${ti||"配信予定"}`,`game: ${$("f-game").value.trim()||"その他"}`,`own: ${$("f-own").value==="own"?"yes":"no"}`];
       if(su)lines.push(`url: ${su}`);
     }else if(t==="deadline"){
       const ti=$("f-dtitle").value.trim(),d=$("f-ddate").value,tm=$("f-dtime").value||"23:59",u=$("f-durl").value.trim();

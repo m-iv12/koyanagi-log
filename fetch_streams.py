@@ -68,12 +68,25 @@ def video_id(text):
     return text if re.fullmatch(r"[A-Za-z0-9_-]{11}", text) else None
 
 
+LEGACY = {"valo": "VALORANT", "apex": "APEX", "chat": "雑談", "other": "その他"}
+
+
+def normalize_game(name):
+    """表記ゆれをそろえる（config.json の game_aliases）。"""
+    if not name:
+        return "その他"
+    name = LEGACY.get(name, name).strip()
+    low = name.lower()
+    for canon, words in CONFIG.get("game_aliases", {}).items():
+        if any(w.lower() in low for w in words):
+            return canon
+    return name
+
+
 def classify(title):
-    t = title.lower()
-    for game, words in CONFIG["games"].items():
-        if any(w.lower() in t for w in words):
-            return game
-    return "other"
+    """タイトル先頭の【】の中身をゲーム名とする。【】がなければ「その他」。"""
+    m = re.search(r"【([^】]+)】", title or "")
+    return normalize_game(m.group(1) if m else None)
 
 
 def resolve_channel(ref):
@@ -221,7 +234,7 @@ def span(rec):
 def public(rec, own_name):
     keep = ("id", "title", "kind", "status", "start", "end", "url", "thumb", "channel", "own")
     out = {k: rec.get(k) for k in keep}
-    out["game"] = rec.get("game") or classify(rec["title"])
+    out["game"] = normalize_game(rec["game"]) if rec.get("game") else classify(rec["title"])
     out["collabs"] = rec.get("collabs", [])
     return out
 

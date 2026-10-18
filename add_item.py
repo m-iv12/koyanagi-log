@@ -52,7 +52,7 @@ def main():
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+09:00", f.get("start", "")):
             sys.exit("開始日時が読み取れません")
         item = {"start": f["start"], "title": f.get("title", "配信予定")[:200],
-                "game": f.get("game", "other"), "own": f.get("own", "yes") == "yes"}
+                "game": f.get("game", "その他"), "own": f.get("own", "yes") == "yes"}
         if f.get("url", "").startswith("https://"):
             item["url"] = f["url"]
         items = load("schedule.json", [])
