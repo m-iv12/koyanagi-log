@@ -278,6 +278,11 @@ h1{margin:0;font-family:var(--font-body);font-weight:700;font-size:clamp(1.3rem,
 .dh{line-height:1.15}
 @media (min-width:720px){.evin{padding:10px 4px 4px}.evin .evth{margin:-10px -4px 4px;width:calc(100% + 8px)}.pill{font-size:.72rem}}
 @media (max-width:480px){.evin{padding:10px 1px 2px}.evin .evth{margin:-10px -1px 2px;width:calc(100% + 2px)}.pill{font-size:.56rem;padding:0 3px;left:-3px;top:-7px}}
+
+/* ---- サムネイルの背景（うっすら）---- */
+.evin.hasth{background:linear-gradient(rgb(111 133 178 / .8),rgb(76 95 138 / .88)),var(--th) center / cover no-repeat}
+.evin.hasth .g,.evin.hasth .tt{text-shadow:0 1px 2px rgb(40 50 75 / .45)}
+font-size:.76rem;line-height:1.45;color:var(--ink);padding:0 2px 2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -568,7 +573,9 @@ function renderWeek(){
         const gl=px>=base+14?`<span class="g">${esc(gInfo(x.game).short)}<small>(${sub})</small></span>`:"";
         const tt=px>=base+16+16?`<span class="tt">${esc(cleanTitle(x.title))}</span>`:"";
         const pill=`<span class="pill">${isUp(x)?hm(x.start)+"〜":x.status==="live"?"LIVE":hm(x.start)}</span>`;
-        inner=`${pill}<span class="evin">${thumb}${gl}${tt}</span>`;
+        // サムネイルは青を重ねて背景にうっすら敷く（予定のカードは除く）
+        const bg=x.thumb&&!isUp(x)?` style="--th:url(&quot;${esc(x.thumb)}&quot;)"`:"";
+        inner=`${pill}<span class="evin${bg?" hasth":""}"${bg}>${thumb}${gl}${tt}</span>`;
       }
       body+=`<button class="ev gx${cut}${flags(x)}" style="top:${top}%;height:${ht}%;${gStyle(x.game)}" data-id="${x.id}" aria-label="${esc(x.title)} ${hm(x.start)}から">${inner}</button>`;
     });
