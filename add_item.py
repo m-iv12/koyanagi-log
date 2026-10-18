@@ -1,7 +1,7 @@
 """ページの「追加」から作られた GitHub Issue の本文を読み、data/*.json に書き足す。
 
 本文の形式（1行1項目）:
-  type: collab | schedule | post | deadline
+  type: collab | schedule | post | deadline | exclude
   url: ...
   start: 2026-11-03T20:00:00+09:00   (schedule)
   title: ... / game: ... / own: yes|no (schedule)
@@ -72,6 +72,19 @@ def main():
         items.append(item)
         items.sort(key=lambda p: p.get("time") or "")
         save("posts.json", items)
+
+    elif t == "exclude":
+        url = f.get("url", "")
+        m = re.search(r"(?:v=|youtu\.be/|/live/|/shorts/)([A-Za-z0-9_-]{11})", url)
+        if not m:
+            sys.exit("YouTube の URL が読み取れません")
+        vid = m.group(1)
+        ex = load("collab_exclude.json", [])
+        if not any(vid in x for x in ex):
+            ex.append(f"https://www.youtube.com/watch?v={vid}")
+        save("collab_exclude.json", ex)
+        # 手動で登録していた場合は登録も外す
+        save("collab_videos.json", [x for x in load("collab_videos.json", []) if vid not in x])
 
     elif t == "deadline":
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+09:00", f.get("deadline", "")):

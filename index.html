@@ -320,6 +320,19 @@ h1 .br::before{content:"　"}
 .ev .tt.solo{margin-top:0;padding-top:0;border-top:0}
 .round{padding:0}
 .round .ico{width:16px;height:16px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- コラボ相手の枠：除外オプション ---- */
+.ex-h span{flex:none}
+.ex-h::after{order:1}
+.ex-opt{order:2;flex:none;border:1px solid var(--grid-2);background:var(--paper);color:var(--ink-soft);border-radius:99px;font-size:.68rem;letter-spacing:0;padding:1px 9px;font-family:var(--font-body)}
+.ex-opt[aria-expanded="true"]{border-color:var(--blue);color:var(--blue-d)}
+.cl li{display:flex;gap:6px;align-items:stretch}
+.cl li a{flex:1;min-width:0}
+.ex-del{flex:none;border:1px solid #d9b3bc;background:var(--paper);color:#a3435a;border-radius:8px;font-size:.74rem;font-weight:700;padding:0 10px;white-space:nowrap}
+.ex-del.armed{background:#a3435a;color:#fff;border-color:#a3435a}
+.ex-del:disabled{opacity:.7;cursor:default}
+.ex-self{display:flex}
+.ex-self .ex-del{padding:7px 12px}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
@@ -709,9 +722,17 @@ function openSheet(ev){
       `<dt>配信元</dt><dd>${esc(ev.channel)}${ev.own?"":"<span class=\"warn\">本人の枠なし</span>"}</dd>`;
     link.href=ev.url;
     link.textContent=ev.manual?"X で告知を開く ↗":ev.own?"小柳ロウの枠を開く ↗":`${ev.channel} の枠を開く ↗`;
+    // 「除外…」は追加ボタンを表示している端末（#edit）だけに出す
+    const canEdit=document.body.classList.contains("edit");
+    const opt=canEdit?'<button type="button" class="ex-opt" aria-expanded="false">除外…</button>':"";
+    const del=(url,title,label)=>canEdit?`<button type="button" class="ex-del" data-url="${esc(url)}" data-title="${esc(title)}" hidden>${label}</button>`:"";
     if(ev.collabs.length){
-      ex.innerHTML=`<p class="ex-h">コラボ相手の枠</p><ul class="cl">`+ev.collabs.map(c=>
-        `<li><a href="${esc(c.url)}" target="_blank" rel="noopener"><b>${esc(c.channel)}</b><span>${esc(c.title||"")}</span><i aria-hidden="true">↗</i></a></li>`).join("")+"</ul>";
+      ex.innerHTML=`<p class="ex-h"><span>コラボ相手の枠</span>${opt}</p><ul class="cl">`+ev.collabs.map(c=>
+        `<li><a href="${esc(c.url)}" target="_blank" rel="noopener"><b>${esc(c.channel)}</b><span>${esc(c.title||"")}</span><i aria-hidden="true">↗</i></a>${del(c.url,c.title||"","除外")}</li>`).join("")+"</ul>";
+    }
+    // 本人の枠がない単独カード（手動の予定は除く）
+    if(!ev.own&&!ev.manual&&canEdit&&/youtube\.com|youtu\.be/.test(ev.url)){
+      ex.innerHTML+=`<p class="ex-h"><span>この配信</span>${opt}</p><div class="ex-self">${del(ev.url,ev.title,"この配信を除外")}</div>`;
     }
   }else if(ev.kind==="deadline"){
     tag.className="tag dl";tag.removeAttribute("style");tag.textContent="締切";
@@ -737,6 +758,19 @@ $("view").addEventListener("click",e=>{
   if(d){cursor=+d.dataset.day;view="week";render()}
 });
 $("deadlines").addEventListener("click",e=>{const b=e.target.closest("[data-id]");if(b){const ev=events.find(x=>x.id===b.dataset.id);if(ev)openSheet(ev)}});
+// コラボ相手の枠の除外（GitHub の Issue で登録。押すと確認表示 → もう一度押すと登録画面へ）
+$("sh-extra").addEventListener("click",e=>{
+  const o=e.target.closest(".ex-opt");
+  if(o){const on=o.getAttribute("aria-expanded")!=="true";o.setAttribute("aria-expanded",on);o.textContent=on?"閉じる":"除外…";
+    let n=o.parentElement.nextElementSibling;if(n)n.querySelectorAll(".ex-del").forEach(b=>{b.hidden=!on;b.classList.remove("armed");b.textContent=b.dataset.label||b.textContent;b.dataset.label=b.textContent});return}
+  const b=e.target.closest(".ex-del");if(!b)return;
+  if(!b.classList.contains("armed")){b.dataset.label=b.dataset.label||b.textContent;b.classList.add("armed");b.textContent="押すと除外";return}
+  const m=String(b.dataset.url).match(/(?:v=|youtu\.be\/|\/live\/|\/shorts\/)([A-Za-z0-9_-]{11})/);if(!m)return;
+  const title=`[追加] 除外 ${m[1]}`,body=`type: exclude\nurl: ${b.dataset.url}\n\n（このまま Create を押してください。内容を書き換えないでください）\n対象：${b.dataset.title}`;
+  if(typeof REPO==="undefined"||!REPO){b.textContent="サンプルのため送信しません";b.disabled=true;return}
+  window.open(`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`,"_blank","noopener");
+  b.textContent="GitHub で Create を押すと除外";b.disabled=true;
+});
 $("summary").addEventListener("click",e=>{const b=e.target.closest("[data-game]");if(!b)return;
   if(view!=="list")backView=view;listGame=b.dataset.game;view="list";render()});
 $("back").onclick=()=>{view=backView;render()};
@@ -759,6 +793,7 @@ const SHOW_ADD_ALWAYS=false; // 「追加」ボタンは URL の末尾に #edit 
   let edit=SHOW_ADD_ALWAYS;
   try{if(location.hash==="#edit")localStorage.setItem("rou-edit","1");if(localStorage.getItem("rou-edit")==="1")edit=true}catch(e){if(location.hash==="#edit")edit=true}
   $("add-open").hidden=!edit;
+  document.body.classList.toggle("edit",edit);
   const sheet=$("add-sheet"),bd=$("backdrop");
   const open=()=>{bd.hidden=false;sheet.hidden=false;$("f-done").hidden=true;$("f-err").textContent="";$("add-close").focus()};
   const close=()=>{sheet.hidden=true;if($("sheet").hidden)bd.hidden=true};
