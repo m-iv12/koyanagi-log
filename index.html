@@ -333,6 +333,12 @@ h1 .br::before{content:"　"}
 .ex-del:disabled{opacity:.7;cursor:default}
 .ex-self{display:flex}
 .ex-self .ex-del{padding:7px 12px}
+/* ---- 詳細パネル：画面内に収めてスクロール（枠線・余白込みで高さを計算）---- */
+.sheet-in{box-sizing:border-box;max-height:calc(100vh - 24px - env(safe-area-inset-bottom,0px));max-height:calc(100dvh - 24px - env(safe-area-inset-bottom,0px));
+  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.sheet-top{position:sticky;top:-20px;z-index:3;margin:-20px -20px 0;padding:14px 20px 10px;background:var(--cream);
+  background-image:linear-gradient(rgb(233 220 176 / .5) 1px,transparent 1px),linear-gradient(90deg,rgb(233 220 176 / .5) 1px,transparent 1px);background-size:14px 14px}
+.sheet-in>*{flex-shrink:0}
 /* ==== 1画面レイアウト（スマホ：上に操作／PC：左パネル＋右カレンダー）==== */
 html,body{height:100%}
 .wrap{box-sizing:border-box;height:100vh;height:100dvh;max-width:1400px;padding-block:10px;gap:8px;display:flex;flex-direction:column;overflow:hidden}
