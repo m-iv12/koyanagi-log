@@ -6407,7 +6407,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "樋口楓【にじさんじ所属】",
+    "title": "【APEX】でろウは…… w/小柳ロウ【にじさんじ / 樋口楓】",
+    "url": "https://www.youtube.com/watch?v=t8dkH7uBkJ0",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "17VBkZExaRU",
