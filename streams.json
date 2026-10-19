@@ -1694,7 +1694,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "朝のざつ",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "四季凪アキラ / Shikinagi Akira",
+    "title": "【寝坊】洗い物を全て片付けたあとの清涼感を、何と呼ぼうか【朝雑談/四季凪アキラ/にじさんじ/VOLTACTION】",
+    "url": "https://www.youtube.com/watch?v=3rokfW9cvqE",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "1VbWvLyEdAc",
