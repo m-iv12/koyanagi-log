@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="koyanagi-log">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="robots" content="noindex">
 <title>koyanagi-log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -400,6 +403,12 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 .mo-grid{flex:1;min-height:0;grid-auto-rows:minmax(0,1fr)}
 .mc{aspect-ratio:auto}
 
+/* スマホ：ステータスバー・ホームバーの分だけ上下に余白。追加ボタンがある端末はボタン分も空ける */
+@media (max-width:899px){
+  .wrap{padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+  body.edit .wrap{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+  .fab{bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:9px 16px 9px 22px}
+}
 @media (min-width:900px){
   .wrap{display:grid;grid-template-columns:280px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:24px;padding-block:18px}
   .side{overflow-y:auto;gap:14px;padding:4px 4px 8px 0;scrollbar-width:thin}
