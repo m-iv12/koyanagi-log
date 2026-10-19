@@ -436,7 +436,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW2",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+    "title": "【Overwatch2】相方起きるまでやります【星導ショウ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=mSq6MGus-8I",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "Cu88yhgBr0w",
