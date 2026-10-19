@@ -5170,7 +5170,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "UNO",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "える / Elu【にじさんじ】",
+    "title": "【UNO】UNOやろ～！^^ってだけです。【にじさんじ/える】",
+    "url": "https://www.youtube.com/watch?v=jpvExM1DFGo",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "oSESzz0PtrA",
