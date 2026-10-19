@@ -372,12 +372,16 @@ def main():
         if meta:
             print(f"since が {meta.get('since')} → {CONFIG['since']} に変わったため全件を取り直します")
         FULL = True
+    # config.json の channel を変えたら（別のライバー用にコピーしたときなど）、自動で全件を取り直す
+    if meta.get("channel") != CONFIG["channel"]:
+        print(f"channel が {meta.get('channel')} → {CONFIG['channel']} に変わったため全件を取り直します")
+        FULL = True
     own, own_name = update_own(since)
     scanned = set() if FULL else set(meta.get("scanned_channels", []))
     partners = update_partners(since, scanned)
     data = merge(own, partners, own_name)
     save(OUT, data)
-    save(DATA / "cache_meta.json", {"since": CONFIG["since"], "scanned_channels": sorted(scanned)})
+    save(DATA / "cache_meta.json", {"since": CONFIG["since"], "channel": CONFIG["channel"], "scanned_channels": sorted(scanned)})
     print(f"表示用データ: {len(data)} 件")
 
 
