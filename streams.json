@@ -3413,7 +3413,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "#ロウ新衣装",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "四季凪アキラ / Shikinagi Akira",
+    "title": "【真剣勝負】『カスのディベート対決』…！？【小柳ロウ/四季凪アキラ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=ivOCNtSQu4w",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "MeI-Y6mKoas",
