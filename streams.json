@@ -4169,7 +4169,8 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【APEX】今度こそ配信でプラチナに行きます【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=sL5WFqZk6D8"
+    "url": "https://www.youtube.com/watch?v=sL5WFqZk6D8",
+    "manual": true
    }
   ]
  },
@@ -11099,7 +11100,8 @@
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【ピグパーティ】ピグパーティにぎゃうるふが登場！【にじさんじ/赤城ウェン/小柳ロウ】",
-    "url": "https://www.youtube.com/watch?v=LhzOZOwk6cY"
+    "url": "https://www.youtube.com/watch?v=LhzOZOwk6cY",
+    "manual": true
    }
   ]
  },
@@ -12690,22 +12692,26 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【REMATCH】MECHATU-Aサッカー部【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=cdmG6Wj5hzw"
+    "url": "https://www.youtube.com/watch?v=cdmG6Wj5hzw",
+    "manual": true
    },
    {
     "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
     "title": "【REMATCH】同期の野郎どもと新感覚サッカー⚽【にじさんじ/緋八マナ】",
-    "url": "https://www.youtube.com/watch?v=5OCGeU1B_yQ"
+    "url": "https://www.youtube.com/watch?v=5OCGeU1B_yQ",
+    "manual": true
    },
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
     "title": "【REMATCH】めちゃサッカーw/めちゃつえー【叢雲カゲツ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=euDfndolxQY"
+    "url": "https://www.youtube.com/watch?v=euDfndolxQY",
+    "manual": true
    },
    {
     "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
     "title": "【REMATCH】ヒーローの皆さんとサッカーで遊ぶ　※佐伯支店【にじさんじ／佐伯イッテツ】",
-    "url": "https://www.youtube.com/watch?v=L6MR8ZvfWnc"
+    "url": "https://www.youtube.com/watch?v=L6MR8ZvfWnc",
+    "manual": true
    }
   ]
  },
@@ -13247,7 +13253,8 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【NTE: Neverness to Everness 】夏過ぎたけど2人でビーチバレー【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=QV4v97g0f_0"
+    "url": "https://www.youtube.com/watch?v=QV4v97g0f_0",
+    "manual": true
    }
   ]
  },
@@ -13267,7 +13274,8 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】カスタムいくぞ！【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=fESNwb24Edg"
+    "url": "https://www.youtube.com/watch?v=fESNwb24Edg",
+    "manual": true
    }
   ]
  },
@@ -13301,7 +13309,8 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】リスナーカスタム→21時～CRカップスクリム1日目【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=ltFql2OOfoE"
+    "url": "https://www.youtube.com/watch?v=ltFql2OOfoE",
+    "manual": true
    }
   ]
  },
@@ -13349,7 +13358,8 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】CRカップ本番！#青ドクWIN【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=so4CHTGmqUU"
+    "url": "https://www.youtube.com/watch?v=so4CHTGmqUU",
+    "manual": true
    }
   ]
  },
@@ -13549,12 +13559,14 @@
    {
     "channel": "エクス・アルビオ -Ex Albio-",
     "title": "VCCスプラカスタム本番、最強ブラスターが暴れるぞ！！『 スプラトゥーン3 』【 エビオ/にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=BCt_e0uIxoE"
+    "url": "https://www.youtube.com/watch?v=BCt_e0uIxoE",
+    "manual": true
    },
    {
     "channel": "ローレン・イロアス / Lauren Iroas【にじさんじ】",
     "title": "【スプラトゥーン3】VCC INK FES2  床は塗ったほうがいいらしい【ローレン・イロアス/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=lDR-HsCyKyI"
+    "url": "https://www.youtube.com/watch?v=lDR-HsCyKyI",
+    "manual": true
    }
   ]
  },
@@ -13630,27 +13642,21 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎チーム4練習だ！集まれるﾁﾑﾒﾝの方々と【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=AGvriNc0kt8"
+    "url": "https://www.youtube.com/watch?v=AGvriNc0kt8",
+    "manual": true
    },
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】毎日コツコツ強くなる！チーム練習 ｗチーム4【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=1YbLzKEsgH4"
+    "url": "https://www.youtube.com/watch?v=1YbLzKEsgH4",
+    "manual": true
+   },
+   {
+    "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
+    "title": "【OW】#にじEX_OW チーム4｜遅刻した分を巻き返すぞの会【にじさんじ / 五木左京】",
+    "url": "https://www.youtube.com/watch?v=HHMNpTtNQ9A",
+    "manual": true
    }
   ]
- },
- {
-  "id": "HHMNpTtNQ9A",
-  "title": "【OW】#にじEX_OW チーム4｜遅刻した分を巻き返すぞの会【にじさんじ / 五木左京】",
-  "kind": "stream",
-  "status": "live",
-  "start": "2026-10-19T12:58:41Z",
-  "end": null,
-  "url": "https://www.youtube.com/watch?v=HHMNpTtNQ9A",
-  "thumb": "https://i.ytimg.com/vi/HHMNpTtNQ9A/mqdefault_live.jpg",
-  "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
-  "own": false,
-  "game": "OW",
-  "collabs": []
  }
 ]
