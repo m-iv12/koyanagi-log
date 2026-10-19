@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="koyanagi-log">
+<meta name="apple-mobile-web-app-title" content="">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="robots" content="noindex">
-<title>koyanagi-log</title>
+<title></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
@@ -445,7 +445,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 <div class="wrap">
   <aside class="side">
   <header class="top">
-    <div class="brand"><h1>小柳ロウ<span class="br"></span>配信スケジュール</h1><span class="badge">Sample</span></div>
+    <div class="brand"><h1><span class="own-name"></span><span class="br"></span>配信スケジュール</h1><span class="badge">Sample</span></div>
     <div class="seg" role="tablist" aria-label="表示切り替え">
       <button id="v-week" role="tab">週</button><button id="v-month" role="tab">月</button>
     </div>
@@ -502,7 +502,7 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
       </div>
       <div class="fgroup" data-type="collab">
         <label class="fld"><span>YouTube の URL（配信・動画）</span><input type="url" id="f-yt" placeholder="https://www.youtube.com/watch?v=…" autocomplete="off"></label>
-        <p class="help">時刻・サムネイル・チャンネル名は自動で取得します。同じ時間に小柳ロウの配信があれば「コラボ相手の枠」として付き、なければ「本人の枠なし」として表示されます。</p>
+        <p class="help">時刻・サムネイル・チャンネル名は自動で取得します。同じ時間に<span class="own-name"></span>の配信があれば「コラボ相手の枠」として付き、なければ「本人の枠なし」として表示されます。</p>
       </div>
       <div class="fgroup" data-type="schedule" hidden>
         <div class="row2">
@@ -542,7 +542,8 @@ h1{font-size:1rem;letter-spacing:.02em;white-space:nowrap}
 
 <script>
 (function(){
-const H=3600e3, DAYMS=864e5, OWN="小柳ロウ";
+const H=3600e3, DAYMS=864e5;
+let OWN="", TAIL_RE=/\s*【[^】]*にじさんじ[^】]*】\s*$/i;
 const GAMES={valo:{name:"VALORANT",short:"VALO"},apex:{name:"APEX",short:"APEX"},chat:{name:"雑談",short:"雑談"},other:{name:"その他",short:"他"}};
 // ゲーム名＝タイトル先頭の【】の中身。VALORANT・APEX・雑談は衣装の配色、それ以外は名前から色を自動で決める
 const KNOWN={"VALORANT":{short:"VALO",c:"var(--valo)",i:"var(--valo-ink)",d:"var(--valo-deep)"},
@@ -560,18 +561,32 @@ const normGame=g=>{if(!g)return"その他";g=LEGACY[g]||String(g).trim();const u
   if(u.includes("VALORANT")||u==="VALO"||g.includes("ヴァロ"))return"VALORANT";if(u.includes("APEX")||g.includes("エーペックス"))return"APEX";return g};
 const gInfo=g=>({short:KNOWN[g]?KNOWN[g].short:g,c:"var(--valo)",i:"var(--valo-ink)",d:"var(--valo-deep)"});
 const gInfoColored=g=>{if(KNOWN[g])return{short:KNOWN[g].short,...KNOWN[g]};let h=0;for(const ch of g)h=(h*31+ch.codePointAt(0))>>>0;const p=PAL[h%PAL.length];return{short:g,c:p[0],i:p[1],d:p[2],p:p[3]}};
-// 表示用タイトル：先頭のゲーム名【】と、末尾の【小柳ロウ/にじさんじ】などを外す
-const cleanTitle=t=>String(t||"").replace(/^\s*【[^】]*】\s*/,"").replace(/\s*【[^】]*(小柳|にじさんじ|Koyanagi)[^】]*】\s*$/i,"").trim()||String(t||"");
+// 表示用タイトル：先頭のゲーム名【】と、末尾の【名前/にじさんじ】などを外す（名前は config.json から）
+const cleanTitle=t=>String(t||"").replace(/^\s*【[^】]*】\s*/,"").replace(TAIL_RE,"").trim()||String(t||"");
 const gStyle=g=>{const x=gInfo(g);return`--gc:${x.c};--gi:${x.i};--gd:${x.d}`+(x.p?`;--gp:${PAT[x.p]}`:"")};
 const WD=["日","月","火","水","木","金","土"];
 const sod=t=>{const d=new Date(t);d.setHours(0,0,0,0);return d.getTime()};
 const addDays=(t,n)=>{const d=new Date(t);d.setDate(d.getDate()+n);return d.getTime()};
 const sow=t=>{const s=sod(t);return addDays(s,-((new Date(s).getDay()+6)%7))};
 
+// ---- ライバー名・ページ名は config.json の name / name_en / site_title から ----
+function applyConfig(cfg){
+  cfg=cfg&&!Array.isArray(cfg)?cfg:{};
+  OWN=cfg.name||"";
+  const site=cfg.site_title||"stream-log";
+  document.title=site;
+  document.querySelector('meta[name="apple-mobile-web-app-title"]').content=site;
+  document.querySelectorAll(".own-name").forEach(el=>el.textContent=OWN);
+  const esc=x=>String(x).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const words=[OWN,cfg.name_en,...(cfg.collab_keywords||[]),"にじさんじ"].filter(Boolean).map(esc);
+  TAIL_RE=new RegExp("\\s*【[^】]*("+words.join("|")+")[^】]*】\\s*$","i");
+}
+
 // ---- *.json を読み込む ----
 async function getData(){
   const get=async p=>{try{const r=await fetch(p,{cache:"no-cache"});return r.ok?await r.json():[]}catch(e){return[]}};
-  const [streams,posts,deadlines]=await Promise.all([get("streams.json"),get("posts.json"),get("deadlines.json")]);
+  const [streams,posts,deadlines,cfg]=await Promise.all([get("streams.json"),get("posts.json"),get("deadlines.json"),get("config.json")]);
+  applyConfig(cfg);
   return {streams,posts,deadlines};
 }
 
@@ -762,7 +777,7 @@ function openSheet(ev){
                :`<dt>時間</dt><dd>${hm(ev.start)} – ${ev.status==="live"?"配信中":endLabel(ev.start,ev.end)}</dd><dt>長さ</dt><dd>約${hrs(ev.end-ev.start)}時間</dd>`)+
       `<dt>配信元</dt><dd>${esc(ev.channel)}${ev.own?"":"<span class=\"warn\">本人の枠なし</span>"}</dd>`;
     link.href=ev.url;
-    link.textContent=ev.manual?"X で告知を開く ↗":ev.own?"小柳ロウの枠を開く ↗":`${ev.channel} の枠を開く ↗`;
+    link.textContent=ev.manual?"X で告知を開く ↗":ev.own?`${OWN}の枠を開く ↗`:`${ev.channel} の枠を開く ↗`;
     // 「除外…」は追加ボタンを表示している端末（#edit）だけに出す
     const canEdit=document.body.classList.contains("edit");
     const opt=canEdit?'<button type="button" class="ex-opt" aria-expanded="false">除外…</button>':"";
