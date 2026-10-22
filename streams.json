@@ -1736,7 +1736,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "The Mortuary Assistant",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "伊波ライ / Inami Rai【にじさんじ】",
+    "title": "【 マリオカート8DX 】コソ練【 伊波ライ / にじさんじ 】",
+    "url": "https://www.youtube.com/watch?v=Zl3Mx06AAkY",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "g8-bua9N0KU",
