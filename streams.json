@@ -14420,7 +14420,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
+    "title": "【OW】もっと強く！もっと楽しく！チーム練習 ｗチーム4【森中花咲/にじさんじ所属】",
+    "url": "https://www.youtube.com/watch?v=KqS80A4tb0M",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "5M2AdP8XVFw",
