@@ -12300,9 +12300,9 @@
   "url": "https://www.youtube.com/watch?v=PaLQ8R44qVI",
   "thumb": "https://i.ytimg.com/vi/PaLQ8R44qVI/mqdefault.jpg?v=6adc8da4",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-10-24T11:04:24Z",
-  "end": null,
+  "end": "2026-10-24T13:53:40Z",
   "own": true
  }
 }
