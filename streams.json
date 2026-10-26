@@ -14574,5 +14574,19 @@
   "own": true,
   "game": "にじEX_OW",
   "collabs": []
+ },
+ {
+  "id": "BSlXJucCID4",
+  "title": "【VALORANT】リハビリ少々【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-10-26T10:16:57Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=BSlXJucCID4",
+  "thumb": "https://i.ytimg.com/vi/BSlXJucCID4/mqdefault.jpg?v=6adf26c4",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "VALORANT",
+  "collabs": []
  }
 ]
