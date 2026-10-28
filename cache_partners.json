@@ -4703,9 +4703,9 @@
   "url": "https://www.youtube.com/watch?v=9E36zhZb_6k",
   "thumb": "https://i.ytimg.com/vi/9E36zhZb_6k/mqdefault.jpg?v=6adf30b0",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-10-28T12:00:46Z",
-  "end": null,
+  "end": "2026-10-28T16:30:39Z",
   "own": false,
   "source": "manual"
  }
