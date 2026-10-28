@@ -4703,8 +4703,8 @@
   "url": "https://www.youtube.com/watch?v=9E36zhZb_6k",
   "thumb": "https://i.ytimg.com/vi/9E36zhZb_6k/mqdefault.jpg?v=6adf30b0",
   "kind": "stream",
-  "status": "upcoming",
-  "start": "2026-10-28T12:00:00Z",
+  "status": "live",
+  "start": "2026-10-28T12:00:46Z",
   "end": null,
   "own": false,
   "source": "manual"
