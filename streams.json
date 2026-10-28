@@ -14607,28 +14607,21 @@
   "id": "xZJWxlYDZYI",
   "title": "【OW】猫練【小柳ロウ/にじさんじ】",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-10-27T23:36:28Z",
-  "end": null,
+  "end": "2026-10-28T10:41:29Z",
   "url": "https://www.youtube.com/watch?v=xZJWxlYDZYI",
   "thumb": "https://i.ytimg.com/vi/xZJWxlYDZYI/mqdefault.jpg?v=6ae1332a",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW",
-  "collabs": []
- },
- {
-  "id": "9E36zhZb_6k",
-  "title": "【 Pizza House Simulator🍕 】まさかのピザ屋経営👩‍🍳👨‍🍳 w/けっつん、小柳ロウ、玉餅かずよ、寧々丸、リモーネ先生【おなつのにびたし/個人勢Vtuber/#おなつのなま】",
-  "kind": "stream",
-  "status": "upcoming",
-  "start": "2026-10-28T11:00:00Z",
-  "end": null,
-  "url": "https://www.youtube.com/watch?v=9E36zhZb_6k",
-  "thumb": "https://i.ytimg.com/vi/9E36zhZb_6k/mqdefault.jpg?v=6adf30b0",
-  "channel": "おなつのにびたし / Onatsu no Nibitashi",
-  "own": false,
-  "game": "Pizza House Simulator🍕",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "おなつのにびたし / Onatsu no Nibitashi",
+    "title": "【 Pizza House Simulator🍕 】まさかのピザ屋経営👩‍🍳👨‍🍳 w/けっつん、小柳ロウ、玉餅かずよ、寧々丸、リモーネ先生【おなつのにびたし/個人勢Vtuber/#おなつのなま】",
+    "url": "https://www.youtube.com/watch?v=9E36zhZb_6k",
+    "manual": true
+   }
+  ]
  }
 ]
