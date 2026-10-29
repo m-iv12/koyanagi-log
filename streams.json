@@ -11506,6 +11506,11 @@
     "channel": "ハユン / HaYun【にじさんじ】",
     "title": "【APEX】跳ね回る子が二人います2  W.こはく, ロウ 【ハユン/にじさんじ】",
     "url": "https://www.youtube.com/watch?v=UtHTTWSukyw"
+   },
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【Overwatch】OWランク  ロウ ハユン【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=FnvET6kYvMI"
    }
   ]
  },
@@ -11546,6 +11551,11 @@
     "channel": "ハユン / HaYun【にじさんじ】",
     "title": "【OW】 ロウ クロ 【ハユン/にじさんじ】",
     "url": "https://www.youtube.com/watch?v=l8uPR_wz_pA"
+   },
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【Overwatch2】OWとりまプラチナ行く  ロウ【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=HrXh9D7vulY"
    },
    {
     "channel": "伊波ライ / Inami Rai【にじさんじ】",
@@ -12074,7 +12084,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "YAPYAP",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【YAPYAP】にびたしメンツと魔法で協力するらしいぞ！！【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=83PbGF7Zpqs"
+   }
+  ]
  },
  {
   "id": "qHCY1U2RsOU",
@@ -12206,7 +12222,13 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "goose goose duck",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【Goose Goose Duck】アルさんありがとうの会！みんなで遊ぶ【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=z0taoFn0VsQ"
+   }
+  ]
  },
  {
   "id": "0mdSRhO0pg0",
@@ -14334,6 +14356,11 @@
   "game": "OW",
   "collabs": [
    {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【OW2】早朝熱血OW部Withロウ【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=_2HG_OcyzDQ"
+   },
+   {
     "channel": "Yuhi Riri Official",
     "title": "▶︎▷ OVERWATCH ｜ OWはしようよ w/小柳ロウ ｜ 夕陽リリ ￤ にじさんじ",
     "url": "https://www.youtube.com/watch?v=QTdF4OiIy-M",
@@ -14745,6 +14772,11 @@
     "title": "【OW】朝練OWがあるよって話ではあるよ ｗ小柳【森中花咲/にじさんじ所属】",
     "url": "https://www.youtube.com/watch?v=BHU3KDKvqQY",
     "manual": true
+   },
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【OW】熱血OW部Withロウ【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=kirAq8i0ZM4"
    }
   ]
  },
@@ -14774,6 +14806,12 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "日裏クロ / Hiura Kuro",
+    "title": "【OW】熱血OW部今日エメいくぞ！Withロウ【日裏クロ / ネオポルテ】",
+    "url": "https://www.youtube.com/watch?v=R4Y151dupGE"
+   }
+  ]
  }
 ]
