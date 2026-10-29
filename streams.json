@@ -14173,7 +14173,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "OW",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "ラトナ・プティ -Ratna Petit -にじさんじ所属",
+    "title": "【OW】カスタム！にじさんじの皆さんと遊ぶ【ラトナ・プティ/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=UO7aKgZeYgE",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "BfdLgs1PL6I",
