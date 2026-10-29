@@ -12370,9 +12370,9 @@
   "url": "https://www.youtube.com/watch?v=X-8BnjWdBZU",
   "thumb": "https://i.ytimg.com/vi/X-8BnjWdBZU/mqdefault.jpg?v=6ae2cc4a",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-10-29T04:43:26Z",
-  "end": null,
+  "end": "2026-10-29T14:07:25Z",
   "own": true
  }
 }
