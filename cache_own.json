@@ -12426,9 +12426,9 @@
   "url": "https://www.youtube.com/watch?v=K0LvAF2atCg",
   "thumb": "https://i.ytimg.com/vi/K0LvAF2atCg/mqdefault.jpg?v=6ae9992e",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-03T08:33:18Z",
-  "end": null,
+  "end": "2026-11-03T16:21:03Z",
   "own": true
  }
 }
