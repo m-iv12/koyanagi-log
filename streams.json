@@ -14888,5 +14888,19 @@
   "own": true,
   "game": "スプラ",
   "collabs": []
+ },
+ {
+  "id": "zU5dgDxavuQ",
+  "title": "【スプラ】チム練【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-04T10:05:25Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=zU5dgDxavuQ",
+  "thumb": "https://i.ytimg.com/vi/zU5dgDxavuQ/mqdefault.jpg?v=6aeb00a8",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "スプラ",
+  "collabs": []
  }
 ]
