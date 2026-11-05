@@ -12452,11 +12452,11 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "channel_id": "UC6WFKwYptsxVue56Lx218vg",
   "url": "https://www.youtube.com/watch?v=KlzY-LuDuyo",
-  "thumb": "https://i.ytimg.com/vi/KlzY-LuDuyo/mqdefault.jpg?v=6aec55ed",
+  "thumb": "https://i.ytimg.com/vi/KlzY-LuDuyo/mqdefault.jpg",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-05T10:19:02Z",
-  "end": null,
+  "end": "2026-11-05T16:07:11Z",
   "own": true
  }
 }
