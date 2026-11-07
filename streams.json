@@ -14930,5 +14930,19 @@
   "own": true,
   "game": "スプラ",
   "collabs": []
+ },
+ {
+  "id": "uAF9L73jfco",
+  "title": "【#にじイカ祭り2026】Day1【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-07T06:41:17Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=uAF9L73jfco",
+  "thumb": "https://i.ytimg.com/vi/uAF9L73jfco/mqdefault.jpg?v=6aeec542",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "にじイカ祭り2026",
+  "collabs": []
  }
 ]
