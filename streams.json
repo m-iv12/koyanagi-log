@@ -15031,7 +15031,14 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "にじイカ祭り2026",
-  "collabs": []
+  "collabs": [
+   {
+    "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
+    "title": "【 #にじイカ祭り2026 】#絶対WIN 👑最終出勤日!! 絶対優勝だああああああ!!✨【倉持めると/にじさんじ】",
+    "url": "https://www.youtube.com/watch?v=XQ_arlCrv_c",
+    "manual": true
+   }
+  ]
  },
  {
   "id": "cZQ4HPcAf04",
