@@ -14972,5 +14972,19 @@
   "own": true,
   "game": "にじイカ祭り2026",
   "collabs": []
+ },
+ {
+  "id": "cZQ4HPcAf04",
+  "title": "【APEX】天月さん、セリーさん【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-09T11:02:26Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=cZQ4HPcAf04",
+  "thumb": "https://i.ytimg.com/vi/cZQ4HPcAf04/mqdefault.jpg?v=6af1a724",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": []
  }
 ]
