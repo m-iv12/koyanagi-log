@@ -15122,5 +15122,25 @@
   "own": true,
   "game": "APEX",
   "collabs": []
+ },
+ {
+  "id": "WBzHLAc2SlQ",
+  "title": "【APEX】テンくん、水無瀬【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-09T23:08:45Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=WBzHLAc2SlQ",
+  "thumb": "https://i.ytimg.com/vi/WBzHLAc2SlQ/mqdefault.jpg?v=6af24f72",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": [
+   {
+    "channel": "水無瀬 / Minase",
+    "title": "【 Apex Legends 】朝すぎるけどフルパ w/小柳ロウ,鬼ヶ谷テン【 Neo-Porte / 水無瀬 】",
+    "url": "https://www.youtube.com/watch?v=EjrsJ6WI-zE"
+   }
+  ]
  }
 ]
