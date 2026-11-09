@@ -14836,6 +14836,21 @@
   ]
  },
  {
+  "id": "NebfZQFj5Zg",
+  "title": "【 #グラニット生誕祭2026 】豪華な人達を迎えてハロウィン記念凸待ち！【グラニット/ゆにれいど！】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-10-31T09:56:32Z",
+  "end": "2026-10-31T12:56:09Z",
+  "url": "https://www.youtube.com/watch?v=NebfZQFj5Zg",
+  "thumb": "https://i.ytimg.com/vi/NebfZQFj5Zg/mqdefault.jpg?v=6ae56825",
+  "channel": "グラニット / Granite",
+  "own": false,
+  "game": "グラニット生誕祭2026",
+  "collabs": [],
+  "cameo": true
+ },
+ {
   "id": "ubdHDFlwBVI",
   "title": "【APEX】ベリーさんゴールド企画【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -14848,12 +14863,6 @@
   "own": true,
   "game": "APEX",
   "collabs": [
-   {
-    "channel": "グラニット / Granite",
-    "title": "【 #グラニット生誕祭2026 】豪華な人達を迎えてハロウィン記念凸待ち！【グラニット/ゆにれいど！】",
-    "url": "https://www.youtube.com/watch?v=NebfZQFj5Zg",
-    "manual": true
-   },
    {
     "channel": "早乙女 ベリー / Saotome Berry【にじさんじ】",
     "title": "【APEX】ゴールド目前だ！！✨ロウ先輩にえぺを見守ってもらう！！【早乙女ベリー/小柳ロウ/にじさんじ】",
