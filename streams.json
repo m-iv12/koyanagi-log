@@ -15148,5 +15148,19 @@
     "url": "https://www.youtube.com/watch?v=EjrsJ6WI-zE"
    }
   ]
+ },
+ {
+  "id": "gQBb8TXhFb4",
+  "title": "【ガチグラ２】のんびりやります。【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-10T11:16:46Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=gQBb8TXhFb4",
+  "thumb": "https://i.ytimg.com/vi/gQBb8TXhFb4/mqdefault.jpg?v=6af2fba4",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "ガチグラ2",
+  "collabs": []
  }
 ]
