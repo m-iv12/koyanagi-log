@@ -15162,5 +15162,19 @@
   "own": true,
   "game": "ガチグラ2",
   "collabs": []
+ },
+ {
+  "id": "5mMXyEK0sLM",
+  "title": "【APEX】テンくん、ハユン【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "upcoming",
+  "start": "2026-11-11T06:00:00Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=5mMXyEK0sLM",
+  "thumb": "https://i.ytimg.com/vi/5mMXyEK0sLM/mqdefault.jpg?v=6af40310",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": []
  }
 ]
