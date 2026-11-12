@@ -5526,11 +5526,11 @@
   "channel": "水無瀬 / Minase",
   "channel_id": "UCEy9cYULQrC2cRlVqJPCcSw",
   "url": "https://www.youtube.com/watch?v=cGGnzHnXFfU",
-  "thumb": "https://i.ytimg.com/vi/cGGnzHnXFfU/mqdefault.jpg?v=6af5a9d2",
+  "thumb": "https://i.ytimg.com/vi/cGGnzHnXFfU/mqdefault.jpg",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-12T12:03:06Z",
-  "end": null,
+  "end": "2026-11-12T16:13:25Z",
   "own": false,
   "source": "auto"
  }
