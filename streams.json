@@ -15210,5 +15210,34 @@
     "url": "https://www.youtube.com/watch?v=cGGnzHnXFfU"
    }
   ]
+ },
+ {
+  "id": "zo_aAXasJhc",
+  "title": "【#ハユン3D】おまたせ 3Dハユンやっと来たね。   【ハユン/にじさんじ】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-11-13T11:59:09Z",
+  "end": "2026-11-13T13:15:47Z",
+  "url": "https://www.youtube.com/watch?v=zo_aAXasJhc",
+  "thumb": "https://i.ytimg.com/vi/zo_aAXasJhc/mqdefault.jpg",
+  "channel": "ハユン / HaYun【にじさんじ】",
+  "own": false,
+  "game": "ハユン3D",
+  "collabs": [],
+  "cameo": true
+ },
+ {
+  "id": "BrbBsOtF-aw",
+  "title": "【ガチグラ２】闇医者日和【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "upcoming",
+  "start": "2026-11-13T13:30:00Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=BrbBsOtF-aw",
+  "thumb": "https://i.ytimg.com/vi/BrbBsOtF-aw/mqdefault.jpg?v=6af71087",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "ガチグラ2",
+  "collabs": []
  }
 ]
