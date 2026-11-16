@@ -15272,14 +15272,28 @@
   "id": "95AguTJfpF0",
   "title": "【Cursed Companions】ちる☆ぼた二次会【小柳ロウ/にじさんじ】",
   "kind": "stream",
-  "status": "upcoming",
-  "start": "2026-11-16T12:00:00Z",
-  "end": null,
+  "status": "done",
+  "start": "2026-11-16T12:08:11Z",
+  "end": "2026-11-16T14:14:37Z",
   "url": "https://www.youtube.com/watch?v=95AguTJfpF0",
-  "thumb": "https://i.ytimg.com/vi/95AguTJfpF0/mqdefault.jpg?v=6afaef9d",
+  "thumb": "https://i.ytimg.com/vi/95AguTJfpF0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "Cursed Companions",
+  "collabs": []
+ },
+ {
+  "id": "KJtTk_D7uY4",
+  "title": "【ガチグラ２】極楽【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-16T14:23:08Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=KJtTk_D7uY4",
+  "thumb": "https://i.ytimg.com/vi/KJtTk_D7uY4/mqdefault.jpg?v=6afb1099",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "ガチグラ2",
   "collabs": []
  }
 ]
