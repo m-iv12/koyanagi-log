@@ -12627,20 +12627,6 @@
   "end": "2026-11-15T17:02:09Z",
   "own": true
  },
- "KJtTk_D7uY4": {
-  "id": "KJtTk_D7uY4",
-  "title": "【ガチグラ２】極楽【小柳ロウ/にじさんじ】",
-  "description": "イラスト　@haegang3\nメンバー　\n・┈┈┈┈┈┈┈┈┈・\nhttps://twitter.com/Rou_2434\nメンバーシップ\nhttps://www.youtube.com/channel/UC6WFKwYptsxVue56Lx218vg/join\n・┈┈┈┈┈┈┈┈┈・\n誹謗中傷、伝書鳩等の行為はお控えください。\n他チャンネルで無闇に小柳ロウの名前を出さないでください。\n\n※未成年者の視聴者の方々は、下記リンク先の注意事項もご覧ください。\nhttps://www.anycolor.co.jp/notice-for-minors",
-  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
-  "channel_id": "UC6WFKwYptsxVue56Lx218vg",
-  "url": "https://www.youtube.com/watch?v=KJtTk_D7uY4",
-  "thumb": "https://i.ytimg.com/vi/KJtTk_D7uY4/mqdefault.jpg?v=6afb1099",
-  "kind": "stream",
-  "status": "live",
-  "start": "2026-11-16T14:23:08Z",
-  "end": null,
-  "own": true
- },
  "95AguTJfpF0": {
   "id": "95AguTJfpF0",
   "title": "【Cursed Companions】ちる☆ぼた二次会【小柳ロウ/にじさんじ】",
@@ -12653,6 +12639,20 @@
   "status": "done",
   "start": "2026-11-16T12:08:11Z",
   "end": "2026-11-16T14:14:37Z",
+  "own": true
+ },
+ "KJtTk_D7uY4": {
+  "id": "KJtTk_D7uY4",
+  "title": "【ガチグラ２】極楽【小柳ロウ/にじさんじ】",
+  "description": "イラスト　@haegang3\nメンバー　\n・┈┈┈┈┈┈┈┈┈・\nhttps://twitter.com/Rou_2434\nメンバーシップ\nhttps://www.youtube.com/channel/UC6WFKwYptsxVue56Lx218vg/join\n・┈┈┈┈┈┈┈┈┈・\n誹謗中傷、伝書鳩等の行為はお控えください。\n他チャンネルで無闇に小柳ロウの名前を出さないでください。\n\n※未成年者の視聴者の方々は、下記リンク先の注意事項もご覧ください。\nhttps://www.anycolor.co.jp/notice-for-minors",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "channel_id": "UC6WFKwYptsxVue56Lx218vg",
+  "url": "https://www.youtube.com/watch?v=KJtTk_D7uY4",
+  "thumb": "https://i.ytimg.com/vi/KJtTk_D7uY4/mqdefault.jpg?v=6afb1099",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-16T14:23:08Z",
+  "end": null,
   "own": true
  }
 }
