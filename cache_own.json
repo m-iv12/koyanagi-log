@@ -12662,11 +12662,11 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "channel_id": "UC6WFKwYptsxVue56Lx218vg",
   "url": "https://www.youtube.com/watch?v=yNmn2Ud5pU4",
-  "thumb": "https://i.ytimg.com/vi/yNmn2Ud5pU4/mqdefault.jpg?v=6afc34e6",
+  "thumb": "https://i.ytimg.com/vi/yNmn2Ud5pU4/mqdefault.jpg",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-17T11:10:20Z",
-  "end": null,
+  "end": "2026-11-17T17:02:11Z",
   "own": true
  }
 }
