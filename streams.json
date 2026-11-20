@@ -15350,5 +15350,19 @@
     "url": "https://www.youtube.com/watch?v=wu6EFvhAGEk"
    }
   ]
+ },
+ {
+  "id": "zf1s27Bad1E",
+  "title": "【ガチグラ２】残り二日【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-20T13:02:50Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=zf1s27Bad1E",
+  "thumb": "https://i.ytimg.com/vi/zf1s27Bad1E/mqdefault.jpg?v=6b002a78",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "ガチグラ2",
+  "collabs": []
  }
 ]
