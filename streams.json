@@ -15406,5 +15406,19 @@
   "own": true,
   "game": "ガチグラ2",
   "collabs": []
+ },
+ {
+  "id": "QzVfDVpVb9Y",
+  "title": "【APEX】ぶいすぽGGスクリム【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-11-22T10:00:27Z",
+  "end": "2026-11-22T12:58:59Z",
+  "url": "https://www.youtube.com/watch?v=QzVfDVpVb9Y",
+  "thumb": "https://i.ytimg.com/vi/QzVfDVpVb9Y/mqdefault.jpg",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": []
  }
 ]
