@@ -136,21 +136,7 @@
   "thumb": "https://i.ytimg.com/vi/j7WjBJ70vNw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
-  "collabs": []
- },
- {
-  "id": "Wh2J28WHQNU",
-  "title": "【Dytica初コラボ】西の最強ヒーロー、決めようや。【伊波ライ / にじさんじ】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2023-05-07T11:00:34Z",
-  "end": "2023-05-07T12:14:46Z",
-  "url": "https://www.youtube.com/watch?v=Wh2J28WHQNU",
-  "thumb": "https://i.ytimg.com/vi/Wh2J28WHQNU/mqdefault.jpg",
-  "channel": "伊波ライ / Inami Rai【にじさんじ】",
-  "own": false,
-  "game": "Dytica初コラボ",
+  "game": "スプラトゥーン３",
   "collabs": []
  },
  {
@@ -164,7 +150,7 @@
   "thumb": "https://i.ytimg.com/vi/5pHqRaHHH2g/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": [
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
@@ -329,7 +315,7 @@
   "thumb": "https://i.ytimg.com/vi/fDTO6Dv2-zY/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": [
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
@@ -354,7 +340,7 @@
   "thumb": "https://i.ytimg.com/vi/lexwbJQSFmY/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": []
  },
  {
@@ -382,7 +368,7 @@
   "thumb": "https://i.ytimg.com/vi/AH8f1CPRcAA/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": [
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
@@ -439,6 +425,20 @@
   "collabs": []
  },
  {
+  "id": "mSq6MGus-8I",
+  "title": "【Overwatch2】相方起きるまでやります【星導ショウ/にじさんじ】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2023-05-27T15:00:14Z",
+  "end": "2023-05-27T16:28:35Z",
+  "url": "https://www.youtube.com/watch?v=mSq6MGus-8I",
+  "thumb": "https://i.ytimg.com/vi/mSq6MGus-8I/mqdefault.jpg",
+  "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
+  "own": false,
+  "game": "Overwatch2",
+  "collabs": []
+ },
+ {
   "id": "cyF1f7vB_ko",
   "title": "【OW2】裏に星導とカゲツとライいる【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -449,15 +449,8 @@
   "thumb": "https://i.ytimg.com/vi/cyF1f7vB_ko/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
-  "collabs": [
-   {
-    "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
-    "title": "【Overwatch2】相方起きるまでやります【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=mSq6MGus-8I",
-    "manual": true
-   }
-  ]
+  "game": "OW2",
+  "collabs": []
  },
  {
   "id": "Cu88yhgBr0w",
@@ -526,7 +519,7 @@
   "thumb": "https://i.ytimg.com/vi/buOuiVYvOXc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "Amanda the Adventurer",
+  "game": "Amanda the  Adventurer",
   "collabs": []
  },
  {
@@ -540,7 +533,7 @@
   "thumb": "https://i.ytimg.com/vi/9mHM38n07k4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -554,7 +547,7 @@
   "thumb": "https://i.ytimg.com/vi/CmQhmPS6EQc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": [
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
@@ -627,7 +620,7 @@
   "thumb": "https://i.ytimg.com/vi/CJyhNJ4v4yI/mqdefault.jpg",
   "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
   "own": false,
-  "game": "スプラトゥーン3",
+  "game": "Splatoon３",
   "collabs": []
  },
  {
@@ -655,7 +648,7 @@
   "thumb": "https://i.ytimg.com/vi/2fcVG3uA-60/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -669,7 +662,7 @@
   "thumb": "https://i.ytimg.com/vi/SXFTkPQTChk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -820,7 +813,7 @@
   "thumb": "https://i.ytimg.com/vi/orrpfWSc1Uk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "3Dモデリング",
+  "game": "３Dモデリング",
   "collabs": []
  },
  {
@@ -868,7 +861,7 @@
   "thumb": "https://i.ytimg.com/vi/y6QWD3LZFUU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "7 Days to End with You",
+  "game": "7 Days to End with  You",
   "collabs": []
  },
  {
@@ -910,7 +903,7 @@
   "thumb": "https://i.ytimg.com/vi/YNKVNO0KBqE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": [
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
@@ -1102,7 +1095,7 @@
   "thumb": "https://i.ytimg.com/vi/B7IFHKQ-Az0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": []
  },
  {
@@ -1135,8 +1128,7 @@
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
     "title": "【Only Up!】20分台いけそう！！RTA！！【叢雲カゲツ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=5dovcuIBrCA",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=5dovcuIBrCA"
    }
   ]
  },
@@ -1319,7 +1311,7 @@
   "thumb": "https://i.ytimg.com/vi/wReisck8jSY/mqdefault.jpg",
   "channel": "不破 湊 / Fuwa Minato【にじさんじ】",
   "own": false,
-  "game": "にじさんじラジオ体操部",
+  "game": "#にじさんじラジオ体操部",
   "collabs": []
  },
  {
@@ -1468,7 +1460,7 @@
   "thumb": "https://i.ytimg.com/vi/9QssqCBUj5o/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -1496,7 +1488,7 @@
   "thumb": "https://i.ytimg.com/vi/2YJGIswozds/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ鯖夏祭り2023",
+  "game": "#にじ鯖夏祭り2023",
   "collabs": [
    {
     "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
@@ -1686,7 +1678,7 @@
   "thumb": "https://i.ytimg.com/vi/NMbw8KcWNqE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": []
  },
  {
@@ -1705,8 +1697,7 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【遊戯王マスターデュエル】闇のデュエル凸待ち【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=y6l9JDpWXiQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=y6l9JDpWXiQ"
    }
   ]
  },
@@ -1736,14 +1727,21 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "The Mortuary Assistant",
-  "collabs": [
-   {
-    "channel": "伊波ライ / Inami Rai【にじさんじ】",
-    "title": "【 マリオカート8DX 】コソ練【 伊波ライ / にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=Zl3Mx06AAkY",
-    "manual": true
-   }
-  ]
+  "collabs": []
+ },
+ {
+  "id": "Zl3Mx06AAkY",
+  "title": "【 マリオカート8DX 】コソ練【 伊波ライ / にじさんじ 】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2023-09-14T13:47:26Z",
+  "end": "2023-09-14T15:37:42Z",
+  "url": "https://www.youtube.com/watch?v=Zl3Mx06AAkY",
+  "thumb": "https://i.ytimg.com/vi/Zl3Mx06AAkY/mqdefault.jpg",
+  "channel": "伊波ライ / Inami Rai【にじさんじ】",
+  "own": false,
+  "game": "マリオカート8DX",
+  "collabs": []
  },
  {
   "id": "g8-bua9N0KU",
@@ -1761,8 +1759,7 @@
    {
     "channel": "四季凪アキラ / Shikinagi Akira",
     "title": "【寝坊】洗い物を全て片付けたあとの清涼感を、何と呼ぼうか【朝雑談/四季凪アキラ/にじさんじ/VOLTACTION】",
-    "url": "https://www.youtube.com/watch?v=3rokfW9cvqE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=3rokfW9cvqE"
    }
   ]
  },
@@ -1909,20 +1906,6 @@
     "url": "https://www.youtube.com/watch?v=MCASLjarFho"
    }
   ]
- },
- {
-  "id": "y9Q8JkJARfI",
-  "title": "【歌ってみた】パーペキヒーロー/MECHATU-A",
-  "kind": "stream",
-  "status": "done",
-  "start": "2023-09-30T09:00:10Z",
-  "end": "2023-09-30T09:04:43Z",
-  "url": "https://www.youtube.com/watch?v=y9Q8JkJARfI",
-  "thumb": "https://i.ytimg.com/vi/y9Q8JkJARfI/mqdefault.jpg",
-  "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
-  "own": false,
-  "game": "歌ってみた",
-  "collabs": []
  },
  {
   "id": "fi489jFefhs",
@@ -2087,7 +2070,7 @@
   "thumb": "https://i.ytimg.com/vi/U-nF2VjlZ4U/mqdefault.jpg",
   "channel": "神田笑一 / Kanda Shoichi【 にじさんじ 】",
   "own": false,
-  "game": "にじ占いの館",
+  "game": "#にじ占いの館",
   "collabs": []
  },
  {
@@ -2182,7 +2165,7 @@
   "thumb": "https://i.ytimg.com/vi/wv7Npn18FfM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラトゥーン３",
   "collabs": []
  },
  {
@@ -2362,7 +2345,7 @@
   "thumb": "https://i.ytimg.com/vi/rbTSSeKrZUc/mqdefault.jpg",
   "channel": "伊波ライ / Inami Rai【にじさんじ】",
   "own": false,
-  "game": "にじヒーローカラオケ",
+  "game": "#にじヒーローカラオケ",
   "collabs": []
  },
  {
@@ -2410,7 +2393,7 @@
   "thumb": "https://i.ytimg.com/vi/zRlRuvsrjms/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "小柳ロウ誕生日2023",
+  "game": "#小柳ロウ誕生日2023",
   "collabs": []
  },
  {
@@ -2507,20 +2490,6 @@
   "channel": "風楽奏斗 / Fura Kanato ",
   "own": false,
   "game": "にじRUST",
-  "collabs": []
- },
- {
-  "id": "WJHKsJ7O6OA",
-  "title": "【 RUST 】お昼の鬼ふぁーむタイム。かなてぃー＆小柳ロウ【 伊波ライ / にじさんじ 】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2023-12-09T02:53:27Z",
-  "end": "2023-12-09T06:24:34Z",
-  "url": "https://www.youtube.com/watch?v=WJHKsJ7O6OA",
-  "thumb": "https://i.ytimg.com/vi/WJHKsJ7O6OA/mqdefault.jpg",
-  "channel": "伊波ライ / Inami Rai【にじさんじ】",
-  "own": false,
-  "game": "RUST",
   "collabs": []
  },
  {
@@ -2868,7 +2837,7 @@
   "thumb": "https://i.ytimg.com/vi/_sOqVNVmV40/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじエペさい2024",
+  "game": "#にじエペさい2024",
   "collabs": [
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
@@ -2888,7 +2857,7 @@
   "thumb": "https://i.ytimg.com/vi/jCXN6oXLbto/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": [
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
@@ -2908,7 +2877,7 @@
   "thumb": "https://i.ytimg.com/vi/6lxprIl5z4g/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -2922,7 +2891,7 @@
   "thumb": "https://i.ytimg.com/vi/9uoZXRBOUo0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -2936,7 +2905,7 @@
   "thumb": "https://i.ytimg.com/vi/k8A9aobI1kI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": [
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
@@ -2970,7 +2939,7 @@
   "thumb": "https://i.ytimg.com/vi/UupvF8LwIHo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -3130,7 +3099,7 @@
   "thumb": "https://i.ytimg.com/vi/imcMm1CLg6U/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -3326,7 +3295,7 @@
   "thumb": "https://i.ytimg.com/vi/a6mGkkQ3qxo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": []
  },
  {
@@ -3360,7 +3329,7 @@
   "thumb": "https://i.ytimg.com/vi/wOx69R0sFd4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじTikTokLite",
+  "game": "#にじTikTokLite",
   "collabs": []
  },
  {
@@ -3436,7 +3405,7 @@
   "thumb": "https://i.ytimg.com/vi/cytvLt64VlI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリオカート8DX",
+  "game": "マリオカート８DX",
   "collabs": [
    {
     "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
@@ -3461,7 +3430,7 @@
   "thumb": "https://i.ytimg.com/vi/k7b5W5YOq2A/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -3521,6 +3490,20 @@
   "collabs": []
  },
  {
+  "id": "ivOCNtSQu4w",
+  "title": "【真剣勝負】『カスのディベート対決』…！？【小柳ロウ/四季凪アキラ/にじさんじ】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2024-04-26T11:01:06Z",
+  "end": "2024-04-26T12:40:38Z",
+  "url": "https://www.youtube.com/watch?v=ivOCNtSQu4w",
+  "thumb": "https://i.ytimg.com/vi/ivOCNtSQu4w/mqdefault.jpg",
+  "channel": "四季凪アキラ / Shikinagi Akira",
+  "own": false,
+  "game": "真剣勝負",
+  "collabs": []
+ },
+ {
   "id": "npgFGqC4tyo",
   "title": "【#ロウ新衣装】服買いました。【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -3531,15 +3514,8 @@
   "thumb": "https://i.ytimg.com/vi/npgFGqC4tyo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ロウ新衣装",
-  "collabs": [
-   {
-    "channel": "四季凪アキラ / Shikinagi Akira",
-    "title": "【真剣勝負】『カスのディベート対決』…！？【小柳ロウ/四季凪アキラ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=ivOCNtSQu4w",
-    "manual": true
-   }
-  ]
+  "game": "#ロウ新衣装",
+  "collabs": []
  },
  {
   "id": "MeI-Y6mKoas",
@@ -3552,7 +3528,7 @@
   "thumb": "https://i.ytimg.com/vi/MeI-Y6mKoas/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3566,7 +3542,7 @@
   "thumb": "https://i.ytimg.com/vi/K6cQkHxBGoY/mqdefault.jpg",
   "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
   "own": false,
-  "game": "Dytica1周年オフコラボ",
+  "game": "#Dytica1周年オフコラボ",
   "collabs": []
  },
  {
@@ -3580,7 +3556,7 @@
   "thumb": "https://i.ytimg.com/vi/goywHXsLtyQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3594,7 +3570,7 @@
   "thumb": "https://i.ytimg.com/vi/nKWGpoq5B2k/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3608,7 +3584,7 @@
   "thumb": "https://i.ytimg.com/vi/KMi-61Ta4YE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3622,7 +3598,7 @@
   "thumb": "https://i.ytimg.com/vi/wIsgtTTgKQY/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3636,7 +3612,7 @@
   "thumb": "https://i.ytimg.com/vi/_LadX-uLTRU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -3748,7 +3724,7 @@
   "thumb": "https://i.ytimg.com/vi/kuixr1GAPbI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -3762,7 +3738,7 @@
   "thumb": "https://i.ytimg.com/vi/i10HZN157bg/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -3776,7 +3752,7 @@
   "thumb": "https://i.ytimg.com/vi/hs7d3xF4Z6g/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -3790,7 +3766,7 @@
   "thumb": "https://i.ytimg.com/vi/91dPZNw_d7U/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -3804,7 +3780,7 @@
   "thumb": "https://i.ytimg.com/vi/L7YbmPv6y-I/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -3818,7 +3794,7 @@
   "thumb": "https://i.ytimg.com/vi/9GtPQ5GtRzk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじスマブラ杯",
+  "game": "＃にじさんじスマブラ杯",
   "collabs": []
  },
  {
@@ -3857,7 +3833,7 @@
   "thumb": "https://i.ytimg.com/vi/WphA5iCOwWc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじスマブラ杯",
+  "game": "＃にじさんじスマブラ杯",
   "collabs": []
  },
  {
@@ -3885,7 +3861,7 @@
   "thumb": "https://i.ytimg.com/vi/JFbFg6n2pEM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじスマブラ杯",
+  "game": "＃にじさんじスマブラ杯",
   "collabs": []
  },
  {
@@ -3899,7 +3875,7 @@
   "thumb": "https://i.ytimg.com/vi/p2zTtDLgrRE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじスマブラ杯",
+  "game": "＃にじさんじスマブラ杯",
   "collabs": []
  },
  {
@@ -3947,7 +3923,7 @@
   "thumb": "https://i.ytimg.com/vi/-v2AcwN_NG0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -4009,7 +3985,7 @@
   "thumb": "https://i.ytimg.com/vi/F_Ggpw9w2ac/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4023,7 +3999,7 @@
   "thumb": "https://i.ytimg.com/vi/IqZPNvCa49w/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4037,7 +4013,7 @@
   "thumb": "https://i.ytimg.com/vi/yTYE9wSbh5w/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4051,7 +4027,7 @@
   "thumb": "https://i.ytimg.com/vi/DqQ3KsK1FbU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4065,7 +4041,7 @@
   "thumb": "https://i.ytimg.com/vi/bjd20YRIqbI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4079,7 +4055,7 @@
   "thumb": "https://i.ytimg.com/vi/RyNwS5we5PI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4093,7 +4069,7 @@
   "thumb": "https://i.ytimg.com/vi/u_K_gMU5rMI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4107,7 +4083,7 @@
   "thumb": "https://i.ytimg.com/vi/oAIEerEQmBU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4121,7 +4097,7 @@
   "thumb": "https://i.ytimg.com/vi/joBcA0YBuM0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4135,7 +4111,7 @@
   "thumb": "https://i.ytimg.com/vi/vwM0Kv5eFhg/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ星ファーム",
+  "game": "#にじ星ファーム",
   "collabs": []
  },
  {
@@ -4149,7 +4125,7 @@
   "thumb": "https://i.ytimg.com/vi/QAS48f9Hnfk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじGTA",
+  "game": "＃にじGTA",
   "collabs": []
  },
  {
@@ -4435,8 +4411,7 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【APEX】今度こそ配信でプラチナに行きます【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=sL5WFqZk6D8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=sL5WFqZk6D8"
    }
   ]
  },
@@ -4828,7 +4803,7 @@
   "thumb": "https://i.ytimg.com/vi/HqgT0bXVyvw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ヒーロー鯖マイクラ",
+  "game": "#ヒーロー鯖マイクラ",
   "collabs": []
  },
  {
@@ -5212,7 +5187,7 @@
   "thumb": "https://i.ytimg.com/vi/Jm0iE3b9Ftk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -5226,7 +5201,7 @@
   "thumb": "https://i.ytimg.com/vi/L3cOhim9nIk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -5302,7 +5277,7 @@
   "thumb": "https://i.ytimg.com/vi/xK0NEiCwTtM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "OW",
+  "game": "OW2",
   "collabs": []
  },
  {
@@ -5321,8 +5296,7 @@
    {
     "channel": "える / Elu【にじさんじ】",
     "title": "【UNO】UNOやろ～！^^ってだけです。【にじさんじ/える】",
-    "url": "https://www.youtube.com/watch?v=jpvExM1DFGo",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=jpvExM1DFGo"
    }
   ]
  },
@@ -5609,7 +5583,7 @@
   "thumb": "https://i.ytimg.com/vi/Yw-bt8JjXPU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "いつでもにじシード",
+  "game": "#いつでもにじシード",
   "collabs": []
  },
  {
@@ -5685,21 +5659,7 @@
   "thumb": "https://i.ytimg.com/vi/bUYf74Ra-NM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじハードコア対決2",
-  "collabs": []
- },
- {
-  "id": "aB7YSPB4TTA",
-  "title": "【Dyticaコラボ】メデュラ語り部人狼とやらをさせていただきます【にじさんじ/ 星導ショウ / 叢雲カゲツ / 小柳ロウ / 伊波ライ】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2024-10-31T12:00:09Z",
-  "end": "2024-10-31T13:09:03Z",
-  "url": "https://www.youtube.com/watch?v=aB7YSPB4TTA",
-  "thumb": "https://i.ytimg.com/vi/aB7YSPB4TTA/mqdefault.jpg",
-  "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
-  "own": false,
-  "game": "Dyticaコラボ",
+  "game": "#にじさんじハードコア対決2",
   "collabs": []
  },
  {
@@ -5781,7 +5741,7 @@
   "thumb": "https://i.ytimg.com/vi/culcfmKeW-o/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": [
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
@@ -5806,7 +5766,7 @@
   "thumb": "https://i.ytimg.com/vi/gSwG2QRBsDE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": []
  },
  {
@@ -5820,7 +5780,7 @@
   "thumb": "https://i.ytimg.com/vi/2G9-o4JQjgo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": []
  },
  {
@@ -5834,7 +5794,7 @@
   "thumb": "https://i.ytimg.com/vi/bRPEPPclIsk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": []
  },
  {
@@ -5848,7 +5808,7 @@
   "thumb": "https://i.ytimg.com/vi/zuqOtNH7xWs/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ3",
   "collabs": []
  },
  {
@@ -5862,7 +5822,7 @@
   "thumb": "https://i.ytimg.com/vi/FA8mNNp_rMI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじイカ祭り2024",
+  "game": "#にじイカ祭り2024",
   "collabs": []
  },
  {
@@ -5909,8 +5869,7 @@
    {
     "channel": "夜見れな/yorumi rena【にじさんじ所属】",
     "title": "🎅 #SMCクリスマス会2024 🎅　早めのクリスマスがあってもいいよね？豪華２本立て‼【夜見れな / 葉加瀬冬雪 / 加賀美ハヤト /にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=7is1jDui69A",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=7is1jDui69A"
    }
   ]
  },
@@ -6107,7 +6066,7 @@
   "thumb": "https://i.ytimg.com/vi/4BcvltrfmP4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじすぷーん",
+  "game": "＃にじすぷーん",
   "collabs": []
  },
  {
@@ -6192,20 +6151,6 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "マイクラ",
-  "collabs": []
- },
- {
-  "id": "LHFXjw6DWSM",
-  "title": "【2024年忘年会】赤城ウェン、小柳ロウの切り抜き鑑賞！【にじさんじ / 赤城ウェン】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2024-12-30T11:05:55Z",
-  "end": "2024-12-30T12:53:04Z",
-  "url": "https://www.youtube.com/watch?v=LHFXjw6DWSM",
-  "thumb": "https://i.ytimg.com/vi/LHFXjw6DWSM/mqdefault.jpg",
-  "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
-  "own": false,
-  "game": "2024年忘年会",
   "collabs": []
  },
  {
@@ -6317,7 +6262,7 @@
   "thumb": "https://i.ytimg.com/vi/52DbiXGywWQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじさんじ麻雀杯2025",
+  "game": "#にじさんじ麻雀杯2025",
   "collabs": []
  },
  {
@@ -6359,7 +6304,7 @@
   "thumb": "https://i.ytimg.com/vi/Y2DrRASa96I/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "VSにじARK",
+  "game": "#VSにじARK",
   "collabs": []
  },
  {
@@ -6373,7 +6318,7 @@
   "thumb": "https://i.ytimg.com/vi/ZUcMZxAINHs/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "VSにじARK",
+  "game": "#VSにじARK",
   "collabs": []
  },
  {
@@ -6387,7 +6332,7 @@
   "thumb": "https://i.ytimg.com/vi/ldDLrMpBpkU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "VSにじARK",
+  "game": "#VSにじARK",
   "collabs": []
  },
  {
@@ -6401,7 +6346,7 @@
   "thumb": "https://i.ytimg.com/vi/W2k8ePkhk5k/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "VSにじARK",
+  "game": "#VSにじARK",
   "collabs": []
  },
  {
@@ -6415,7 +6360,7 @@
   "thumb": "https://i.ytimg.com/vi/CjZPMX34sp4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "VSにじARK",
+  "game": "#VSにじARK",
   "collabs": []
  },
  {
@@ -6429,7 +6374,7 @@
   "thumb": "https://i.ytimg.com/vi/gmrwK9zdVsM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -6499,7 +6444,7 @@
   "thumb": "https://i.ytimg.com/vi/g4KQsagafGo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "一緒にスナックミー",
+  "game": "＃一緒にスナックミー",
   "collabs": []
  },
  {
@@ -6547,7 +6492,7 @@
   "thumb": "https://i.ytimg.com/vi/ESBxgnITQCM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -6614,8 +6559,7 @@
    {
     "channel": "樋口楓【にじさんじ所属】",
     "title": "【APEX】でろウは…… w/小柳ロウ【にじさんじ / 樋口楓】",
-    "url": "https://www.youtube.com/watch?v=t8dkH7uBkJ0",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=t8dkH7uBkJ0"
    }
   ]
  },
@@ -6718,20 +6662,6 @@
   "collabs": []
  },
  {
-  "id": "gR0YfW8RPpA",
-  "title": "【MECHATU-A第1弾】「ヘアケア戦士メデュラ」ってなんだ？みんなのヘアケアを助ける者さ【にじさんじ/佐伯イッテツ/赤城ウェン/伊波ライ/小柳ロウ】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2025-02-25T11:01:17Z",
-  "end": "2025-02-25T12:12:58Z",
-  "url": "https://www.youtube.com/watch?v=gR0YfW8RPpA",
-  "thumb": "https://i.ytimg.com/vi/gR0YfW8RPpA/mqdefault.jpg",
-  "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
-  "own": false,
-  "game": "MECHATU-A第1弾",
-  "collabs": []
- },
- {
   "id": "UxdM-Ru8y0M",
   "title": "【ドーナツの穴】問い【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -6778,20 +6708,6 @@
     "url": "https://www.youtube.com/watch?v=V8AZbFsLPmY"
    }
   ]
- },
- {
-  "id": "d011Zqyvuww",
-  "title": "【歌ってみた】絶対敵対メチャキライヤー / 小柳ロウ、赤城ウェン【にじさんじ】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2025-03-01T10:00:06Z",
-  "end": "2025-03-01T10:05:03Z",
-  "url": "https://www.youtube.com/watch?v=d011Zqyvuww",
-  "thumb": "https://i.ytimg.com/vi/d011Zqyvuww/mqdefault.jpg",
-  "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
-  "own": false,
-  "game": "歌ってみた",
-  "collabs": []
  },
  {
   "id": "XnvA9UEgwEA",
@@ -6926,7 +6842,7 @@
   "thumb": "https://i.ytimg.com/vi/NG354tFVEas/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじオンキヨー",
+  "game": "#にじオンキヨー",
   "collabs": []
  },
  {
@@ -6954,7 +6870,7 @@
   "thumb": "https://i.ytimg.com/vi/3hFOwxgBZuU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじリメド",
+  "game": "#にじリメド",
   "collabs": []
  },
  {
@@ -7015,8 +6931,7 @@
    {
     "channel": "カワノKawano",
     "title": "【スト6】小柳ロウさんに教える豪鬼　PART4くらい",
-    "url": "https://www.youtube.com/watch?v=hCnCv2UYMvY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=hCnCv2UYMvY"
    }
   ]
  },
@@ -7185,7 +7100,7 @@
   "thumb": "https://i.ytimg.com/vi/OEMtV5telPk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "小柳ロウ3D",
+  "game": "#小柳ロウ3D",
   "collabs": []
  },
  {
@@ -7281,7 +7196,7 @@
   "thumb": "https://i.ytimg.com/vi/0L35T3UMR-E/mqdefault.jpg",
   "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
   "own": false,
-  "game": "叢雲カゲツ3Dお披露目",
+  "game": "#叢雲カゲツ3Dお披露目",
   "collabs": []
  },
  {
@@ -7309,7 +7224,7 @@
   "thumb": "https://i.ytimg.com/vi/ODMhB4diNw4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -7328,8 +7243,7 @@
    {
     "channel": "北見遊征 / Kitami Yusei【にじさんじ】",
     "title": "【It Takes Two】人形になって大冒険#１【小柳ロウ/北見遊征/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=AuQmWNzMGpU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=AuQmWNzMGpU"
    }
   ]
  },
@@ -7358,7 +7272,7 @@
   "thumb": "https://i.ytimg.com/vi/lOg7qKUgnto/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -7372,7 +7286,7 @@
   "thumb": "https://i.ytimg.com/vi/03bUxa0ckC8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "マリカにじさんじ杯",
+  "game": "#マリカにじさんじ杯",
   "collabs": []
  },
  {
@@ -7439,7 +7353,7 @@
   "thumb": "https://i.ytimg.com/vi/WUEQUo96C_4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじマイクラ占領戦",
+  "game": "#にじマイクラ占領戦",
   "collabs": []
  },
  {
@@ -7453,7 +7367,7 @@
   "thumb": "https://i.ytimg.com/vi/0YOG9xuQ-hI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじマイクラ占領戦",
+  "game": "#にじマイクラ占領戦",
   "collabs": []
  },
  {
@@ -7467,7 +7381,7 @@
   "thumb": "https://i.ytimg.com/vi/8okByHDR--M/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじマイクラ占領戦",
+  "game": "#にじマイクラ占領戦",
   "collabs": []
  },
  {
@@ -7663,7 +7577,7 @@
   "thumb": "https://i.ytimg.com/vi/uJabwRpK3Ms/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "あくまじごっふぃー大会",
+  "game": "#あくまじごっふぃー大会",
   "collabs": []
  },
  {
@@ -7719,7 +7633,7 @@
   "thumb": "https://i.ytimg.com/vi/8y0YWu1WcQo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじAnideal",
+  "game": "#にじAnideal",
   "collabs": []
  },
  {
@@ -7860,20 +7774,6 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "MADTOWN",
-  "collabs": []
- },
- {
-  "id": "KKh-tB3XrbE",
-  "title": "【 告知あり 】重大告知を賭けた！？餃子大食いストラックアウト！！！【 MECHATU-A / にじさんじ 】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2025-07-01T11:59:05Z",
-  "end": "2025-07-01T13:08:17Z",
-  "url": "https://www.youtube.com/watch?v=KKh-tB3XrbE",
-  "thumb": "https://i.ytimg.com/vi/KKh-tB3XrbE/mqdefault.jpg",
-  "channel": "伊波ライ / Inami Rai【にじさんじ】",
-  "own": false,
-  "game": "告知あり",
   "collabs": []
  },
  {
@@ -8135,7 +8035,7 @@
   "thumb": "https://i.ytimg.com/vi/_pDXUs767T4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじアイクルール",
+  "game": "#にじアイクルール",
   "collabs": []
  },
  {
@@ -8659,7 +8559,7 @@
   "thumb": "https://i.ytimg.com/vi/utoTG-AOBgg/mqdefault.jpg",
   "channel": "東京デザインテクノロジーセンター専門学校",
   "own": false,
-  "game": "コラボイベント",
+  "game": "コラボイベント#8",
   "collabs": []
  },
  {
@@ -8727,7 +8627,7 @@
   "thumb": "https://i.ytimg.com/vi/OHVvVAyJDy8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじPixel10",
+  "game": "#にじPixel10",
   "collabs": []
  },
  {
@@ -8741,7 +8641,7 @@
   "thumb": "https://i.ytimg.com/vi/uZhxPVLrvEA/mqdefault.jpg",
   "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
   "own": false,
-  "game": "にじ肌パーフェクトワン",
+  "game": "#にじ肌パーフェクトワン",
   "collabs": []
  },
  {
@@ -8780,7 +8680,7 @@
   "thumb": "https://i.ytimg.com/vi/wYAPCZcebjM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "STARDEW VALLEY",
+  "game": "STARDEW　VALLEY",
   "collabs": [
    {
     "channel": "水無瀬 / Minase",
@@ -8820,9 +8720,8 @@
   "thumb": "https://i.ytimg.com/vi/PE4P9MRLpDA/mqdefault.jpg",
   "channel": "北見遊征 / Kitami Yusei【にじさんじ】",
   "own": false,
-  "game": "北見クールガイ3Dお披露目",
-  "collabs": [],
-  "cameo": true
+  "game": "#北見クールガイ3Dお披露目",
+  "collabs": []
  },
  {
   "id": "M-e8vx37igI",
@@ -9241,7 +9140,7 @@
   "thumb": "https://i.ytimg.com/vi/y6T92fo8qZM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "KZHCUPinLoL",
+  "game": "#KZHCUPinLoL",
   "collabs": []
  },
  {
@@ -9353,7 +9252,7 @@
   "thumb": "https://i.ytimg.com/vi/9GvREGqtzLo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじプロミル",
+  "game": "#にじプロミル",
   "collabs": []
  },
  {
@@ -9485,7 +9384,7 @@
   "thumb": "https://i.ytimg.com/vi/bh4HTsWM_5o/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9533,7 +9432,7 @@
   "thumb": "https://i.ytimg.com/vi/xl2GLUWm0-M/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9547,7 +9446,7 @@
   "thumb": "https://i.ytimg.com/vi/LAl65-iRcro/mqdefault.jpg",
   "channel": "不破 湊 / Fuwa Minato【にじさんじ】",
   "own": false,
-  "game": "不破湊3Dライブ",
+  "game": "#不破湊3Dライブ",
   "collabs": []
  },
  {
@@ -9603,7 +9502,7 @@
   "thumb": "https://i.ytimg.com/vi/NrQa-XVsEVg/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9673,7 +9572,7 @@
   "thumb": "https://i.ytimg.com/vi/O8WR6QB5-iE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9687,7 +9586,7 @@
   "thumb": "https://i.ytimg.com/vi/Z7UDxR5ev4g/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9701,7 +9600,7 @@
   "thumb": "https://i.ytimg.com/vi/paboRNuH8Ho/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9715,7 +9614,7 @@
   "thumb": "https://i.ytimg.com/vi/EXiIJL7QzyI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9729,7 +9628,7 @@
   "thumb": "https://i.ytimg.com/vi/xmHRThGbx2g/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9743,7 +9642,7 @@
   "thumb": "https://i.ytimg.com/vi/4Tl5YRKQCDU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9757,7 +9656,7 @@
   "thumb": "https://i.ytimg.com/vi/K4ww-hWrDHA/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スプラトゥーン3",
+  "game": "スプラ３",
   "collabs": []
  },
  {
@@ -9771,7 +9670,7 @@
   "thumb": "https://i.ytimg.com/vi/KcHHHtiUUJQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9785,7 +9684,7 @@
   "thumb": "https://i.ytimg.com/vi/ffTUtzXO_AU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9799,7 +9698,7 @@
   "thumb": "https://i.ytimg.com/vi/9iJtiEy_R8I/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9813,7 +9712,7 @@
   "thumb": "https://i.ytimg.com/vi/iNiTlyz9hT8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9827,7 +9726,7 @@
   "thumb": "https://i.ytimg.com/vi/KzdF_NVohFk/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9841,7 +9740,7 @@
   "thumb": "https://i.ytimg.com/vi/reComvIe6H8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -9929,7 +9828,7 @@
   "thumb": "https://i.ytimg.com/vi/UaUQvtjHKic/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "同時視聴",
+  "game": "同時視聴 第1回",
   "collabs": []
  },
  {
@@ -9991,7 +9890,7 @@
   "thumb": "https://i.ytimg.com/vi/JB3FbOvFqIo/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -10005,7 +9904,7 @@
   "thumb": "https://i.ytimg.com/vi/4JJ-IRDbmIE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -10061,7 +9960,7 @@
   "thumb": "https://i.ytimg.com/vi/nDJm1RKjXLc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -10117,7 +10016,7 @@
   "thumb": "https://i.ytimg.com/vi/Ib04LzVX8bw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -10337,6 +10236,20 @@
   "collabs": []
  },
  {
+  "id": "d_zDv3n5jR4",
+  "title": "【 ゼンゼロ 】妄想エンジェルってナニモノ❓👀にじゼンゼロモーソークイズの幕開けだあああああ✨💗【 にじさんじ / 西園チグサ 】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-02-11T08:59:10Z",
+  "end": "2026-02-11T10:03:38Z",
+  "url": "https://www.youtube.com/watch?v=d_zDv3n5jR4",
+  "thumb": "https://i.ytimg.com/vi/d_zDv3n5jR4/mqdefault.jpg",
+  "channel": "西園チグサ / Nishizono Chigusa",
+  "own": false,
+  "game": "ゼンゼロ",
+  "collabs": []
+ },
+ {
   "id": "T7PcJioS3BM",
   "title": "【NEW TOWN】喫茶店に住み着く者【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -10348,14 +10261,7 @@
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "NEW TOWN",
-  "collabs": [
-   {
-    "channel": "西園チグサ / Nishizono Chigusa",
-    "title": "【 ゼンゼロ 】妄想エンジェルってナニモノ❓👀にじゼンゼロモーソークイズの幕開けだあああああ✨💗【 にじさんじ / 西園チグサ 】",
-    "url": "https://www.youtube.com/watch?v=d_zDv3n5jR4",
-    "manual": true
-   }
-  ]
+  "collabs": []
  },
  {
   "id": "42thXGAodsQ",
@@ -10508,7 +10414,7 @@
   "thumb": "https://i.ytimg.com/vi/WLF1xgGHtLI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじレイル虹相楽園",
+  "game": "#にじレイル虹相楽園",
   "collabs": []
  },
  {
@@ -10592,7 +10498,7 @@
   "thumb": "https://i.ytimg.com/vi/z3dvvf6MvU4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじメディキューブ",
+  "game": "#にじメディキューブ",
   "collabs": []
  },
  {
@@ -10868,7 +10774,7 @@
   "thumb": "https://i.ytimg.com/vi/qATWVGMw5Ag/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじエペさい2026",
+  "game": "#にじエペさい2026",
   "collabs": []
  },
  {
@@ -10902,7 +10808,7 @@
   "thumb": "https://i.ytimg.com/vi/XKX5lA5dd7w/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじエペさい2026",
+  "game": "#にじエペさい2026",
   "collabs": []
  },
  {
@@ -10916,7 +10822,7 @@
   "thumb": "https://i.ytimg.com/vi/N3ccc5BqtFE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじエペさい2026",
+  "game": "#にじエペさい2026",
   "collabs": []
  },
  {
@@ -10940,8 +10846,7 @@
    {
     "channel": "Syusetu kohaku/秋雪こはく",
     "title": "【apex】突発フルパw/ハユンくん 小柳ロウくん【REJECT/秋雪こはく】",
-    "url": "https://www.youtube.com/watch?v=-H9VK34lpKY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=-H9VK34lpKY"
    }
   ]
  },
@@ -11006,8 +10911,7 @@
    {
     "channel": "鴉紋ゆうく / Amon Yuuku",
     "title": "【APEX】唐突フルパ合流 w/小柳ロウ、dtto.【 鴉紋ゆうく/Vtuber 】",
-    "url": "https://www.youtube.com/watch?v=9_5j4atR-6g",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=9_5j4atR-6g"
    }
   ]
  },
@@ -11110,7 +11014,7 @@
   "thumb": "https://i.ytimg.com/vi/OV0zAKvDbYc/mqdefault.jpg",
   "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
   "own": false,
-  "game": "にじPUMA",
+  "game": "#にじPUMA",
   "collabs": []
  },
  {
@@ -11630,7 +11534,7 @@
   "thumb": "https://i.ytimg.com/vi/2p2IteCbKSc/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "MECHATUA重大告知",
+  "game": "#MECHATUA重大告知",
   "collabs": []
  },
  {
@@ -11678,7 +11582,7 @@
   "thumb": "https://i.ytimg.com/vi/HT0XVbvVnP8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -11725,8 +11629,7 @@
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【ピグパーティ】ピグパーティにぎゃうるふが登場！【にじさんじ/赤城ウェン/小柳ロウ】",
-    "url": "https://www.youtube.com/watch?v=LhzOZOwk6cY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=LhzOZOwk6cY"
    }
   ]
  },
@@ -12118,7 +12021,7 @@
   "thumb": "https://i.ytimg.com/vi/qHCY1U2RsOU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -12132,7 +12035,7 @@
   "thumb": "https://i.ytimg.com/vi/0nJ0UIAulGI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "サブノーティカ2",
+  "game": "サブノーティカ２",
   "collabs": [
    {
     "channel": "伊波ライ / Inami Rai【にじさんじ】",
@@ -12166,7 +12069,7 @@
   "thumb": "https://i.ytimg.com/vi/Qd079fnLf6s/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12194,7 +12097,7 @@
   "thumb": "https://i.ytimg.com/vi/W9mVd_99HtI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12208,7 +12111,7 @@
   "thumb": "https://i.ytimg.com/vi/M6TiKPLxcgc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12222,7 +12125,7 @@
   "thumb": "https://i.ytimg.com/vi/YTZDISSl2xU/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12256,7 +12159,7 @@
   "thumb": "https://i.ytimg.com/vi/0mdSRhO0pg0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12270,7 +12173,7 @@
   "thumb": "https://i.ytimg.com/vi/Wblc7FpfQQs/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": []
  },
  {
@@ -12284,7 +12187,7 @@
   "thumb": "https://i.ytimg.com/vi/46gcFiKht_Q/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12298,7 +12201,7 @@
   "thumb": "https://i.ytimg.com/vi/9l--wBCW2MM/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12312,7 +12215,7 @@
   "thumb": "https://i.ytimg.com/vi/e7ArKRSvv4E/mqdefault.jpg",
   "channel": "渚トラウト / Nagisa Trout【にじさんじ】",
   "own": false,
-  "game": "渚トラウト3D",
+  "game": "#渚トラウト3D",
   "collabs": []
  },
  {
@@ -12326,7 +12229,7 @@
   "thumb": "https://i.ytimg.com/vi/eXbXlliEiRw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12340,7 +12243,7 @@
   "thumb": "https://i.ytimg.com/vi/apR5bOjoi00/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12360,7 +12263,7 @@
   "thumb": "https://i.ytimg.com/vi/DJCk-F1ymZE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12388,7 +12291,7 @@
   "thumb": "https://i.ytimg.com/vi/BOmEAKXtl_I/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12408,7 +12311,7 @@
   "thumb": "https://i.ytimg.com/vi/-2_tok2rb-0/mqdefault.jpg",
   "channel": "酒寄颯馬 / Sakayori Soma【にじさんじ】",
   "own": false,
-  "game": "酒寄颯馬3D",
+  "game": "#酒寄颯馬3D",
   "collabs": []
  },
  {
@@ -12422,7 +12325,7 @@
   "thumb": "https://i.ytimg.com/vi/YcRFniWSNXQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12436,7 +12339,7 @@
   "thumb": "https://i.ytimg.com/vi/2dNCqF1y8Ak/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12450,7 +12353,7 @@
   "thumb": "https://i.ytimg.com/vi/FFceEl3uRDE/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12470,7 +12373,7 @@
   "thumb": "https://i.ytimg.com/vi/qzpUfhHlOvc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12490,7 +12393,7 @@
   "thumb": "https://i.ytimg.com/vi/vgpteRBqiNw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12510,7 +12413,7 @@
   "thumb": "https://i.ytimg.com/vi/Q-rDOi9RxOQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12530,7 +12433,7 @@
   "thumb": "https://i.ytimg.com/vi/yznVe8KlK6E/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12550,7 +12453,7 @@
   "thumb": "https://i.ytimg.com/vi/hMdcOe_Zp_s/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12570,7 +12473,7 @@
   "thumb": "https://i.ytimg.com/vi/Fed0zyEKSd8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": [
    {
     "channel": "紡木こかげ",
@@ -12610,7 +12513,7 @@
   "thumb": "https://i.ytimg.com/vi/omwAxjQ_N14/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "スト6",
+  "game": "スト６",
   "collabs": []
  },
  {
@@ -12666,7 +12569,7 @@
   "thumb": "https://i.ytimg.com/vi/W6lrZ3WxjL8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじカラリア",
+  "game": "#にじカラリア",
   "collabs": []
  },
  {
@@ -12680,7 +12583,7 @@
   "thumb": "https://i.ytimg.com/vi/DV-50xBI3pU/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12694,7 +12597,7 @@
   "thumb": "https://i.ytimg.com/vi/iW8zh7L_29s/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": [
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
@@ -12742,7 +12645,7 @@
   "thumb": "https://i.ytimg.com/vi/REd7tE94zyY/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12756,7 +12659,7 @@
   "thumb": "https://i.ytimg.com/vi/lPN0Qeh48MQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12770,7 +12673,7 @@
   "thumb": "https://i.ytimg.com/vi/Ce4g3eqRgAY/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12896,7 +12799,7 @@
   "thumb": "https://i.ytimg.com/vi/piZeY3gKam4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12980,7 +12883,7 @@
   "thumb": "https://i.ytimg.com/vi/SBkGxuXzg-I/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -12994,7 +12897,7 @@
   "thumb": "https://i.ytimg.com/vi/_OSYwAPj92E/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -13008,7 +12911,7 @@
   "thumb": "https://i.ytimg.com/vi/j75aiF2T2OI/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -13022,7 +12925,7 @@
   "thumb": "https://i.ytimg.com/vi/7gqPxDnWZUc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -13126,7 +13029,7 @@
   "thumb": "https://i.ytimg.com/vi/cDRzcx6PSto/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "にじ甲2026_Day1",
+  "game": "#にじ甲2026_Day1",
   "collabs": []
  },
  {
@@ -13140,7 +13043,7 @@
   "thumb": "https://i.ytimg.com/vi/C_-x2UnAY-A/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "にじ甲2026_Day2",
+  "game": "#にじ甲2026_Day2",
   "collabs": []
  },
  {
@@ -13168,7 +13071,7 @@
   "thumb": "https://i.ytimg.com/vi/zc5pZOzDta0/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "にじ甲2026_Day3",
+  "game": "#にじ甲2026_Day3",
   "collabs": []
  },
  {
@@ -13272,7 +13175,7 @@
   "thumb": "https://i.ytimg.com/vi/itNvSC3AXWQ/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじマニフレックス",
+  "game": "#にじマニフレックス",
   "collabs": []
  },
  {
@@ -13413,44 +13316,37 @@
    {
     "channel": "伊波ライ / Inami Rai【にじさんじ】",
     "title": "【 Rematch 】めちゃつえサッカー部【 伊波ライ / にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=5OMg5LleVIo",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=5OMg5LleVIo"
    },
    {
     "channel": "赤城ウェン / Akagi Wen【にじさんじ】",
     "title": "【REMATCH】夏はサッカーだろ！with めちゃつえー【にじさんじ / 赤城ウェン】",
-    "url": "https://www.youtube.com/watch?v=hvtXlK0p7iQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=hvtXlK0p7iQ"
    },
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【REMATCH】MECHATU-Aサッカー部【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=cdmG6Wj5hzw",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=cdmG6Wj5hzw"
    },
    {
     "channel": "緋八マナ / Hibachi Mana【にじさんじ】",
     "title": "【REMATCH】同期の野郎どもと新感覚サッカー⚽【にじさんじ/緋八マナ】",
-    "url": "https://www.youtube.com/watch?v=5OCGeU1B_yQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=5OCGeU1B_yQ"
    },
    {
     "channel": "宇佐美リト / Usami Rito【にじさんじ】",
     "title": "【REMATCH】ヒーローでサッカーやるぜ【宇佐美リト/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=xzGIVnFRVvI",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=xzGIVnFRVvI"
    },
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
     "title": "【REMATCH】めちゃサッカーw/めちゃつえー【叢雲カゲツ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=euDfndolxQY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=euDfndolxQY"
    },
    {
     "channel": "佐伯イッテツ / Saiki Ittetsu【にじさんじ】",
     "title": "【REMATCH】ヒーローの皆さんとサッカーで遊ぶ　※佐伯支店【にじさんじ／佐伯イッテツ】",
-    "url": "https://www.youtube.com/watch?v=L6MR8ZvfWnc",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=L6MR8ZvfWnc"
    }
   ]
  },
@@ -13535,7 +13431,7 @@
   "thumb": "https://i.ytimg.com/vi/XU94sRimSdc/mqdefault.jpg",
   "channel": "にじさんじ",
   "own": false,
-  "game": "にじ甲2026",
+  "game": "#にじ甲2026",
   "collabs": []
  },
  {
@@ -13563,7 +13459,7 @@
   "thumb": "https://i.ytimg.com/vi/faz-qiTzdMw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "LoL",
+  "game": "League of Legends",
   "collabs": [
    {
     "channel": "叢雲カゲツ / Murakumo Kagetsu【にじさんじ】",
@@ -14006,8 +13902,7 @@
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【NTE: Neverness to Everness 】夏過ぎたけど2人でビーチバレー【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=QV4v97g0f_0",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=QV4v97g0f_0"
    }
   ]
  },
@@ -14027,8 +13922,7 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】カスタムいくぞ！【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=fESNwb24Edg",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=fESNwb24Edg"
    }
   ]
  },
@@ -14062,8 +13956,7 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】リスナーカスタム→21時～CRカップスクリム1日目【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=ltFql2OOfoE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=ltFql2OOfoE"
    }
   ]
  },
@@ -14083,8 +13976,7 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】ソロ練→21時～CRカップスクリム2日目【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=59UClH4RvF8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=59UClH4RvF8"
    }
   ]
  },
@@ -14104,8 +13996,7 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】カスタム→21時～CRカップスクリム3日目【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=cCjc1SR66A4",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=cCjc1SR66A4"
    }
   ]
  },
@@ -14125,8 +14016,7 @@
    {
     "channel": "紡木こかげ",
     "title": "【APEX】CRカップ本番！#青ドクWIN【ぶいすぽっ！ / 紡木こかげ】",
-    "url": "https://www.youtube.com/watch?v=so4CHTGmqUU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=so4CHTGmqUU"
    }
   ]
  },
@@ -14146,8 +14036,7 @@
    {
     "channel": "空澄セナ -Asumi Sena-",
     "title": "【BOMBANANA】見ざる言わざる聞かざる！協力して爆弾解除せよ。w/早乙女ベリー3.小柳ロウ【空澄セナ/ぶいすぽっ！】",
-    "url": "https://www.youtube.com/watch?v=j61xeQLsvt0",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=j61xeQLsvt0"
    },
    {
     "channel": "早乙女 ベリー / Saotome Berry【にじさんじ】",
@@ -14214,56 +14103,47 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "OW┊︎カスタムの助っ人いがらしぃ【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=uVyAkegljdU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=uVyAkegljdU"
    },
    {
     "channel": "ラトナ・プティ -Ratna Petit -にじさんじ所属",
     "title": "【OW】カスタム！にじさんじの皆さんと遊ぶ【ラトナ・プティ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=UO7aKgZeYgE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=UO7aKgZeYgE"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ OW2 ꒱　にじカスタム～～～～🌈TANK練習しよっ🦍　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=kNzp7Oy7I1g",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=kNzp7Oy7I1g"
    },
    {
     "channel": "塚原大地 / Tsukahara Daichi【にじさんじ】",
     "title": "【OW】にじカスタム参加。練習してきました。 【塚原大地 / にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=_lwUDfVU0jA",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=_lwUDfVU0jA"
    },
    {
     "channel": "海妹四葉 / Umise Yotsuha 【にじさんじ】",
     "title": "【Overwatch】またしても浦島おうばうおちカスタム【海妹四葉/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=3rCuk6zOzdw",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=3rCuk6zOzdw"
    },
    {
     "channel": "星導ショウ / Hoshirube Sho【にじさんじ】",
     "title": "【オーバーウォッチ】新キャラを使おうにじさんじカスタム【星導ショウ/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=EqoCH8srKGw",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=EqoCH8srKGw"
    },
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】新シーズン‼にじさんじOWカスタム🔫ｗにじさんじライバー9名【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=4uvokJtoUVg",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=4uvokJtoUVg"
    },
    {
     "channel": "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
     "title": "⋙ Overwatch ⋮❙⋮ 最高なカスタムは新シーズンです ⋮❙⋮ 弦月藤士郎 / にじさんじ ⋘",
-    "url": "https://www.youtube.com/watch?v=et72yzUO9mY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=et72yzUO9mY"
    },
    {
     "channel": "Yuhi Riri Official",
     "title": "▶︎▷ OWにじさんじさんカスタム ｜ にじさんじの皆さんへ　こんにちは ｜ 夕陽リリ ￤ にじさんじ",
-    "url": "https://www.youtube.com/watch?v=SP1b79NCLY8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=SP1b79NCLY8"
    }
   ]
  },
@@ -14378,8 +14258,7 @@
    {
     "channel": "Yuhi Riri Official",
     "title": "▶︎▷ OVERWATCH ｜ OWはしようよ w/小柳ロウ ｜ 夕陽リリ ￤ にじさんじ",
-    "url": "https://www.youtube.com/watch?v=QTdF4OiIy-M",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=QTdF4OiIy-M"
    }
   ]
  },
@@ -14399,14 +14278,12 @@
    {
     "channel": "エクス・アルビオ -Ex Albio-",
     "title": "VCCスプラカスタム本番、最強ブラスターが暴れるぞ！！『 スプラトゥーン3 』【 エビオ/にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=BCt_e0uIxoE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=BCt_e0uIxoE"
    },
    {
     "channel": "ローレン・イロアス / Lauren Iroas【にじさんじ】",
     "title": "【スプラトゥーン3】VCC INK FES2  床は塗ったほうがいいらしい【ローレン・イロアス/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=lDR-HsCyKyI",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=lDR-HsCyKyI"
    }
   ]
  },
@@ -14426,14 +14303,12 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "OW┊︎れんしゅうしますか！集まれるﾁﾑﾒﾝの方々と【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=bY5z4xMGf-s",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=bY5z4xMGf-s"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ OW2 ꒱　たいかいでるじょ🌈🦍ｳﾎﾎ　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=yDz6JxJCXCg",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=yDz6JxJCXCg"
    }
   ]
  },
@@ -14481,20 +14356,17 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "OW┊︎チーム4練習だ！集まれるﾁﾑﾒﾝの方々と【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=Y1UgBFMPVE4",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=Y1UgBFMPVE4"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY2 今日も練習で背中デカくなる。🌈🦍ｳﾎﾎ　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=SlFm1s2Q4Do",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=SlFm1s2Q4Do"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW チーム4｜大ヒーリング時代開幕【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=qn6Zu6vUNSU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=qn6Zu6vUNSU"
    }
   ]
  },
@@ -14514,26 +14386,22 @@
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY3 今日は \" 耐え \" 🌈🦍ｳﾎﾎ　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=IPQ78HAprwM",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=IPQ78HAprwM"
    },
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎チーム4練習だ！集まれるﾁﾑﾒﾝの方々と【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=AGvriNc0kt8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=AGvriNc0kt8"
    },
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】毎日コツコツ強くなる！チーム練習 ｗチーム4【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=1YbLzKEsgH4",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=1YbLzKEsgH4"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW チーム4｜遅刻した分を巻き返すぞの会【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=HHMNpTtNQ9A",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=HHMNpTtNQ9A"
    }
   ]
  },
@@ -14553,14 +14421,12 @@
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】もっと強く！もっと楽しく！チーム練習 ｗチーム4【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=KqS80A4tb0M",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=KqS80A4tb0M"
    },
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎チーム4練習！成長したい【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=jUA9wjLHonM",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=jUA9wjLHonM"
    }
   ]
  },
@@ -14580,26 +14446,22 @@
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY5  　\"　耐　え　\"　 🌈　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=Ia3sA1odtRU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=Ia3sA1odtRU"
    },
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】強くなるだけじゃだめ！みんながいる！チーム練習 ｗチーム4【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=ffe9UBnb2EQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=ffe9UBnb2EQ"
    },
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎チーム4練習！練習！練習！【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=B5edUBNsm74",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=B5edUBNsm74"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW チーム4｜THE学をアウトTHEプットしますTHE【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=YlzFGXCOVuU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=YlzFGXCOVuU"
    }
   ]
  },
@@ -14619,26 +14481,22 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎チーム4名前決めたいね～🌴【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=pGmGPxj7A78",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=pGmGPxj7A78"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY6 　\"　ウホホ・ホーホホホ・ウワワ～　\"　 🌈　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=Xg58Ryxv45Y",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=Xg58Ryxv45Y"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW チーム4｜まだはじまったばかりのにょきにょき🌱【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=gLbX_VStbYs",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=gLbX_VStbYs"
    },
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】カリカリポテト！アイス二個！たまごっち！からのチーム練習！ ｗチーム4【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=0AuIUr6DBR8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=0AuIUr6DBR8"
    }
   ]
  },
@@ -14658,20 +14516,17 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎#ちるぼたWIN スクリム1日目いくぞ❕【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=vYACkro0hf8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=vYACkro0hf8"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY7 　スクリム 　 🌈　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=2F6nyUCRiH8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=2F6nyUCRiH8"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW #ちるぼたWIN｜チームスクリムDAY1！最適化最適化最適化【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=jIj8QDCa6EY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=jIj8QDCa6EY"
    }
   ]
  },
@@ -14691,20 +14546,17 @@
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ DAY8 　命がもったいたい～ね～ 🌈　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=bEo47Cve9yA",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=bEo47Cve9yA"
    },
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎#ちるぼたWIN スクリム2日目いくぞ❕【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=P6s97xLA-fE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=P6s97xLA-fE"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW #ちるぼたWIN｜チームスクリムDAY2！チルの極み【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=G8GiQJkGRUI",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=G8GiQJkGRUI"
    }
   ]
  },
@@ -14724,20 +14576,17 @@
    {
     "channel": "五十嵐梨花 / Igarashi Rika 【にじさんじ】",
     "title": "#にじEX_OW┊︎#ちるぼたWIN ちる☆ぼたサポート視点！本番行っちゃうよ！【 にじさんじ / 五十嵐梨花 】",
-    "url": "https://www.youtube.com/watch?v=4PJv62VFU4w",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=4PJv62VFU4w"
    },
    {
     "channel": "本間ひまわり - Himawari Honma -",
     "title": "꒰ Overwatch ꒱ 本番！　ちる☆ぼたWIN    　˹ 本間ひまわり にじさんじのみなさんっ ˼",
-    "url": "https://www.youtube.com/watch?v=MtmYOy0n4Go",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=MtmYOy0n4Go"
    },
    {
     "channel": "五木左京 / Itsuki Sakyo【にじさんじ】",
     "title": "【OW】#にじEX_OW #ちるぼたWIN｜本番！勝つぞ勝つぞ勝つぞ！！！！【にじさんじ / 五木左京】",
-    "url": "https://www.youtube.com/watch?v=A0-byWiB8kk",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=A0-byWiB8kk"
    }
   ]
  },
@@ -14771,8 +14620,7 @@
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】マスター目指したいんよって話ではあるよ ｗ小柳【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=I742zMmu2Ro",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=I742zMmu2Ro"
    }
   ]
  },
@@ -14792,8 +14640,7 @@
    {
     "channel": "Kazaki Ch. ‐ 森中花咲 ‐",
     "title": "【OW】朝練OWがあるよって話ではあるよ ｗ小柳【森中花咲/にじさんじ所属】",
-    "url": "https://www.youtube.com/watch?v=BHU3KDKvqQY",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=BHU3KDKvqQY"
    },
    {
     "channel": "日裏クロ / Hiura Kuro",
@@ -14837,21 +14684,6 @@
   ]
  },
  {
-  "id": "NebfZQFj5Zg",
-  "title": "【 #グラニット生誕祭2026 】豪華な人達を迎えてハロウィン記念凸待ち！【グラニット/ゆにれいど！】",
-  "kind": "stream",
-  "status": "done",
-  "start": "2026-10-31T09:56:32Z",
-  "end": "2026-10-31T12:56:09Z",
-  "url": "https://www.youtube.com/watch?v=NebfZQFj5Zg",
-  "thumb": "https://i.ytimg.com/vi/NebfZQFj5Zg/mqdefault.jpg?v=6ae56825",
-  "channel": "グラニット / Granite",
-  "own": false,
-  "game": "グラニット生誕祭2026",
-  "collabs": [],
-  "cameo": true
- },
- {
   "id": "ubdHDFlwBVI",
   "title": "【APEX】ベリーさんゴールド企画【小柳ロウ/にじさんじ】",
   "kind": "stream",
@@ -14864,6 +14696,11 @@
   "own": true,
   "game": "APEX",
   "collabs": [
+   {
+    "channel": "グラニット / Granite",
+    "title": "【 #グラニット生誕祭2026 】豪華な人達を迎えてハロウィン記念凸待ち！【グラニット/ゆにれいど！】",
+    "url": "https://www.youtube.com/watch?v=NebfZQFj5Zg"
+   },
    {
     "channel": "早乙女 ベリー / Saotome Berry【にじさんじ】",
     "title": "【APEX】ゴールド目前だ！！✨ロウ先輩にえぺを見守ってもらう！！【早乙女ベリー/小柳ロウ/にじさんじ】",
@@ -14887,20 +14724,17 @@
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 スプラトゥーン３ 】チームのみんなと初顔合わせ！よろしくお願いします！！！【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=JqCaClMdeuM",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=JqCaClMdeuM"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】#にじイカ祭り2026 チーム12🔥顔合わせいくぞおおおおおおおおお！！w/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=IZevDdquaZ0",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=IZevDdquaZ0"
    },
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】チーム12顔合わせと練習だあああああああああ!!✨【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=TcKLMpS-fhk",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=TcKLMpS-fhk"
    }
   ]
  },
@@ -14920,20 +14754,17 @@
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 スプラトゥーン３ 】チーム12！練習会だ！！！【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=t6VwssBvPRs",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=t6VwssBvPRs"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】#にじイカ祭り2026 チーム12🔥チーム練習いくぞおおおおおおおおお！！w/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=qnDm6-OX_YA",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=qnDm6-OX_YA"
    },
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】今日も相性を優勝させるため…!!練習するぞ!!【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=bjOgXgliqKE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=bjOgXgliqKE"
    }
   ]
  },
@@ -14967,20 +14798,17 @@
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】チーム練!!プラコラの仕事頑張るぞ✨【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=0eauEjucKM4",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=0eauEjucKM4"
    },
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 スプラトゥーン３ 】チーム12のわくわく練習会です【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=EN2QM157NlM",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=EN2QM157NlM"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】#にじイカ祭り2026 絶対優勝ドロップス🔥チーム練習いくぞおおおおおおおおお！！w/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=D61qR1KQKjs",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=D61qR1KQKjs"
    }
   ]
  },
@@ -15000,14 +14828,12 @@
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】修行したことをできるように…!! #絶対優勝ドロップス 練習だー!!!!!!【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=5gLLMGNKdro",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=5gLLMGNKdro"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】#にじイカ祭り2026 絶対優勝ドロップス🔥チーム練習いくぞおおおおおおおおお！！w/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=oXbiTaxp1ic",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=oXbiTaxp1ic"
    }
   ]
  },
@@ -15027,20 +14853,17 @@
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】#絶対優勝ドロップス 👑本番前最終出勤!!ドリンク飲めええええ!!【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=KYCYDsyAkoM",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=KYCYDsyAkoM"
    },
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 スプラトゥーン３ 】チーム絶対優勝ドロップス！！！大会前日練習会！！！【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=yFuPkZw-EdI",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=yFuPkZw-EdI"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】#にじイカ祭り2026 絶対優勝ドロップス🔥vs16 w/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=lR_bz1tmIgQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=lR_bz1tmIgQ"
    }
   ]
  },
@@ -15055,25 +14878,22 @@
   "thumb": "https://i.ytimg.com/vi/uAF9L73jfco/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじイカ祭り2026",
+  "game": "#にじイカ祭り2026",
   "collabs": [
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】#絶対優勝ドロップス 🦑いよいよ本番だーーー！！！楽しむぞっ！！【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=lkrHSKf2AqU",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=lkrHSKf2AqU"
    },
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】#絶対WIN 👑 最高の一杯で絶対勝利だああああ!!【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=n9PhV8lql6w",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=n9PhV8lql6w"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】本番🔥 #にじイカ祭り2026 絶対優勝ドロップス/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=2KABcfu42X8",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=2KABcfu42X8"
    }
   ]
  },
@@ -15088,25 +14908,22 @@
   "thumb": "https://i.ytimg.com/vi/Be14jNSUwxc/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "にじイカ祭り2026",
+  "game": "#にじイカ祭り2026",
   "collabs": [
    {
     "channel": "鏑木ろこ / Kaburaki Roco【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】#絶対優勝ドロップス 🦑本番2日め！！！いくぞーーーーー！！！！！【 鏑木ろこ￤にじさんじ 】",
-    "url": "https://www.youtube.com/watch?v=ZwOSHaQLSkQ",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=ZwOSHaQLSkQ"
    },
    {
     "channel": "倉持めると / Kuramochi Meruto【にじさんじ】",
     "title": "【 #にじイカ祭り2026 】#絶対WIN 👑最終出勤日!! 絶対優勝だああああああ!!✨【倉持めると/にじさんじ】",
-    "url": "https://www.youtube.com/watch?v=XQ_arlCrv_c",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=XQ_arlCrv_c"
    },
    {
     "channel": "椎名唯華 / Shiina Yuika",
     "title": "【 スプラトゥーン3 】本番🔥 #にじイカ祭り2026 絶対優勝ドロップス/小柳鏑木倉持【にじさんじ/椎名唯華】",
-    "url": "https://www.youtube.com/watch?v=8q-zVZ8HEms",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=8q-zVZ8HEms"
    }
   ]
  },
@@ -15140,8 +14957,7 @@
    {
     "channel": "鬼ヶ谷 テン / Onigaya Ten",
     "title": "【APEX】健康朝活ﾌﾙﾊﾟ/w ボスこと小柳さん・旅人こと水無瀬さん【鬼ヶ谷テン/ネオポルテ】",
-    "url": "https://www.youtube.com/watch?v=UFQlGILWffE",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=UFQlGILWffE"
    },
    {
     "channel": "水無瀬 / Minase",
@@ -15161,7 +14977,7 @@
   "thumb": "https://i.ytimg.com/vi/gQBb8TXhFb4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15189,7 +15005,7 @@
   "thumb": "https://i.ytimg.com/vi/MkL8eZr83o0/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15223,9 +15039,8 @@
   "thumb": "https://i.ytimg.com/vi/zo_aAXasJhc/mqdefault.jpg",
   "channel": "ハユン / HaYun【にじさんじ】",
   "own": false,
-  "game": "ハユン3D",
-  "collabs": [],
-  "cameo": true
+  "game": "#ハユン3D",
+  "collabs": []
  },
  {
   "id": "BrbBsOtF-aw",
@@ -15238,7 +15053,7 @@
   "thumb": "https://i.ytimg.com/vi/BrbBsOtF-aw/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15252,7 +15067,7 @@
   "thumb": "https://i.ytimg.com/vi/0iCfVRPBFvI/mqdefault.jpg?v=6af83f0b",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15266,7 +15081,7 @@
   "thumb": "https://i.ytimg.com/vi/lCdXhwenKFM/mqdefault.jpg?v=6af98fdb",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15294,7 +15109,7 @@
   "thumb": "https://i.ytimg.com/vi/KJtTk_D7uY4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15308,7 +15123,7 @@
   "thumb": "https://i.ytimg.com/vi/yNmn2Ud5pU4/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15322,7 +15137,7 @@
   "thumb": "https://i.ytimg.com/vi/sTyde4-Ab_U/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15341,8 +15156,7 @@
    {
     "channel": "鬼ヶ谷 テン / Onigaya Ten",
     "title": "【APEX】ｳｷｳｷ朝活ﾌﾙﾊﾟ/w ボスこと小柳さん・旅人こと水無瀬さん【鬼ヶ谷テン/ネオポルテ】",
-    "url": "https://www.youtube.com/watch?v=yyg4b1aujDk",
-    "manual": true
+    "url": "https://www.youtube.com/watch?v=yyg4b1aujDk"
    },
    {
     "channel": "水無瀬 / Minase",
@@ -15362,7 +15176,7 @@
   "thumb": "https://i.ytimg.com/vi/zf1s27Bad1E/mqdefault.jpg?v=6b002a78",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15390,7 +15204,7 @@
   "thumb": "https://i.ytimg.com/vi/PDN0EIfIgas/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15404,7 +15218,7 @@
   "thumb": "https://i.ytimg.com/vi/ifRxf9AEXh8/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
-  "game": "ガチグラ2",
+  "game": "ガチグラ２",
   "collabs": []
  },
  {
@@ -15439,11 +15253,11 @@
   "id": "l8RN1mui1io",
   "title": "【APEX】ぶいすぽGG【小柳ロウ/にじさんじ】",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-23T09:58:02Z",
-  "end": null,
+  "end": "2026-11-23T13:05:52Z",
   "url": "https://www.youtube.com/watch?v=l8RN1mui1io",
-  "thumb": "https://i.ytimg.com/vi/l8RN1mui1io/mqdefault.jpg?v=6b040b4b",
+  "thumb": "https://i.ytimg.com/vi/l8RN1mui1io/mqdefault.jpg",
   "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
   "own": true,
   "game": "APEX",
