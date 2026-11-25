@@ -15462,5 +15462,19 @@
   "own": true,
   "game": "APEX",
   "collabs": []
+ },
+ {
+  "id": "z1aBMTQrLZE",
+  "title": "【新衣装】パフォ【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "done",
+  "start": "2026-11-25T13:16:19Z",
+  "end": "2026-11-25T13:58:50Z",
+  "url": "https://www.youtube.com/watch?v=z1aBMTQrLZE",
+  "thumb": "https://i.ytimg.com/vi/z1aBMTQrLZE/mqdefault.jpg",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "新衣装",
+  "collabs": []
  }
 ]
