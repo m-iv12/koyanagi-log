@@ -15476,5 +15476,19 @@
   "own": true,
   "game": "新衣装",
   "collabs": []
+ },
+ {
+  "id": "gmdV_gdayQA",
+  "title": "【APEX】5,6時まで【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-26T04:32:31Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=gmdV_gdayQA",
+  "thumb": "https://i.ytimg.com/vi/gmdV_gdayQA/mqdefault.jpg?v=6b07b518",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": []
  }
 ]
