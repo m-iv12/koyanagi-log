@@ -12832,9 +12832,9 @@
   "url": "https://www.youtube.com/watch?v=gmdV_gdayQA",
   "thumb": "https://i.ytimg.com/vi/gmdV_gdayQA/mqdefault.jpg?v=6b07b518",
   "kind": "stream",
-  "status": "live",
+  "status": "done",
   "start": "2026-11-26T04:32:31Z",
-  "end": null,
+  "end": "2026-11-26T08:59:13Z",
   "own": true
  }
 }
