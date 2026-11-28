@@ -15518,5 +15518,19 @@
   "own": true,
   "game": "LoL",
   "collabs": []
+ },
+ {
+  "id": "Vvc7aBC7P10",
+  "title": "【APEX】夜練【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-28T12:40:36Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=Vvc7aBC7P10",
+  "thumb": "https://i.ytimg.com/vi/Vvc7aBC7P10/mqdefault.jpg?v=6b0ac939",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "APEX",
+  "collabs": []
  }
 ]

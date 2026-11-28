@@ -12864,5 +12864,19 @@
   "start": "2026-11-28T05:50:51Z",
   "end": "2026-11-28T10:29:57Z",
   "own": true
+ },
+ "Vvc7aBC7P10": {
+  "id": "Vvc7aBC7P10",
+  "title": "【APEX】夜練【小柳ロウ/にじさんじ】",
+  "description": "イラスト　@WmmmyY \nメンバー　ゆうく、こはく\n・┈┈┈┈┈┈┈┈┈・\nhttps://twitter.com/Rou_2434\nメンバーシップ\nhttps://www.youtube.com/channel/UC6WFKwYptsxVue56Lx218vg/join\n・┈┈┈┈┈┈┈┈┈・\n誹謗中傷、伝書鳩等の行為はお控えください。\n他チャンネルで無闇に小柳ロウの名前を出さないでください。\n\n※未成年者の視聴者の方々は、下記リンク先の注意事項もご覧ください。\nhttps://www.anycolor.co.jp/notice-for-minors",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "channel_id": "UC6WFKwYptsxVue56Lx218vg",
+  "url": "https://www.youtube.com/watch?v=Vvc7aBC7P10",
+  "thumb": "https://i.ytimg.com/vi/Vvc7aBC7P10/mqdefault.jpg?v=6b0ac939",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-28T12:40:36Z",
+  "end": null,
+  "own": true
  }
 }
