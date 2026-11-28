@@ -15504,5 +15504,19 @@
   "own": true,
   "game": "APEX",
   "collabs": []
+ },
+ {
+  "id": "9kEHStMwidk",
+  "title": "【lol】暇つぶし【小柳ロウ/にじさんじ】",
+  "kind": "stream",
+  "status": "live",
+  "start": "2026-11-28T05:50:51Z",
+  "end": null,
+  "url": "https://www.youtube.com/watch?v=9kEHStMwidk",
+  "thumb": "https://i.ytimg.com/vi/9kEHStMwidk/mqdefault.jpg?v=6b0a6acd",
+  "channel": "小柳ロウ / Koyanagi Rou【にじさんじ】",
+  "own": true,
+  "game": "LoL",
+  "collabs": []
  }
 ]
